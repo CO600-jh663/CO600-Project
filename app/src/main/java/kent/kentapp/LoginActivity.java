@@ -3,6 +3,7 @@ package kent.kentapp;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -29,9 +30,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
+
 import java.io.BufferedReader;
 //import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.HttpURLConnection;
 import java.security.MessageDigest;
@@ -54,7 +60,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     /**
      * A dummy authentication store containing known user names and passwords.
-     * TODO: remove after connecting to a real authentication system.
      */
     private static final String[] DUMMY_CREDENTIALS = new String[]{
             "foo@example.com:hello", "bar@example.com:world"
@@ -69,6 +74,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,6 +110,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
     private void populateAutoComplete() {
@@ -119,7 +132,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
         if (shouldShowRequestPermissionRationale(READ_CONTACTS)) {
             Snackbar.make(mEmailView, R.string.permission_rationale, Snackbar.LENGTH_INDEFINITE)
-                    .setAction(android.R.string.ok, new View.OnClickListener() {
+                    .setAction(android.R.string.ok, new OnClickListener() {
                         @Override
                         @TargetApi(Build.VERSION_CODES.M)
                         public void onClick(View v) {
@@ -276,6 +289,46 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client.connect();
+        Action viewAction = Action.newAction(
+                Action.TYPE_VIEW, // TODO: choose an action type.
+                "Login Page", // TODO: Define a title for the content shown.
+                // TODO: If you have web page content that matches this app activity's content,
+                // make sure this auto-generated web page URL is correct.
+                // Otherwise, set the URL to null.
+                Uri.parse("http://host/path"),
+                // TODO: Make sure this auto-generated app deep link URI is correct.
+                Uri.parse("android-app://kent.kentapp/http/host/path")
+        );
+        AppIndex.AppIndexApi.start(client, viewAction);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        Action viewAction = Action.newAction(
+                Action.TYPE_VIEW, // TODO: choose an action type.
+                "Login Page", // TODO: Define a title for the content shown.
+                // TODO: If you have web page content that matches this app activity's content,
+                // make sure this auto-generated web page URL is correct.
+                // Otherwise, set the URL to null.
+                Uri.parse("http://host/path"),
+                // TODO: Make sure this auto-generated app deep link URI is correct.
+                Uri.parse("android-app://kent.kentapp/http/host/path")
+        );
+        AppIndex.AppIndexApi.end(client, viewAction);
+        client.disconnect();
+    }
+
     private interface ProfileQuery {
         String[] PROJECTION = {
                 ContactsContract.CommonDataKinds.Email.ADDRESS,
@@ -327,45 +380,57 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                     return pieces[1].equals(mPassword);
                 }
             }
-            // TODO: put php script on server so it can be used
-            URL url = new URL(phpLoginURL);
+
+            String username = mEmail.substring(0, mEmail.length() - 11);
+            String urlString = "http://raptor.kent.ac.uk/proj/co600/project/c26_fresher/KSAPP_db_login.php?username=" + username;
+            URL url;
+            try {
+                url = new URL(urlString);
+            } catch (MalformedURLException e) {
+                System.out.println("Error fetching user data: " + e);
+                return false;
+            }
             HttpURLConnection urlConnection;
-            String username = mEmail.substring(0,mEmail.length()-11);
             ArrayList response = new ArrayList();
             try {
                 urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("GET");
-                urlConnection.setRequestProperty("username", username);
+                //urlConnection.setRequestProperty("username", username);
 
-                BufferedReader in = new BufferedReader(
+                System.out.println("\nSending request to URL : " + url);
+                System.out.println("Response Code : " + urlConnection.getResponseCode());
+                System.out.println("Response Message : " + urlConnection.getResponseMessage());
+
+                BufferedReader reader = new BufferedReader(
                         new InputStreamReader(urlConnection.getInputStream()));
                 String inputLine;
 
-                while ((inputLine = in.readLine()) != null) {
+                while ((inputLine = reader.readLine()) != null) {
                     response.add(inputLine);
                 }
-                in.close();
-            }
-            catch (Exception e) {
+                reader.close();
+            } catch (Exception e) {
                 System.out.println("Error fetching user data: " + e);
+                return false;
             }
 
-            MessageDigest digest=null;
+            MessageDigest digest = null;
             try {
                 digest = MessageDigest.getInstance("SHA-256");
-            }
-            catch (NoSuchAlgorithmException e) {
+            } catch (NoSuchAlgorithmException e) {
                 System.out.println("No such hashing algorithm: " + e);
             }
-            digest.reset();
-            digest.digest(mPassword.getBytes());
-            Byte[] hashedPasswordBytes = new Byte[digest.getDigestLength()];
-            String hashedPassword = hashedPasswordBytes.toString();
+            digest.update(mPassword.getBytes());
+            byte[] hashedPasswordBytes = digest.digest();
 
-            // TODO: finish login functionality
+            StringBuffer sb = new StringBuffer();
+            for (int i = 0; i < hashedPasswordBytes.length; i++) {
+                sb.append(Integer.toString((hashedPasswordBytes[i] & 0xff) + 0x100, 16).substring(1));
+            }
+            String hashedPassword = sb.toString();
 
-            // if(hashedPassword = response.password) return true;
-            // else return false;
+            if (hashedPassword.equals(response.get(0))) return true;
+            else return false;
         }
 
         @Override
@@ -374,6 +439,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
 
             if (success) {
+                Intent intent = new Intent(LoginActivity.this, MainMenu.class);
+                startActivity(intent);
                 finish();
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
