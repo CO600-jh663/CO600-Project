@@ -16,6 +16,7 @@
         android:rowCount="9"
         android:columnCount="9"
         android:layout_alignParentStart="true"
+<<<<<<< HEAD
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true">
 
@@ -194,4 +195,7 @@
 
 
     </GridLayout>
+=======
+        android:onClick="btnMap_OnClick" />
+>>>>>>> parent of 274ec27... Merge remote-tracking branch 'remotes/origin/master' into Michael
 </RelativeLayout>
