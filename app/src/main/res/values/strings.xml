@@ -2,6 +2,12 @@
     <string name="app_name">Kent App</string>
 
     <!-- Strings related to login -->
+    <string name="title">University of Kent</string>
+    <string name="subtitle">The UK\'s European university</string>
+    <string name="username">Enter username</string>
+    <string name="password">Enter password</string>
+    <string name="login">Login ></string>
+    <string name="redeemPassword">Forgot your password</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="action_sign_in">Sign in or register</string>
@@ -106,4 +112,23 @@
     <string name="action_settings">Settings</string>
     <string name="campus_map">Campus Map</string>
     <string name="title_activity_campus_map">CampusMap</string>
+
+    <!-- Strings related to activity_main_menu -->
+    <string name="user_full_name">Name</string>
+    <string name="profile">Profile</string>
+    <string name="fiends">Friends</string>
+    <string name="calender">Calender</string>
+    <string name="societies">Societies</string>
+    <string name="news_and_events">News + Events</string>
+    <string name="directory">Directory</string>
+    <string name="btnMap">Maps</string>
+    <string name="function">function</string>
+    <string name="x">x</string>
+    <string name="menu">menu</string>
+    <string name="video">video</string>
+
+    <!-- Strings related to activity_news_feed -->
+    <string name="news_feed"></string>
+    <string name="event_feed"></string>
+    <string name="news"></string>
 </resources>
