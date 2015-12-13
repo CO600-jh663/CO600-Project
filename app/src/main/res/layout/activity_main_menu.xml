@@ -16,7 +16,6 @@
         android:rowCount="9"
         android:columnCount="9"
         android:layout_alignParentStart="true"
-<<<<<<< HEAD
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true">
 
@@ -168,7 +167,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button"
+            android:id="@+id/btnDirectory"
             android:text="@string/directory"
             android:layout_row="8"
             android:layout_column="1"
@@ -177,7 +176,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button2"
+            android:id="@+id/btnMap"
             android:text="@string/btnMap"
             android:layout_row="8"
             android:layout_column="5"
