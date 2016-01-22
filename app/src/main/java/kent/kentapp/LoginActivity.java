@@ -87,7 +87,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         setContentView(R.layout.activity_login);
         // Set up the login form.
 
-        Typeface newCentury = Typeface.createFromAsset(getAssets(), "newcentury.tff");
+        Typeface newCentury = Typeface.createFromAsset(getAssets(), "fonts/newcentury.ttf");
         TextView myText = (TextView) findViewById(R.id.headingHome);
         myText.setTypeface(newCentury);
 

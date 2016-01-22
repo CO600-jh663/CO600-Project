@@ -51,7 +51,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SDS"></activity>
+        <activity android:name=".SDS" />
+        <activity android:name=".Moodle"></activity>
     </application>
 
 </manifest>

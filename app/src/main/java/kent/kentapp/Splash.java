@@ -31,8 +31,14 @@ public class Splash extends Activity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 iv.startAnimation(an2);
+                /*try {
+                    wait(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                */
                 finish();
-                Intent i = new Intent(getBaseContext(),MainMenu.class);
+                Intent i = new Intent(getBaseContext(),LoginActivity.class);
                 startActivity(i);
 
             }

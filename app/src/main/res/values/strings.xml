@@ -120,8 +120,9 @@
     <string name="calender">Calender</string>
     <string name="societies">Societies</string>
     <string name="news_and_events">News + Events</string>
-    <string name="directory">Directory</string>
+    <string name="btnMoodle">Moodle</string>
     <string name="btnMap">Maps</string>
+    <string name="btnSDS">SDS</string>
     <string name="function">function</string>
     <string name="x">x</string>
     <string name="menu">menu</string>
