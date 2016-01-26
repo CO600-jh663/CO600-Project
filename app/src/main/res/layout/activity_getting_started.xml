@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="kent.kentapp.GettingStarted">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:columnCount="8"
+        android:isScrollContainer="true"
+        android:rowCount="16">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnSpan="7"
+            android:layout_gravity="start"
+            android:layout_marginBottom="7dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_row="0"
+            android:text="@string/getting_started_title"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="32sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnSpan="7"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_row="1"
+            android:width="340dp"
+            android:gravity="center_vertical"
+            android:text="@string/getting_started_subtitle"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/divide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="7"
+            android:layout_margin="2dp"
+            android:layout_marginBottom="16dp"
+            android:layout_row="2"
+            android:height="3dp"
+            android:background="@color/kent_gold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnSpan="2"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_row="3"
+            android:text="@string/it_account"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="22sp" />
+
+        <CheckBox
+            android:id="@+id/it_account_checkbox"
+            android:layout_column="5"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="20dp"
+            android:layout_row="3"
+            android:button="@drawable/selector_toggle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnSpan="2"
+            android:layout_row="4"
+            android:text="@string/it_account_subtext"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="25dp"
+            android:layout_row="5"
+            android:text="@string/fees"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="22sp" />
+
+        <CheckBox
+            android:id="@+id/fees_checkbox"
+            android:layout_column="5"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="20dp"
+            android:layout_row="5"
+            android:button="@drawable/selector_toggle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnSpan="3"
+            android:layout_row="6"
+            android:text="@string/fees_subtext"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnSpan="2"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="25dp"
+            android:layout_row="7"
+            android:text="@string/accommodation"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="22sp" />
+
+        <CheckBox
+            android:id="@+id/accommodation_checkbox"
+            android:layout_column="5"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="20dp"
+            android:layout_row="7"
+            android:button="@drawable/selector_toggle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnSpan="2"
+            android:layout_row="8"
+            android:text="@string/accommodation_subtext"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnSpan="2"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="25dp"
+            android:layout_row="9"
+            android:text="@string/immunisation"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="22sp" />
+
+        <CheckBox
+            android:id="@+id/immunisation_checkbox"
+            android:layout_column="5"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="20dp"
+            android:layout_row="9"
+            android:button="@drawable/selector_toggle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnSpan="2"
+            android:layout_row="10"
+            android:text="@string/immunisation_subtext"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnSpan="7"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="25dp"
+            android:layout_row="11"
+            android:width="280dp"
+            android:text="@string/student_support_and_wellbeing"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/optional_check"
+            android:layout_column="5"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="20dp"
+            android:layout_row="11" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnSpan="2"
+            android:layout_row="12"
+            android:text="@string/student_support_and_wellbeing_subtext"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/proceed_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_row="13"
+            android:background="@color/kent_blue"
+            android:text="@string/proceed"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:onClick="proceed"/>
+
+    </GridLayout>
+</RelativeLayout>
