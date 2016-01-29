@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">Kent App</string>
     <!-- Strings related to activity_getting_started -->
     <!-- Heading -->
@@ -244,6 +245,26 @@
 
     <!-- Other -->
 
+
+    <!-- Strings related to activity_directory -->
+
+    <!-- Heading -->
+
+    <!-- Sub-heading -->
+
+<string name="medical_centre">Medical Centre</string>
+    <string name="emergency_loan">Emergency Loan</string>
+    <string name="emergency_accommodation">Emergency Accommodation</string>
+    <string name="emergency_services">Emergency Services</string>
+
+
+    <!-- Text Field -->
+
+
+    <!-- Buttons -->
+
+
+    <!-- Other -->
 
 
 
