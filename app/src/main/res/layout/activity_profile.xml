@@ -25,13 +25,13 @@
             android:id="@+id/house_colour"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:height="8dp"
             android:layout_column="1"
             android:layout_columnSpan="7"
-            android:layout_row="0"
-            android:background="@color/kent_gold"
             android:layout_margin="2dp"
-            android:layout_marginBottom="5dp"/>
+            android:layout_marginBottom="5dp"
+            android:layout_row="0"
+            android:height="8dp"
+            android:background="@color/kent_gold" />
 
 
         <ImageView
@@ -104,28 +104,39 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/home_hyp"
+                    android:id="@+id/news_hyp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="9dp"
                     android:layout_marginTop="15dp"
-                    android:width="40dp"
+                    android:width="35dp"
                     android:ems="10"
-                    android:text="@string/home"/>
+                    android:text="@string/news" />
 
                 <TextView
                     android:id="@+id/profile_hyp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="12dp"
                     android:layout_marginTop="15dp"
-                    android:width="45dp"
+                    android:width="42dp"
                     android:ems="10"
                     android:text="@string/profile"
-                    android:textStyle="bold"
-                    android:textColor="@color/kent_blue"/>
+                    android:textColor="@color/kent_blue"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/calendar_hyp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="15dp"
+                    android:width="55dp"
+                    android:ems="10"
+                    android:text="@string/calendar" />
 
 
                 <TextView
@@ -222,7 +233,79 @@
             android:layout_marginTop="2dp"
             android:layout_row="4"
             android:height="3dp"
-            android:background="@android:color/darker_gray"/>
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/services"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="7"
+            android:layout_gravity="end"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_row="5"
+            android:width="230dp"
+            android:height="24dp"
+            android:background="@color/kent_translucent"
+            android:ems="10"
+            android:text="@string/services"
+            android:textAlignment="viewEnd"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/moodle_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="16dp"
+            android:layout_row="6"
+            android:width="29dp"
+            android:height="24dp"
+            android:background="@color/kent_blue"
+            android:textColor="@android:color/white"
+            android:ems="10"
+            android:text="@string/moodle"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/sds_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_columnSpan="2"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="12dp"
+            android:layout_row="6"
+            android:width="29dp"
+            android:height="24dp"
+            android:background="@color/kent_blue"
+            android:textColor="@android:color/white"
+            android:ems="10"
+            android:text="@string/sds"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/timetable_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="6"
+            android:layout_columnSpan="2"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="26dp"
+            android:layout_row="6"
+            android:width="29dp"
+            android:height="24dp"
+            android:background="@color/kent_blue"
+            android:textColor="@android:color/white"
+            android:ems="10"
+            android:text="@string/calendar"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/about_you"
@@ -231,9 +314,10 @@
             android:layout_column="0"
             android:layout_columnSpan="7"
             android:layout_gravity="end"
+            android:layout_marginTop="15dp"
             android:layout_marginBottom="5dp"
             android:layout_marginEnd="10dp"
-            android:layout_row="5"
+            android:layout_row="7"
             android:width="290dp"
             android:height="24dp"
             android:background="@color/kent_translucent"
@@ -249,13 +333,12 @@
             android:layout_column="0"
             android:layout_columnSpan="7"
             android:layout_marginBottom="10dp"
-            android:layout_row="6"
+            android:layout_row="8"
             android:height="40dp"
             android:ems="10"
             android:hint="@string/add_degree"
             android:textColor="@color/kent_blue"
-            android:textStyle="bold"/>
-
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/add_bio"
@@ -264,75 +347,13 @@
             android:layout_column="0"
             android:layout_columnSpan="7"
             android:layout_marginBottom="10dp"
-            android:layout_row="7"
+            android:layout_row="9"
             android:layout_rowSpan="2"
             android:height="100dp"
-            android:textColor="@color/kent_blue"
             android:ems="10"
             android:hint="@string/add_bio"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/calender_heading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnSpan="3"
-            android:layout_gravity="end"
-            android:layout_marginBottom="0dp"
-            android:layout_row="9"
-            android:width="150dp"
-            android:height="22dp"
-            android:background="@color/kent_light_grey"
-            android:ems="10"
-            android:text="@string/calender"
-            android:textAlignment="viewEnd"/>
-
-        <TextView
-            android:id="@+id/calander_feed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnSpan="4"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="2dp"
-            android:layout_row="10"
-            android:height="93dp"
-            android:ems="10"
-            android:text="@string/calender_contents"/>
-
-        <TextView
-            android:id="@+id/events_heading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="3"
-            android:layout_columnSpan="4"
-            android:layout_gravity="end"
-            android:layout_marginBottom="0dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="0dp"
-            android:layout_row="9"
-            android:width="135dp"
-            android:height="22dp"
-            android:background="@color/kent_light_grey"
-            android:ems="10"
-            android:text="@string/events"
-            android:textAlignment="textEnd" />
-
-
-        <TextView
-            android:id="@+id/events_feed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="3"
-            android:layout_columnSpan="4"
-            android:layout_marginBottom="5dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="0dp"
-            android:layout_row="10"
-            android:height="93dp"
-            android:ems="10"
-            android:text="@string/events_contents" />
+            android:textColor="@color/kent_blue"
+            android:textStyle="bold" />
 
     </GridLayout>
 </RelativeLayout>

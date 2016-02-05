@@ -169,24 +169,28 @@
     <!-- Other -->
     <string name="contentDescriptionlogo">KSapp</string>
 
-    <!-- Strings related to activity_main_menu -->
+    <!-- Strings related to activity_news -->
     <!-- Heading -->
     <string name="user_welcome_message">Hello User!</string>
 
     <!-- Sub-heading -->
     <string name="home">Home</string>
+    <string name="news">News</string>
     <string name="profile">Profile</string>
     <string name="friends">Friends</string>
-    <string name="calender">Calender</string>
+    <string name="calendar">Calender</string>
     <string name="events">Events</string>
     <string name="social">Social</string>
     <string name="photo">Photos</string>
     <string name="video">Videos</string>
     <string name="news_and_events">News &amp; Events</string>
+    <string name="services">Services</string>
     <string name="person_info">About You</string>
     <string name="bio">Bio</string>
     <string name="settings">Settings</string>
-
+    <string name="moodle">Moodle</string>
+    <string name="sds">SDS</string>
+    <string name="timetable">Timetable</string>
 
     <!-- Field  Contents -->
     <string name="add_bio">+Add Bio/Your Interests and More</string>
@@ -196,7 +200,6 @@
     <string name="calender_contents"></string>
     <string name="events_contents"></string>
 
-    <string name="news">News</string>
 
     <string name="profile_image_description">User Image</string>
 
