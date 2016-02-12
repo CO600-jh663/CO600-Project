@@ -216,7 +216,7 @@
                     android:layout_marginTop="15dp"
                     android:width="60dp"
                     android:ems="10"
-                    android:text="@string/settings" />
+                    android:text="@string/more" />
 
             </LinearLayout>
 
@@ -269,7 +269,8 @@
             android:ems="10"
             android:text="@string/moodle"
             android:textAllCaps="false"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:clickable="true"/>
 
         <Button
             android:id="@+id/sds_button"
@@ -287,7 +288,8 @@
             android:ems="10"
             android:text="@string/sds"
             android:textAllCaps="false"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:clickable="true"/>
 
         <Button
             android:id="@+id/timetable_button"
@@ -305,7 +307,8 @@
             android:ems="10"
             android:text="@string/calendar"
             android:textAllCaps="false"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:clickable="true"/>
 
         <TextView
             android:id="@+id/about_you"

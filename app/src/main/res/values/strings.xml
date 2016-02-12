@@ -187,7 +187,7 @@
     <string name="services">Services</string>
     <string name="person_info">About You</string>
     <string name="bio">Bio</string>
-    <string name="settings">Settings</string>
+    <string name="more">More</string>
     <string name="moodle">Moodle</string>
     <string name="sds">SDS</string>
     <string name="timetable">Timetable</string>
@@ -216,14 +216,14 @@
     <!-- Strings related to activity_news_feed -->
 
     <!-- Heading -->
-    <string name="news_feed_title">Today\'s News</string>
     <string name="upcoming_events">Upcoming Events</string>
 
     <!-- Sub-heading -->
 
-    <string name="news_feed"></string>
+    <string name="news_feed">News</string>
 
-    <string name="event_feed"></string>
+
+
 
     <!-- Text Field -->
 
@@ -270,5 +270,28 @@
     <!-- Other -->
 
 
+
+    <!-- Strings related to activity_more -->
+
+    <string name="official_kent">Kent Home</string>
+    <string name="kent_union">Kent Union</string>
+    <string name="facebook">Facebook</string>
+    <string name="instagram">Instagram</string>
+    <string name="twitter">Twitter</string>
+    <string name="googleplus">Google+</string>
+    <string name="flickr">Flickr</string>
+    <string name="lib_search">Library Search</string>
+
+    <string name="logout">logout</string>
+
+
+
+    <!-- Text Field -->
+
+
+    <!-- Buttons -->
+
+
+    <!-- Other -->
 
 </resources>

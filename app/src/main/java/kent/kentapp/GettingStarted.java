@@ -10,7 +10,7 @@ import android.widget.Toast;
 import android.content.Intent;
 
 
-public class GettingStarted extends Activity implements OnClickListener {
+public class GettingStarted extends Activity {
 
     CheckBox it_account_checkbox, fees_checkbox, accommodation_checkbox, immunisation_checkbox, wellbeing_checkbox;
     Button continueButton;
@@ -28,31 +28,30 @@ public class GettingStarted extends Activity implements OnClickListener {
         wellbeing_checkbox = (CheckBox) findViewById(R.id.optional_check);
 
         continueButton = (Button) findViewById(R.id.proceed_button);
-        continueButton.setOnClickListener(this);
-    }
+        continueButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
 
-    public void onClick(View v) {
+                Intent proceed = new Intent(GettingStarted.this, MainMenu.class);
 
-        Intent proceed = new Intent(GettingStarted.this, MainMenu.class);
+                if (it_account_checkbox.isChecked() && fees_checkbox.isChecked() && accommodation_checkbox.isChecked()
+                   && immunisation_checkbox.isChecked()) {
 
-        if (continueButton.isPressed()) {
-            if (it_account_checkbox.isChecked() && fees_checkbox.isChecked() && accommodation_checkbox.isChecked()
-                    && immunisation_checkbox.isChecked()) {
+                   startActivity(proceed);
 
-                startActivity(proceed);
+                }
+                else
 
+                {
+                    showToast();
+                }
             }
-        }
-        else
-
-        {
-            showToast();
-        }
+        });
     }
+
+
 
     public void showToast() {
         Toast.makeText(this, "Please complete all previous tasks before continuing", Toast.LENGTH_LONG).show();
     }
 
 }
-

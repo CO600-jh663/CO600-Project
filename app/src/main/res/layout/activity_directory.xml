@@ -164,7 +164,7 @@
                     android:layout_marginTop="15dp"
                     android:width="60dp"
                     android:ems="10"
-                    android:text="@string/settings" />
+                    android:text="@string/more" />
 
             </LinearLayout>
 
@@ -183,8 +183,8 @@
             android:height="3dp"
             android:background="@android:color/darker_gray" />
 
-        <TextView
-            android:id="@+id/medical_centre"
+        <ExpandableListView
+            android:id="@+id/directory_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_column="0"
@@ -192,53 +192,10 @@
             android:layout_marginBottom="10dp"
             android:layout_row="6"
             android:layout_rowSpan="1"
-            android:ems="10"
-            android:text="@string/medical_centre"
-            android:isScrollContainer="true"
-            android:textAlignment="textEnd"/>
-
-        <TextView
-            android:id="@+id/emergency_loan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnSpan="7"
-            android:layout_marginBottom="10dp"
-            android:layout_row="7"
-            android:text="@string/emergency_loan"
-            android:layout_rowSpan="1"
-            android:ems="10"
-            android:isScrollContainer="true"
-            android:textAlignment="textEnd"/>
-
-        <TextView
-            android:id="@+id/emergency_accommodation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnSpan="7"
-            android:layout_marginBottom="10dp"
-            android:layout_row="8"
-            android:text="@string/emergency_accommodation"
-            android:layout_rowSpan="1"
-            android:ems="10"
-            android:isScrollContainer="true"
-            android:textAlignment="textEnd"/>
+            android:ems="10" />
 
 
-        <TextView
-            android:id="@+id/emergency_services"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnSpan="7"
-            android:layout_marginBottom="10dp"
-            android:layout_row="9"
-            android:text="@string/emergency_services"
-            android:layout_rowSpan="1"
-            android:ems="10"
-            android:isScrollContainer="true"
-            android:textAlignment="textEnd"/>
+
     </GridLayout>
 
 </RelativeLayout>
