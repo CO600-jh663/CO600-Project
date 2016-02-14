@@ -1,13 +1,54 @@
 <resources>
+
     <string name="app_name">Kent App</string>
+    <!-- Strings related to activity_getting_started -->
+    <!-- Heading -->
+    <string name="getting_started_title">Getting Started</string>
+
+    <!-- Sub-heading -->
+    <string name="getting_started_subtitle">Here is a list of actions you will first need to complete</string>
+    <string name="enrol">Enrol</string>
+    <string name="enrol_subtext">Have you enrolled?</string>
+    <string name="it_account">IT Account</string>
+    <string name="it_account_subtext">Claim your IT account</string>
+    <string name="fees">Fees</string>
+    <string name="fees_subtext">Arrange your fee payments</string>
+    <string name="accommodation">Accommodation</string>
+    <string name="accommodation_subtext">Apply for accommodation</string>
+    <string name="immunisation">Immunisation</string>
+    <string name="immunisation_subtext">Are you immunisations in date?</string>
+    <string name="student_support_and_wellbeing">Student Support &amp; Well-being Service</string>
+    <string name="student_support_and_wellbeing_subtext">Have you registered? (if applicable)</string>
+
+
+    <!-- Text Field -->
+
+
+    <!-- Buttons -->
+    <string name="proceed">Continue ></string>
+    <!-- Other -->
+
 
     <!-- Strings related to login -->
+    <!-- Heading -->
     <string name="title">University of Kent</string>
+
+    <!-- Sub-heading -->
     <string name="subtitle">The UK\'s European university</string>
+
+
+    <string name="redeemPassword">Forgot your password</string>
+
+    <!-- Text Field -->
     <string name="username">Enter username</string>
     <string name="password">Enter password</string>
+
+    <!-- Buttons -->
     <string name="login">Login ></string>
-    <string name="redeemPassword">Forgot your password</string>
+
+    <!-- Other -->
+
+
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="action_sign_in">Sign in or register</string>
@@ -113,23 +154,144 @@
     <string name="campus_map">Campus Map</string>
     <string name="title_activity_campus_map">CampusMap</string>
 
-    <!-- Strings related to activity_main_menu -->
-    <string name="user_full_name">Name</string>
+    <!-- Strings related to home -->
+    <!-- Heading -->
+
+
+    <!-- Sub-heading -->
+
+
+    <!-- Text Field -->
+
+
+    <!-- Buttons -->
+
+    <!-- Other -->
+    <string name="contentDescriptionlogo">KSapp</string>
+
+    <!-- Strings related to activity_news -->
+    <!-- Heading -->
+    <string name="user_welcome_message">Hello User!</string>
+
+    <!-- Sub-heading -->
+    <string name="home">Home</string>
+    <string name="news">News</string>
     <string name="profile">Profile</string>
-    <string name="fiends">Friends</string>
-    <string name="calender">Calender</string>
-    <string name="societies">Societies</string>
-    <string name="news_and_events">News + Events</string>
-    <string name="btnMoodle">Moodle</string>
-    <string name="btnMap">Maps</string>
-    <string name="btnSDS">SDS</string>
+    <string name="friends">Friends</string>
+    <string name="calendar">Calender</string>
+    <string name="events">Events</string>
+    <string name="social">Social</string>
+    <string name="photo">Photos</string>
+    <string name="video">Videos</string>
+    <string name="news_and_events">News &amp; Events</string>
+    <string name="services">Services</string>
+    <string name="person_info">About You</string>
+    <string name="bio">Bio</string>
+    <string name="more">More</string>
+    <string name="moodle">Moodle</string>
+    <string name="sds">SDS</string>
+    <string name="timetable">Timetable</string>
+
+    <!-- Field  Contents -->
+    <string name="add_bio">+Add Bio/Your Interests and More</string>
+    <string name="add_degree">+Add Degree</string>
     <string name="function">function</string>
+    <string name="contentDescription">function</string>
+    <string name="calender_contents"></string>
+    <string name="events_contents"></string>
+
+
+    <string name="profile_image_description">User Image</string>
+
+    <!-- Buttons -->
+    <string name="btnMap">Maps</string>
+    <string name="directory">Directory</string>
+
+    <!-- Other -->
     <string name="x">x</string>
     <string name="menu">menu</string>
-    <string name="video">video</string>
+
+
 
     <!-- Strings related to activity_news_feed -->
-    <string name="news_feed"></string>
-    <string name="event_feed"></string>
-    <string name="news"></string>
+
+    <!-- Heading -->
+    <string name="upcoming_events">Upcoming Events</string>
+
+    <!-- Sub-heading -->
+
+    <string name="news_feed">News</string>
+
+
+
+
+    <!-- Text Field -->
+
+    <!-- Buttons -->
+
+
+    <!-- Other -->
+
+    <!-- Strings related to activity_news_feed -->
+    <!-- Heading -->
+    <string name="friends_title">Friends</string>
+
+
+    <!-- Sub-heading -->
+    <string name="friends_recommendations">Recommendations</string>
+
+
+    <!-- Text Field -->
+
+    <!-- Buttons -->
+
+
+    <!-- Other -->
+
+
+    <!-- Strings related to activity_directory -->
+
+    <!-- Heading -->
+
+    <!-- Sub-heading -->
+
+<string name="medical_centre">Medical Centre</string>
+    <string name="emergency_loan">Emergency Loan</string>
+    <string name="emergency_accommodation">Emergency Accommodation</string>
+    <string name="emergency_services">Emergency Services</string>
+
+
+    <!-- Text Field -->
+
+
+    <!-- Buttons -->
+
+
+    <!-- Other -->
+
+
+
+    <!-- Strings related to activity_more -->
+
+    <string name="official_kent">Kent Home</string>
+    <string name="kent_union">Kent Union</string>
+    <string name="facebook">Facebook</string>
+    <string name="instagram">Instagram</string>
+    <string name="twitter">Twitter</string>
+    <string name="googleplus">Google+</string>
+    <string name="flickr">Flickr</string>
+    <string name="lib_search">Library Search</string>
+
+    <string name="logout">logout</string>
+
+
+
+    <!-- Text Field -->
+
+
+    <!-- Buttons -->
+
+
+    <!-- Other -->
+
 </resources>
