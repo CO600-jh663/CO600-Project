@@ -252,10 +252,40 @@
             android:layout_columnSpan="7"
             android:layout_marginBottom="10dp"
             android:layout_row="6"
-            android:layout_rowSpan="5"
-            android:ems="10"
-            android:isScrollContainer="true"
-            android:textAlignment="textEnd"/>
+            android:layout_column="4"
+            android:layout_columnSpan="3"
+            android:layout_rowSpan="3"
+            android:width="180dp"
+            android:height="245dp"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnMoodle"
+            android:text="@string/btnMoodle"
+            android:layout_row="8"
+            android:layout_column="1"
+            android:layout_marginStart="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnMap"
+            android:text="@string/btnMap"
+            android:layout_row="8"
+            android:layout_column="5"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="-55dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnSDS"
+            android:id="@+id/btnSDS"
+            android:layout_row="8"
+            android:layout_column="6"
+            android:layout_marginStart="-15dp" />
 
 
     </GridLayout>
