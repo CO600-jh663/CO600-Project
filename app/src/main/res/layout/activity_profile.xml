@@ -7,17 +7,13 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="kent.kentapp.MainMenu">
+    tools:context="kent.kentapp.ProfileHome">
 
 
     <GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/gridLayout"
-        android:rowCount="9"
-        android:columnCount="9"
-        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
@@ -37,18 +33,46 @@
             android:height="8dp"
             android:background="@color/kent_gold" />
 
+
         <ImageView
-            android:id="@+id/logo"
-            android:layout_width="37.5dp"
-            android:layout_height="30dp"
-            android:layout_column="6"
-            android:layout_gravity="center"
-            android:layout_marginStart="-20dp"
+            android:id="@+id/profile_pic"
+            android:layout_width="110dp"
+            android:layout_height="105dp"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginTop="5dp"
+            android:layout_row="1"
+            android:layout_rowSpan="2"
+            android:clickable="true"
+            android:src="@drawable/avatar2" />
+
+        <TextView
+            android:id="@+id/homeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_columnSpan="5"
+            android:layout_marginTop="7dp"
+            android:layout_row="1"
+            android:text="@string/user_welcome_message"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="18sp" />
+
+
+        <ImageView
+            android:id="@+id/alert_bell"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_column="2"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="48dp"
             android:layout_row="2"
             android:clickable="true"
-            android:contentDescription="@string/contentDescriptionlogo"
-            android:src="@drawable/ksapplogonobackground" />
+            android:contentDescription="@string/profile_image_description"
+            android:src="@drawable/alert_bell" />
 
         <TextView
             android:id="@+id/divide"
@@ -63,7 +87,9 @@
             android:height="3dp"
             android:background="@android:color/darker_gray" />
 
+
         <HorizontalScrollView
+            android:id="@+id/scroll_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_column="0"
@@ -86,10 +112,7 @@
                     android:layout_marginTop="15dp"
                     android:width="35dp"
                     android:ems="10"
-                    android:text="@string/news"
-                    android:textColor="@color/kent_blue"
-                    android:textStyle="bold"
-                    android:onClick=""/>
+                    android:text="@string/news" />
 
                 <TextView
                     android:id="@+id/profile_hyp"
@@ -100,7 +123,9 @@
                     android:layout_marginTop="15dp"
                     android:width="42dp"
                     android:ems="10"
-                    android:text="@string/profile" />
+                    android:text="@string/profile"
+                    android:textColor="@color/kent_blue"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/calendar_hyp"
@@ -119,9 +144,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
-                    android:layout_marginStart="12dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="15dp"
-                    android:width="46dp"
+                    android:width="50dp"
                     android:ems="10"
                     android:text="@string/friends" />
 
@@ -131,9 +156,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
-                    android:layout_marginStart="12dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="15dp"
-                    android:width="35dp"
+                    android:width="38dp"
                     android:ems="10"
                     android:text="@string/btnMap" />
 
@@ -142,9 +167,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
-                    android:layout_marginStart="12dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="15dp"
-                    android:width="40dp"
+                    android:width="45dp"
                     android:ems="10"
                     android:text="@string/social" />
 
@@ -153,9 +178,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
-                    android:layout_marginStart="12dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="15dp"
-                    android:width="43dp"
+                    android:width="45dp"
                     android:ems="10"
                     android:text="@string/video" />
 
@@ -164,9 +189,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
-                    android:layout_marginStart="12dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="15dp"
-                    android:width="48dp"
+                    android:width="50dp"
                     android:ems="10"
                     android:text="@string/photo" />
 
@@ -187,7 +212,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
-                    android:layout_marginEnd="5dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="15dp"
                     android:width="60dp"
@@ -211,53 +235,128 @@
             android:height="3dp"
             android:background="@android:color/darker_gray" />
 
-        <ImageView
-            android:id="@+id/home_background"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_column="0"
-            android:layout_columnSpan="7"
-            android:layout_marginBottom="5dp"
-            android:layout_marginStart="-20dp"
-            android:layout_marginTop="5dp"
-            android:layout_row="5"
-            android:layout_rowSpan="6"
-            android:background="@drawable/background_home"
-            android:backgroundTint="@color/kent_translucent_complete"
-            android:clickable="true" />
-
         <TextView
-            android:id="@+id/news_head"
+            android:id="@+id/services"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_columnSpan="7"
             android:layout_gravity="end"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="15dp"
             android:layout_marginEnd="10dp"
             android:layout_row="5"
-            android:width="290dp"
-            android:height="20dp"
+            android:width="230dp"
+            android:height="24dp"
             android:background="@color/kent_translucent"
             android:ems="10"
-            android:text="@string/news_feed"
+            android:text="@string/services"
             android:textAlignment="viewEnd"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/moodle_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="16dp"
+            android:layout_row="6"
+            android:width="29dp"
+            android:height="24dp"
+            android:background="@color/kent_blue"
+            android:textColor="@android:color/white"
+            android:ems="10"
+            android:text="@string/moodle"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:clickable="true"/>
+
+        <Button
+            android:id="@+id/sds_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_columnSpan="2"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="12dp"
+            android:layout_row="6"
+            android:width="29dp"
+            android:height="24dp"
+            android:background="@color/kent_blue"
+            android:textColor="@android:color/white"
+            android:ems="10"
+            android:text="@string/sds"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:clickable="true"/>
+
+        <Button
+            android:id="@+id/timetable_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="6"
+            android:layout_columnSpan="2"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="26dp"
+            android:layout_row="6"
+            android:width="29dp"
+            android:height="24dp"
+            android:background="@color/kent_blue"
+            android:textColor="@android:color/white"
+            android:ems="10"
+            android:text="@string/calendar"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:clickable="true"/>
 
         <TextView
-            android:id="@+id/news"
+            android:id="@+id/about_you"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="7"
+            android:layout_gravity="end"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_row="7"
+            android:width="290dp"
+            android:height="24dp"
+            android:background="@color/kent_translucent"
+            android:ems="10"
+            android:text="@string/person_info"
+            android:textAlignment="viewEnd"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/add_degree"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_columnSpan="7"
             android:layout_marginBottom="10dp"
-            android:layout_row="6"
-            android:layout_rowSpan="5"
+            android:layout_row="8"
+            android:height="40dp"
             android:ems="10"
-            android:isScrollContainer="true"
-            android:textAlignment="textEnd"/>
+            android:hint="@string/add_degree"
+            android:textColor="@color/kent_blue"
+            android:textStyle="bold" />
 
+        <EditText
+            android:id="@+id/add_bio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="7"
+            android:layout_marginBottom="10dp"
+            android:layout_row="9"
+            android:layout_rowSpan="2"
+            android:height="100dp"
+            android:ems="10"
+            android:hint="@string/add_bio"
+            android:textColor="@color/kent_blue"
+            android:textStyle="bold" />
 
     </GridLayout>
-    android:onClick="btnMap_OnClick" />
 </RelativeLayout>

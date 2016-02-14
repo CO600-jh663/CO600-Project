@@ -3,25 +3,164 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView android:id="@+id/news_scroll" android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ScrollView
+        android:id="@+id/news_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false">
 
         <TabHost
+            android:id="@+id/tabHost"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:id="@+id/tabHost"
-            android:layout_gravity="left|center_vertical">
+            android:layout_gravity="center|top">
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="vertical">
 
+                <TextView
+                    android:id="@+id/divide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_columnSpan="7"
+                    android:layout_margin="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_row="2"
+                    android:height="3dp"
+                    android:background="@android:color/darker_gray" />
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_columnSpan="7"
+                    android:layout_row="3"
+                    android:layout_rowSpan="1"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:scrollbars="none">
+
+                        <TextView
+                            android:id="@+id/profile_hyp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="15dp"
+                            android:width="50dp"
+                            android:ems="10"
+                            android:text="@string/profile" />
+
+
+                        <TextView
+                            android:id="@+id/friends_hyp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="15dp"
+                            android:width="50dp"
+                            android:ems="10"
+                            android:text="@string/fiends" />
+
+
+                        <TextView
+                            android:id="@+id/map_hyp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="15dp"
+                            android:width="35dp"
+                            android:ems="10"
+                            android:text="@string/btnMap" />
+
+                        <TextView
+                            android:id="@+id/societies_hyp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="15dp"
+                            android:width="60dp"
+                            android:ems="10"
+                            android:text="@string/social" />
+
+                        <TextView
+                            android:id="@+id/video_hyp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="15dp"
+                            android:width="45dp"
+                            android:ems="10"
+                            android:text="@string/video" />
+
+                        <TextView
+                            android:id="@+id/photos_hyp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="15dp"
+                            android:width="50dp"
+                            android:ems="10"
+                            android:text="@string/photo" />
+
+                        <TextView
+                            android:id="@+id/directory_hyp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="15dp"
+                            android:width="60dp"
+                            android:ems="10"
+                            android:text="@string/directory" />
+
+
+                        <TextView
+                            android:id="@+id/settings_hyp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="15dp"
+                            android:width="60dp"
+                            android:ems="10"
+                            android:text="@string/settings" />
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/divide2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_columnSpan="7"
+                    android:layout_margin="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_row="4"
+                    android:height="3dp"
+                    android:background="@android:color/darker_gray" />
+
                 <TabWidget
                     android:id="@android:id/tabs"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content">
-                </TabWidget>
+                    android:layout_height="wrap_content"></TabWidget>
 
                 <FrameLayout
                     android:id="@android:id/tabcontent"
@@ -29,74 +168,76 @@
                     android:layout_height="fill_parent">
 
                     <GridLayout
+                        android:id="@+id/newsTab"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:rowCount="6">
 
                         <TextView
+                            android:id="@+id/menu"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:text="@string/menu"
-                            android:id="@+id/menu"
-                            android:layout_row="0"
                             android:layout_column="0"
-                            android:clickable="true"/>
+                            android:layout_row="0"
+                            android:clickable="true"
+                            android:text="@string/menu"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <TextView
+                            android:id="@+id/newsTitle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:text="news"
-                            android:id="@+id/newsTitle"
-                            android:layout_row="1"
                             android:layout_column="0"
-                            android:layout_marginTop="10dp"/>
+                            android:layout_marginTop="10dp"
+                            android:layout_row="1"
+                            android:text="@string/news_feed_title"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <EditText
+                            android:id="@+id/newsFeed"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/newsFeed"
-                            android:layout_row="2"
                             android:layout_column="0"
                             android:layout_columnSpan="1"
-                            android:text="@string/news_feed"/>
+                            android:layout_row="2"
+                            android:text="@string/news_feed" />
 
                         <TextView
+                            android:id="@+id/divider"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/divide"
-                            android:background="@android:color/darker_gray"
-                            android:height="3dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:layout_row="3"
                             android:layout_column="0"
-                            android:layout_columnSpan="1"/>
+                            android:layout_columnSpan="1"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_row="3"
+                            android:height="3dp"
+                            android:background="@android:color/darker_gray" />
                     </GridLayout>
 
                     <GridLayout
+                        android:id="@+id/eventsTab"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:rowCount="6">
 
                         <TextView
+                            android:id="@+id/eventsTitle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:text="Events"
-                            android:id="@+id/eventsTitle"
-                            android:layout_row="4"
                             android:layout_column="0"
-                            android:layout_marginTop="15dp"/>
+                            android:layout_marginTop="15dp"
+                            android:layout_row="4"
+                            android:text="Events"
+                            android:textAppearance="?android:attr/textAppearanceLarge" />
 
                         <EditText
+                            android:id="@+id/eventsFeed"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/eventsFeed"
-                            android:layout_row="5"
                             android:layout_column="0"
                             android:layout_columnSpan="1"
+                            android:layout_row="5"
                             android:text="@string/event_feed" />
 
 

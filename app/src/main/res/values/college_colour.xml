@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/house_colour_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="8dp"
+        android:layout_column="1"
+        android:layout_columnSpan="7"
+        android:layout_row="0"
+        android:background="@color/kent_gold"
+        android:layout_margin="2dp"
+        android:layout_marginBottom="5dp"/>
+
+
+    <TextView
+        android:id="@+id/house_colour_elliot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="8dp"
+        android:layout_column="1"
+        android:layout_columnSpan="7"
+        android:layout_row="0"
+        android:background="@color/kent_blue"
+        android:layout_margin="2dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/house_colour_keyens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="8dp"
+        android:layout_column="1"
+        android:layout_columnSpan="7"
+        android:layout_row="0"
+        android:background="@color/kent_green"
+        android:layout_margin="2dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/house_colour_darwin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="8dp"
+        android:layout_column="1"
+        android:layout_columnSpan="7"
+        android:layout_row="0"
+        android:background="@color/kent_red"
+        android:layout_margin="2dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/house_colour_wolfe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="8dp"
+        android:layout_column="1"
+        android:layout_columnSpan="7"
+        android:layout_row="0"
+        android:background="@color/kent_purple"
+        android:layout_margin="2dp"
+        android:layout_marginBottom="5dp"/>
+
+
+
+
+</resources>

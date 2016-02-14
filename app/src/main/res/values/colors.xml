@@ -3,4 +3,21 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!-- Colours -->
+    <color name="kent_forest_green">#133520</color>
+    <color name="kent_green">#AFBD20</color>
+    <color name="kent_bright_blue">#2ABED9</color>
+    <color name="kent_blue">#05345C</color>
+    <color name="kent_gold">#937227</color>
+    <color name="kent_red">#671115</color>
+    <color name="kent_bright_purple">#C0A6BD</color>
+    <color name="kent_purple">#5E2750</color>
+    <color name="kent_peach">#DE5433</color>
+    <color name="kent_warm_grey">#f5f5f5</color>
+    <color name="kent_grey">#3F3F38</color>
+    <color name="kent_undergraduate_blue">#9CA1BD</color>
+    <color name="kent_translucent">#f1f1f1</color>
+    <color name="kent_translucent_complete">#4D</color>
+    <color name="kent_light_grey">#F5F5F5</color>
 </resources>
