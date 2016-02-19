@@ -14,16 +14,15 @@
         android:id="@+id/gridLayout"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/gridLayout"
         android:rowCount="9"
         android:columnCount="9"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+        <!--
         android:columnCount="8"
         android:rowCount="11">
-
+        -->
 
         <TextView
             android:id="@+id/house_colour"
@@ -252,18 +251,20 @@
             android:layout_columnSpan="7"
             android:layout_marginBottom="10dp"
             android:layout_row="6"
-            android:layout_column="4"
-            android:layout_columnSpan="3"
+
             android:layout_rowSpan="3"
             android:width="180dp"
-            android:height="245dp"
-            android:layout_marginBottom="10dp"/>
+            android:height="245dp"/>
+            <!--
+            android:layout_column="4"
+            android:layout_columnSpan="3"
+            -->
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btnMoodle"
-            android:text="@string/btnMoodle"
+            android:text="@string/moodle"
             android:layout_row="8"
             android:layout_column="1"
             android:layout_marginStart="10dp"/>
@@ -281,7 +282,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btnSDS"
+            android:text="@string/sds"
             android:id="@+id/btnSDS"
             android:layout_row="8"
             android:layout_column="6"

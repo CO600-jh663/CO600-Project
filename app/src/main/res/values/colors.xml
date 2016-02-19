@@ -18,6 +18,6 @@
     <color name="kent_grey">#3F3F38</color>
     <color name="kent_undergraduate_blue">#9CA1BD</color>
     <color name="kent_translucent">#f1f1f1</color>
-    <color name="kent_translucent_complete">#4D</color>
+    <color name="kent_translucent_complete">#FFFFFF</color>
     <color name="kent_light_grey">#F5F5F5</color>
 </resources>
