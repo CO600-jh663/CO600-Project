@@ -45,21 +45,6 @@
 
 
             <TextView
-                android:id="@+id/subtitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginBottom="88dp"
-                android:layout_marginStart="120dp"
-                android:layout_marginTop="2dp"
-                android:text="@string/subtitle"
-                android:textAlignment="center"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/kent_blue"
-                android:textSize="15sp" />
-
-
-            <TextView
                 android:id="@+id/divide"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -72,6 +57,7 @@
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
 
                 <AutoCompleteTextView
                     android:id="@+id/email"
@@ -148,4 +134,17 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="2dp"
+        android:text="@string/subtitle"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/kent_blue"
+        android:textSize="15sp" />
 </LinearLayout>

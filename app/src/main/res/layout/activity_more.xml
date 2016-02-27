@@ -61,43 +61,40 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/home_hyp"
+                    android:id="@+id/news_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
-                    android:layout_marginStart="-155dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="15dp"
                     android:width="40dp"
                     android:ems="10"
-                    android:text="@string/home"
-                    android:textStyle="bold" />
+                    android:text="@string/news" />
 
                 <TextView
-                    android:id="@+id/profile_hyp"
+                    android:id="@+id/calendar_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="15dp"
-                    android:width="42dp"
+                    android:width="55dp"
                     android:ems="10"
-                    android:text="@string/profile" />
-
+                    android:text="@string/calendar" />
 
                 <TextView
-                    android:id="@+id/friends_hyp"
+                    android:id="@+id/social_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="15dp"
-                    android:width="46dp"
+                    android:width="40dp"
                     android:ems="10"
-                    android:text="@string/friends" />
-
+                    android:text="@string/social" />
 
                 <TextView
-                    android:id="@+id/map_hyp"
+                    android:id="@+id/map_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
@@ -107,55 +104,9 @@
                     android:ems="10"
                     android:text="@string/btnMap" />
 
-                <TextView
-                    android:id="@+id/social_hyp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="1dp"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="15dp"
-                    android:width="40dp"
-                    android:ems="10"
-                    android:text="@string/social"
-                    />
 
                 <TextView
-                    android:id="@+id/video_hyp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="1dp"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="15dp"
-                    android:width="43dp"
-                    android:ems="10"
-                    android:text="@string/video" />
-
-                <TextView
-                    android:id="@+id/photos_hyp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="1dp"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="15dp"
-                    android:width="48dp"
-                    android:ems="10"
-                    android:text="@string/photo" />
-
-                <TextView
-                    android:id="@+id/directory_hyp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="1dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="15dp"
-                    android:width="60dp"
-                    android:ems="10"
-                    android:text="@string/directory"
-                    />
-
-
-                <TextView
-                    android:id="@+id/settings_hyp"
+                    android:id="@+id/more_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
@@ -186,151 +137,218 @@
             android:background="@android:color/darker_gray" />
 
         <TextView
-            android:id="@+id/official_kent_hyp"
-            android:layout_width="match_parent"
+            android:id="@+id/profile_sub_link"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="0"
-            android:layout_columnSpan="7"
+            android:layout_columnSpan="5"
             android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
             android:layout_row="6"
             android:layout_rowSpan="1"
             android:ems="10"
-            android:text="@string/official_kent"
-            android:isScrollContainer="true"
-            android:textAlignment="textEnd"/>
+            android:text="@string/profile"
+            android:textSize="22sp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/kent_blue"/>
+
+        <ImageView
+            android:id="@+id/profileimg"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:layout_column="5"
+            android:layout_row="6"
+            android:layout_columnSpan="2"
+            android:src="@drawable/man_icon_hi"
+            android:layout_marginTop="10dp"/>
 
         <TextView
-            android:id="@+id/ku_hyp"
+            android:id="@+id/divide3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="7"
+            android:layout_margin="2dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="40dp"
+            android:layout_row="6"
+            android:height="3dp"
+            android:background="@color/common_action_bar_splitter" />
+
+        <TextView
+            android:id="@+id/friends_sub_link"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_columnSpan="7"
             android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
             android:layout_row="7"
-            android:text="@string/kent_union"
             android:layout_rowSpan="1"
             android:ems="10"
-            android:isScrollContainer="true"
-            android:textAlignment="textEnd"/>
+            android:text="@string/friends"
+            android:textSize="22sp"
+            android:textColor="@color/kent_blue"/>
+
+
+        <ImageView
+            android:id="@+id/friends_img"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_column="5"
+            android:layout_row="7"
+            android:layout_columnSpan="2"
+            android:src="@drawable/people_icon" />
 
         <TextView
-            android:id="@+id/moodle_hyp"
+            android:id="@+id/divide4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="7"
+            android:layout_margin="2dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="40dp"
+            android:layout_row="7"
+            android:height="3dp"
+            android:background="@color/common_action_bar_splitter" />
+
+
+        <TextView
+            android:id="@+id/kent_union_sub_link"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_columnSpan="7"
             android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
             android:layout_row="8"
-            android:text="@string/moodle"
             android:layout_rowSpan="1"
             android:ems="10"
-            android:isScrollContainer="true"
-            android:textAlignment="textEnd"/>
+            android:text="@string/kent_union"
+            android:textSize="22sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/kent_blue"/>
+
+        <ImageView
+            android:id="@+id/ku_img"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_column="5"
+            android:layout_row="8"
+            android:layout_columnSpan="2"
+            android:src="@drawable/ku_icon" />
 
         <TextView
-            android:id="@+id/sds_hyp"
+            android:id="@+id/divide5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="7"
+            android:layout_margin="2dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="40dp"
+            android:layout_row="8"
+            android:height="3dp"
+            android:background="@color/common_action_bar_splitter" />
+
+        <TextView
+            android:id="@+id/media_sub_link"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_columnSpan="7"
             android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
             android:layout_row="9"
-            android:text="@string/sds"
             android:layout_rowSpan="1"
             android:ems="10"
-            android:isScrollContainer="true"
-            android:textAlignment="textEnd"/>
+            android:text="@string/media"
+            android:textSize="22sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/kent_blue"/>
+
+        <ImageView
+            android:id="@+id/media_img"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_column="5"
+            android:layout_row="9"
+            android:layout_columnSpan="2"
+            android:src="@drawable/media_icon3" />
 
         <TextView
-            android:id="@+id/facebook_hyp"
+            android:id="@+id/divide6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="7"
+            android:layout_margin="2dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="40dp"
+            android:layout_row="9"
+            android:height="3dp"
+            android:background="@color/common_action_bar_splitter" />
+
+        <TextView
+            android:id="@+id/directory_sub_link"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_columnSpan="7"
             android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
             android:layout_row="10"
-            android:text="@string/facebook"
+            android:layout_rowSpan="1"
             android:ems="10"
-            android:isScrollContainer="true"
-            android:textAlignment="textEnd"/>
+            android:text="@string/directory"
+            android:textSize="22sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/kent_blue"/>
+
+        <ImageView
+            android:id="@+id/directory_img"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_column="5"
+            android:layout_row="10"
+            android:layout_columnSpan="2"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/directory_icon2" />
+
 
         <TextView
-            android:id="@+id/instagram_hyp"
+            android:id="@+id/divide7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_columnSpan="7"
+            android:layout_margin="2dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="40dp"
+            android:layout_row="10"
+            android:height="3dp"
+            android:background="@color/common_action_bar_splitter" />
+
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="7"
             android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
             android:layout_row="11"
-            android:text="@string/instagram"
             android:ems="10"
-            android:isScrollContainer="true"
-            android:textAlignment="textEnd"/>
+            android:background="@color/kent_blue"
+            android:textColor="#ffffff"
+            android:width="70dp"
+            android:text="@string/logout"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"/>
 
-        <TextView
-            android:id="@+id/twitter_hyp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnSpan="7"
-            android:layout_marginBottom="10dp"
-            android:layout_row="12"
-            android:text="@string/twitter"
-            android:ems="10"
-            android:isScrollContainer="true"
-            android:textAlignment="textEnd"/>
-
-        <TextView
-            android:id="@+id/googleplus_hyp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnSpan="7"
-            android:layout_marginBottom="10dp"
-            android:layout_row="13"
-            android:text="@string/googleplus"
-            android:ems="10"
-            android:isScrollContainer="true"
-            android:textAlignment="textEnd"/>
-
-        <TextView
-            android:id="@+id/flickr_hyp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnSpan="7"
-            android:layout_marginBottom="10dp"
-            android:layout_row="14"
-            android:text="@string/flickr"
-            android:ems="10"
-            android:isScrollContainer="true"
-            android:textAlignment="textEnd"/>
-
-        <TextView
-            android:id="@+id/timetable_hyp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnSpan="7"
-            android:layout_marginBottom="10dp"
-            android:layout_row="15"
-            android:text="@string/timetable"
-            android:ems="10"
-            android:isScrollContainer="true"
-            android:textAlignment="textEnd"/>
-
-        <TextView
-            android:id="@+id/lib_search_hyp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnSpan="7"
-            android:layout_marginBottom="10dp"
-            android:layout_row="16"
-            android:text="@string/lib_search"
-            android:ems="10"
-            android:isScrollContainer="true"
-            android:textAlignment="textEnd"/>
     </GridLayout>
 
 </RelativeLayout>

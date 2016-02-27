@@ -282,7 +282,8 @@
     <string name="flickr">Flickr</string>
     <string name="lib_search">Library Search</string>
 
-    <string name="logout">logout</string>
+    <string name="media">Media</string>
+    <string name="logout">Log Out</string>
 
 
 

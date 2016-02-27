@@ -43,14 +43,29 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".CampusMap" />
-        <activity android:name=".Splash">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+
+        <activity android:name=".Splash" >
+
+
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+
+        <activity android:name=".GettingStarted" />
+
+        <activity android:name=".CampusMap" />
+
+
+        <activity android:name=".ProfileHome" />
+
+        <activity android:name=".More"/>
+
+        <activity android:name=".Directory" />
+
         <activity android:name=".SDS" />
         <activity android:name=".Moodle"></activity>
     </application>

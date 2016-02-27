@@ -16,9 +16,9 @@ public class ProfileHome extends AppCompatActivity
         @Override
         protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_menu);
+        setContentView(R.layout.activity_news_feed);
 
-        final Button btnMap = (Button) findViewById(R.id.btnMap);
+        final Button btnMap = (Button) findViewById(R.id.map_hyp);
         btnMap.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(ProfileHome.this, CampusMap.class);
