@@ -192,6 +192,13 @@
     <string name="sds">SDS</string>
     <string name="timetable">Timetable</string>
 
+    <string name="user_full_name">Name</string>
+    <string name="calender">Calender</string>
+    <string name="societies">Societies</string>
+    <string name="Moodle">Moodle</string>
+    <string name="Map">Map</string>
+    <string name="SDS">SDS</string>
+
     <!-- Field  Contents -->
     <string name="add_bio">+Add Bio/Your Interests and More</string>
     <string name="add_degree">+Add Degree</string>
