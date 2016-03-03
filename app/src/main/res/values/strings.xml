@@ -6,6 +6,7 @@
     <string name="subtitle">The UK\'s European university</string>
     <string name="username">Enter username</string>
     <string name="password">Enter password</string>
+    <string name="gta">Go To Article</string>
     <string name="login">Login ></string>
     <string name="redeemPassword">Forgot your password</string>
     <string name="prompt_email">Email</string>
@@ -19,6 +20,7 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <!-- GIT -->
     <string name="title_activity_news_feed">NewsFeed</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
