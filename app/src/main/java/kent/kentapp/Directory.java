@@ -1,9 +1,11 @@
 package kent.kentapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ExpandableListView;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.util.*;
@@ -22,7 +24,7 @@ public class Directory extends Activity {
 
         expandableListView = (ExpandableListView) findViewById(R.id.directory_list);
         optionsHashMap = DataProvider.getDataHashMap();
-        optionsHashMapKeys = new ArrayList<String>(optionsHashMap.keySet());
+        optionsHashMapKeys = new ArrayList<>(optionsHashMap.keySet());
 
         adapter = new DirectoryAdapter(this, optionsHashMap, optionsHashMapKeys);
         expandableListView.setAdapter(adapter);
@@ -51,5 +53,51 @@ public class Directory extends Activity {
                 return false;
             }
         });
+
+        final ImageButton newsBtn = (ImageButton) findViewById(R.id.newsBtn);
+        newsBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(Directory.this, News.class);
+                startActivity(intent);
+                //finish();
+            }
+        });
+
+        final ImageButton calendarBtn = (ImageButton) findViewById(R.id.calendarBtn);
+        calendarBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(Directory.this, Calendar.class);
+                startActivity(intent);
+                //finish();
+            }
+        });
+
+        final ImageButton socialBtn = (ImageButton) findViewById(R.id.socialBtn);
+        socialBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(Directory.this, Social.class);
+                startActivity(intent);
+                //finish();
+            }
+        });
+
+        final ImageButton mapBtn = (ImageButton) findViewById(R.id.mapsBtn);
+        mapBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(Directory.this, CampusMap.class);
+                startActivity(intent);
+                //finish();
+            }
+        });
+
+        final ImageButton moreBtn = (ImageButton) findViewById(R.id.moreBtn);
+        moreBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(Directory.this, More.class);
+                startActivity(intent);
+                //finish();
+            }
+        });
+        
     }
 }

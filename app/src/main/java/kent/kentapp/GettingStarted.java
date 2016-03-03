@@ -3,7 +3,6 @@ package kent.kentapp;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.CheckBox;
 import android.widget.Button;
 import android.widget.Toast;
@@ -31,7 +30,7 @@ public class GettingStarted extends Activity {
         continueButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                Intent proceed = new Intent(GettingStarted.this, MainMenu.class);
+                Intent proceed = new Intent(GettingStarted.this, Profile.class);
 
                 if (it_account_checkbox.isChecked() && fees_checkbox.isChecked() && accommodation_checkbox.isChecked()
                    && immunisation_checkbox.isChecked()) {

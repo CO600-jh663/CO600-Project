@@ -17,4 +17,32 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="page_header">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textColor">@color/kent_blue</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="divide">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_columnSpan">7</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:height">3dp</item>
+    </style>
+
+    <style name="small_user_image">
+    <item name="android:layout_width">55dp</item>
+    <item name="android:layout_height">52dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+</style>
+
+
+
 </resources>

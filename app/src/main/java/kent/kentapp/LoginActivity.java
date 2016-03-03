@@ -31,10 +31,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.common.api.GoogleApiClient;
-
 import java.io.BufferedReader;
 //import java.io.IOException;
 import java.io.InputStreamReader;
@@ -82,7 +78,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         setContentView(R.layout.activity_login);
         // Set up the login form.
 
-        Typeface newCentury = Typeface.createFromAsset(getAssets(), "fonts/newcentury.ttf");
+        Typeface newCentury = Typeface.createFromAsset(getAssets(), "fonts/verdana.ttf");
         TextView myText = (TextView) findViewById(R.id.headingHome);
         myText.setTypeface(newCentury);
 
@@ -397,7 +393,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
 
             if (success) {
-                Intent intent = new Intent(LoginActivity.this, MainMenu.class);
+                Intent intent = new Intent(LoginActivity.this, Profile.class);
                 startActivity(intent);
                 finish();
             } else {

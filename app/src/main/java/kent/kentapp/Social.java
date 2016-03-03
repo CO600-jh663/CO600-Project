@@ -1,22 +1,23 @@
 package kent.kentapp;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.os.Bundle;
 import android.widget.ImageButton;
 
-public class More  extends AppCompatActivity  {
+public class Social extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_more);
+        setContentView(R.layout.activity_social);
 
             final ImageButton newsBtn = (ImageButton) findViewById(R.id.newsBtn);
             newsBtn.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Intent intent = new Intent(More.this, News.class);
+                    Intent intent = new Intent(Social.this, News.class);
                     startActivity(intent);
                     //finish();
                 }
@@ -25,16 +26,7 @@ public class More  extends AppCompatActivity  {
             final ImageButton calendarBtn = (ImageButton) findViewById(R.id.calendarBtn);
             calendarBtn.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Intent intent = new Intent(More.this, Calendar.class);
-                    startActivity(intent);
-                    //finish();
-                }
-            });
-
-            final ImageButton socialBtn = (ImageButton) findViewById(R.id.socialBtn);
-            socialBtn.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Intent intent = new Intent(More.this, Social.class);
+                    Intent intent = new Intent(Social.this, Calendar.class);
                     startActivity(intent);
                     //finish();
                 }
@@ -43,11 +35,23 @@ public class More  extends AppCompatActivity  {
             final ImageButton mapBtn = (ImageButton) findViewById(R.id.mapsBtn);
             mapBtn.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Intent intent = new Intent(More.this, CampusMap.class);
+                    Intent intent = new Intent(Social.this, CampusMap.class);
                     startActivity(intent);
                     //finish();
                 }
             });
 
+            final ImageButton moreBtn = (ImageButton) findViewById(R.id.moreBtn);
+            moreBtn.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Intent intent = new Intent(Social.this, More.class);
+                    startActivity(intent);
+                    //finish();
+                }
+            });
+            
         }
-}
+
+
+    }
+

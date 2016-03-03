@@ -41,7 +41,7 @@
                 android:textAlignment="center"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/kent_blue"
-                android:textSize="40sp"/>
+                android:textSize="38sp"/>
 
 
             <TextView
