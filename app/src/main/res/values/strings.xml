@@ -24,7 +24,7 @@
     <string name="subtitle">The UK\'s European university</string>
     <string name="redeemPassword">Forgot your password</string>
     <!-- Buttons -->
-    <string name="login">Login ></string>
+    <string name="login">Login</string>
 
     <!-- Strings related to activity_getting_started -->
     <string name="getting_started_subtitle">Here is a list of actions you will first need to complete</string>
@@ -71,6 +71,12 @@
 
     <!-- Strings related to activity_friends -->
     <string name="friends_recommendations">Recommendations</string>
+
+    <!-- Strings related to activity_friends_profile -->
+    <string name="friends_profile">Name</string>
+    <string name="add_friend">+Add</string>
+    <string name="remove_friend"></string>
+    <string name="degree"></string>
 
     <!-- Strings related to activity_directory -->
     <string name="medical_centre">Medical Centre</string>

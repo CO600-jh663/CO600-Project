@@ -124,7 +124,7 @@
             android:layout_marginBottom="5dp"
             android:layout_marginTop="2dp"
             android:layout_row="6"
-            android:background="@android:color/darker_gray" />
+            android:background="@color/common_action_bar_splitter" />
 
         <TextView
             android:id="@+id/friend_sub_section"
@@ -162,7 +162,7 @@
         <TextView
             android:id="@+id/divide4"
             style="@style/divide"
-            android:background="@android:color/darker_gray" />
+            android:background="@color/common_action_bar_splitter" />
 
         <LinearLayout
             android:id="@+id/menuBtn"

@@ -31,7 +31,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
             <TextView
                 android:id="@+id/headingHome"
                 android:layout_width="match_parent"
@@ -43,15 +42,23 @@
                 android:textColor="@color/kent_blue"
                 android:textSize="38sp"/>
 
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="88dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/subtitle"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/kent_blue"
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/divide"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:height="3dp"
-                android:background="@android:color/darker_gray"
-                android:text="New Text" />
+                style="@style/divide"
+                android:background="@color/common_action_bar_splitter" />
 
 
             <android.support.design.widget.TextInputLayout
@@ -103,11 +110,11 @@
 
             <Button
                 android:id="@+id/email_sign_in_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
                 android:layout_gravity="start"
                 android:layout_marginStart="45dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="8dp"
                 android:width="80dp"
                 android:background="@color/kent_blue"
                 android:clickable="true"
@@ -135,16 +142,5 @@
         </LinearLayout>
     </ScrollView>
 
-    <TextView
-        android:id="@+id/subtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="88dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="2dp"
-        android:text="@string/subtitle"
-        android:textAlignment="center"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/kent_blue"
-        android:textSize="15sp" />
+
 </LinearLayout>

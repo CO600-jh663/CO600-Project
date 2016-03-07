@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageButton;
  
 public class Calendar extends AppCompatActivity {
@@ -12,6 +14,14 @@ public class Calendar extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_calendar);
+
+
+            WebView webView = (WebView) findViewById(R.id.web_view);
+            webView.setWebViewClient(new MyWebViewClient());
+
+            String url = "https://www.kent.ac.uk/student/my-study/";
+            webView.getSettings().setJavaScriptEnabled(true);
+            webView.loadUrl(url);
 
             final ImageButton socialBtn = (ImageButton) findViewById(R.id.socialBtn);
             socialBtn.setOnClickListener(new View.OnClickListener() {
@@ -39,6 +49,13 @@ public class Calendar extends AppCompatActivity {
                     //finish();
                 }
             });
-
         }
+
+    private class MyWebViewClient extends WebViewClient {
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            view.loadUrl(url);
+            return true;
+        }
+    }
 }

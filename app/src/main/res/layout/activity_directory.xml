@@ -65,7 +65,7 @@
         <TextView
             android:id="@+id/divide4"
             style="@style/divide"
-            android:background="@android:color/darker_gray" />
+            android:background="@color/common_action_bar_splitter" />
 
         <LinearLayout
             android:id="@+id/menuBtn"
