@@ -336,7 +336,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }*/
 
             String username = mEmail.substring(0, mEmail.length() - 11);
-            String urlString = "http://raptor.kent.ac.uk/proj/co600/project/c26_fresher/KSAPP_db_login.php?username=" + username;
+            String urlString = "https://raptor.kent.ac.uk/proj/co600/project/c26_fresher/KSAPP_db_login.php?username=" + username;
             URL url;
             try {
                 url = new URL(urlString);
