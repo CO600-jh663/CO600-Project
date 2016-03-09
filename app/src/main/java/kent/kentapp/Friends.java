@@ -11,7 +11,7 @@ public class Friends extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calendar);
+        setContentView(R.layout.activity_friends);
 
 
         final ImageButton newsBtn = (ImageButton) findViewById(R.id.newsBtn);
