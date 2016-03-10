@@ -71,12 +71,13 @@ public class Profile extends AppCompatActivity {
             }
         });
 
-        profilePicture.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+        profilePicture.setOnLongClickListener(new View.OnLongClickListener() {
+            public boolean onLongClick(View v) {
                 Intent intent = new Intent(
                         Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 
                 startActivityForResult(intent, RESULT_LOAD_IMAGE);
+                return true;
             }
         });
 
