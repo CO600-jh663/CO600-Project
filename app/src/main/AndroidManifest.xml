@@ -73,7 +73,11 @@
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         <uses-permission android:name="android.permission.INTERNET"></uses-permission>
         <activity android:name=".SDS" />
-        <activity android:name=".Moodle"></activity>
+        <activity android:name=".Moodle" />
+        <activity android:name=".SAMLTest"></activity>
+        <activity android:name=".Calendar"></activity>
+        <activity android:name=".News"></activity>
+        <activity android:name=".Social"></activity>
     </application>
 
 </manifest>
