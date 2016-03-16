@@ -68,6 +68,7 @@
             android:uiOptions="splitActionBarWhenNarrow"/>
 
         <activity android:name=".Friends" />
+        <activity android:name=".Calendar"/>
 
         <uses-permission android:name="android.permission.CAMERA"></uses-permission>
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

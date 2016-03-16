@@ -1,27 +1,66 @@
 package kent.kentapp;
-
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageButton;
- 
-public class Calendar extends AppCompatActivity {
+import android.widget.TextView;
+import android.util.Log;
+import android.os.Bundle;
 
-        @Override
+import com.sothree.slidinguppanel.SlidingUpPanelLayout;
+
+@SuppressLint("SetJavaScriptEnabled")
+public class Calendar extends AppCompatActivity {
+    private static final String TAG = "Calender";
+
+
+    private SlidingUpPanelLayout slidingLayout;
+    private WebView webView_content;
+
+    @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_calendar);
+        slidingLayout = (SlidingUpPanelLayout)findViewById(R.id.sliding_layout);
+        slidingLayout.addPanelSlideListener(new SlidingUpPanelLayout.PanelSlideListener() {
+            @Override
+            public void onPanelSlide(View panel, float slideOffset) {
+                Log.i(TAG, "onPanelSlide, offset " + slideOffset);
+            }
+
+            @Override
+            public void onPanelStateChanged(View panel, SlidingUpPanelLayout.PanelState previousState, SlidingUpPanelLayout.PanelState newState) {
+                Log.i(TAG, "onPanelStateChanged " + newState);
+            }
+        });
+
+        slidingLayout.setFadeOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                slidingLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
+            }
+        });
+
+        TextView textView_events = (TextView) findViewById(R.id.textView_events);
+        textView_events.setText(Html.fromHtml(getString(R.string.events)));
 
 
-            WebView webView = (WebView) findViewById(R.id.web_view);
-            webView.setWebViewClient(new MyWebViewClient());
 
-            String url = "https://www.kent.ac.uk/student/my-study/";
-            webView.getSettings().setJavaScriptEnabled(true);
-            webView.loadUrl(url);
+        webView_content = (WebView) findViewById(R.id.webView_content);
+        webView_content.setWebViewClient(new MyWebViewClient());
+
+
+        String url = "https://www.kent.ac.uk/student/my-study/";
+        webView_content.loadUrl(url);
+
+            //set layout slide listener
+
 
             final ImageButton socialBtn = (ImageButton) findViewById(R.id.socialBtn);
             socialBtn.setOnClickListener(new View.OnClickListener() {
@@ -53,9 +92,20 @@ public class Calendar extends AppCompatActivity {
 
     private class MyWebViewClient extends WebViewClient {
         @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            view.loadUrl(url);
+        public boolean shouldOverrideUrlLoading(WebView view1, String url) {
+            view1.loadUrl(url);
             return true;
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        if (slidingLayout != null &&
+                (slidingLayout.getPanelState() == SlidingUpPanelLayout.PanelState.EXPANDED || slidingLayout.getPanelState() == SlidingUpPanelLayout.PanelState.ANCHORED)) {
+            slidingLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
 }

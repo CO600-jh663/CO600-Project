@@ -109,7 +109,7 @@
                 android:id="@+id/newsBtn"
                 android:layout_width="48dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="17dp"
+                android:layout_marginStart="12dp"
                 android:background="@drawable/news_icon"
                 android:contentDescription="@string/news" />
 

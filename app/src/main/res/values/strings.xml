@@ -55,6 +55,9 @@
     <string name="interests">Your Interests Suggest</string>
     <string name="complete_list">Complete List</string>
     <string name="services">Services</string>
+    <string name="events">Events</string>
+    <string name="calender">Calender</string>
+
 
     <!-- Strings related to activity_more -->
 

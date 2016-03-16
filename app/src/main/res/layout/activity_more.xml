@@ -288,7 +288,7 @@
                 android:layout_height="54dip"
                 android:contentDescription="@string/news"
                 android:background="@drawable/news_icon"
-                android:layout_marginStart="17dp"/>
+                android:layout_marginStart="12dp"/>
 
             <ImageButton
                 android:id="@+id/calendarBtn"
