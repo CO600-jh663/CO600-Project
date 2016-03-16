@@ -16,7 +16,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {
+            debuggable true
+        }
     }
+
     dexOptions {
         javaMaxHeapSize "4g"
     }
@@ -28,6 +32,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.android.support:design:23.0.1'
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
-    compile 'com.sothree.slidinguppanel:library:3.3.0' //calender slide panel dependency
-
+    compile 'com.sothree.slidinguppanel:library:3.3.0'
+    provided fileTree(dir: 'libs', include: ['*.jar'])
+    //compile 'org.springframework.security.extensions:spring-security-saml2-core:1.0.1.RELEASE'
 }

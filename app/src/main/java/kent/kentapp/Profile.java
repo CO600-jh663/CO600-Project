@@ -17,7 +17,7 @@ import android.provider.MediaStore;
 public class Profile extends AppCompatActivity {
 
 
-    ImageButton profilePicture = (ImageButton) findViewById(R.id.profile_picture);
+    ImageButton profilePicture; //= (ImageButton) findViewById(R.id.profile_picture);
     private static int RESULT_LOAD_IMAGE = 1;
 
 
@@ -26,6 +26,7 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        profilePicture = (ImageButton) findViewById(R.id.profile_picture);
         final ImageButton newsBtn = (ImageButton) findViewById(R.id.newsBtn);
         newsBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -87,6 +88,7 @@ public class Profile extends AppCompatActivity {
                 Intent intent = new Intent(Profile.this, SDS.class);
                 startActivity(intent);
                 //finish();
+
             }
         });
 
