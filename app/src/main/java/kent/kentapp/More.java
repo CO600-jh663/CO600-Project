@@ -9,6 +9,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -26,6 +28,61 @@ public class More  extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_more);
+
+        final TextView profileText = (TextView) findViewById(R.id.profile_sub_link);
+        final ImageView profileImage = (ImageView) findViewById(R.id.profileimg);
+        View.OnClickListener profileOnClickListener = new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(More.this, Profile.class);
+                startActivity(intent);
+            }
+        };
+        profileText.setOnClickListener(profileOnClickListener);
+        profileImage.setOnClickListener(profileOnClickListener);
+
+        final TextView friendsText = (TextView) findViewById(R.id.friends_sub_link);
+        final ImageView friendsImage = (ImageView) findViewById(R.id.friends_img);
+        View.OnClickListener friendsOnClickListener = new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(More.this, Friends.class);
+                startActivity(intent);
+            }
+        };
+        friendsText.setOnClickListener(friendsOnClickListener);
+        friendsImage.setOnClickListener(friendsOnClickListener);
+
+        final TextView unionText = (TextView) findViewById(R.id.kent_union_sub_link);
+        final ImageView unionImage = (ImageView) findViewById(R.id.ku_img);
+        View.OnClickListener unionOnClickListener = new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(More.this, KentUnion.class);
+                startActivity(intent);
+            }
+        };
+        unionText.setOnClickListener(unionOnClickListener);
+        unionImage.setOnClickListener(unionOnClickListener);
+
+        final TextView mediaText = (TextView) findViewById(R.id.media_sub_link);
+        final ImageView mediaImage = (ImageView) findViewById(R.id.media_img);
+        View.OnClickListener mediaOnClickListener = new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(More.this, Media.class);
+                startActivity(intent);
+            }
+        };
+        mediaText.setOnClickListener(mediaOnClickListener);
+        mediaImage.setOnClickListener(mediaOnClickListener);
+
+        final TextView directoryText = (TextView) findViewById(R.id.directory_sub_link);
+        final ImageView directoryImage = (ImageView) findViewById(R.id.directory_img);
+        View.OnClickListener directoryOnClickListener = new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(More.this, Directory.class);
+                startActivity(intent);
+            }
+        };
+        directoryText.setOnClickListener(directoryOnClickListener);
+        directoryImage.setOnClickListener(directoryOnClickListener);
 
         final ImageButton newsBtn = (ImageButton) findViewById(R.id.newsBtn);
         newsBtn.setOnClickListener(new View.OnClickListener() {
