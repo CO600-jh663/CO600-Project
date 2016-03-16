@@ -88,6 +88,7 @@ public class Profile extends AppCompatActivity {
                 Intent intent = new Intent(Profile.this, SDS.class);
                 startActivity(intent);
                 //finish();
+
             }
         });
 

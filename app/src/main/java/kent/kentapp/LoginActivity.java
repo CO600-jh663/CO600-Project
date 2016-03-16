@@ -43,6 +43,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+import javax.net.ssl.HttpsURLConnection;
+
 import static android.Manifest.permission.READ_CONTACTS;
 
 /**
@@ -344,10 +346,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 System.out.println("Error fetching user data: " + e);
                 return false;
             }
-            HttpURLConnection urlConnection;
+            HttpsURLConnection urlConnection;
             ArrayList response = new ArrayList();
             try {
-                urlConnection = (HttpURLConnection) url.openConnection();
+                urlConnection = (HttpsURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("GET");
                 //urlConnection.setRequestProperty("username", username);
 

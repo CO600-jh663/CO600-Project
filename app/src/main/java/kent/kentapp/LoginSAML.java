@@ -6,12 +6,12 @@ import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class SAMLTest extends AppCompatActivity {
+public class LoginSAML extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_samltest);
+        //setContentView(R.layout.activity_loginsaml);
         WebView webview = new WebView(this);
         setContentView(webview);
         webview.setWebViewClient(new WebViewClient() {
@@ -19,8 +19,10 @@ public class SAMLTest extends AppCompatActivity {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 System.out.println(url);
                 if(url.equalsIgnoreCase("https://raptor.kent.ac.uk/proj/co600/project/c26_fresher/simplesaml/module.php/core/authenticate.php?as=default-sp")) {
-                    Intent intent = new Intent(SAMLTest.this, Profile.class);
+                    Intent intent = new Intent(LoginSAML.this, Profile.class);
                     startActivity(intent);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    finish();
                 }
                 return false;
             }
