@@ -1,24 +1,11 @@
 package kent.kentapp;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.os.Bundle;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.Button;
 import android.widget.ImageButton;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.ArrayList;
-
-import javax.net.ssl.HttpsURLConnection;
+import android.widget.TextView;
 
 public class More  extends AppCompatActivity  {
 
@@ -63,30 +50,40 @@ public class More  extends AppCompatActivity  {
             }
         });
 
-        final Button logoutBtn = (Button) findViewById(R.id.logoutBtn);
-        logoutBtn.setOnClickListener(new View.OnClickListener() {
+        final TextView profileBtn= (TextView) findViewById(R.id.profileBtn);
+        profileBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                WebView webview = new WebView(More.this);
-                //setContentView(webview);
-                webview.setWebViewClient(new WebViewClient() {
-                    @Override
-                    public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                        System.out.println(url);
-                        if(url.equalsIgnoreCase("https://raptor.kent.ac.uk/proj/co600/project/c26_fresher/simplesaml/logout.php")) {
-                            Intent intent = new Intent(More.this, LoginSAML.class);
-                            startActivity(intent);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                            finish();
-                        }
-                        return false;
-                    }
-                });
-                webview.getSettings().setJavaScriptEnabled(true);
-                webview.loadUrl("https://raptor.kent.ac.uk/proj/co600/project/c26_fresher/simplesaml/module.php/core/authenticate.php?as=default-sp&logout");
-                System.out.println("ok");
-
+                Intent intent = new Intent(More.this, Profile.class);
+                startActivity(intent);
+                //finish();
             }
         });
 
+        final TextView friendsBtn= (TextView) findViewById(R.id.friendsBtn);
+        friendsBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(More.this, Friends.class);
+                startActivity(intent);
+                //finish();
+            }
+        });
+
+        final TextView mediaBtn= (TextView) findViewById(R.id.mediaBtn);
+        mediaBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(More.this, Media.class);
+                startActivity(intent);
+                //finish();
+            }
+        });
+
+        final TextView directoryBtn= (TextView) findViewById(R.id.directoryBtn);
+        directoryBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(More.this, Directory.class);
+                startActivity(intent);
+                //finish();
+            }
+        });
     }
 }

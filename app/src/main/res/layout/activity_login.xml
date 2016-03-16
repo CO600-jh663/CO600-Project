@@ -40,7 +40,7 @@
                 android:textAlignment="center"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/kent_blue"
-                android:textSize="38sp"/>
+                android:textSize="36sp"/>
 
             <TextView
                 android:id="@+id/subtitle"
@@ -110,11 +110,11 @@
 
             <Button
                 android:id="@+id/email_sign_in_button"
-                android:layout_width="65dp"
-                android:layout_height="35dp"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
                 android:layout_gravity="start"
                 android:layout_marginStart="45dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="12dp"
                 android:width="80dp"
                 android:background="@color/kent_blue"
                 android:clickable="true"
