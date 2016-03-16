@@ -15,7 +15,6 @@ import android.os.Bundle;
 
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
-@SuppressLint("SetJavaScriptEnabled")
 public class Calendar extends AppCompatActivity {
     private static final String TAG = "Calender";
 
@@ -47,8 +46,7 @@ public class Calendar extends AppCompatActivity {
             }
         });
 
-        TextView textView_events = (TextView) findViewById(R.id.textView_events);
-        textView_events.setText(Html.fromHtml(getString(R.string.events)));
+
 
 
 
@@ -58,7 +56,7 @@ public class Calendar extends AppCompatActivity {
 
         String url = "https://www.kent.ac.uk/student/my-study/";
         webView_content.loadUrl(url);
-
+        webView_content.getSettings().setJavaScriptEnabled(true);
             //set layout slide listener
 
 

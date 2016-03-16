@@ -43,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="425dp"
             android:gravity="bottom"
-            sothree:umanoPanelHeight="68dp"
+            sothree:umanoPanelHeight="40dp"
             sothree:umanoShadowHeight="4dp"
             android:layout_column="1">
 
@@ -60,7 +60,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="425dp"
                 android:gravity="center|top"
-                android:text="@string/events"
+                android:drawableTop="@drawable/events_menu"
+                android:drawablePadding="5dp"
                 android:textSize="16sp" />
         </com.sothree.slidinguppanel.SlidingUpPanelLayout>
     </GridLayout>
