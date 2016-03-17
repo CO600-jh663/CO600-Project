@@ -6,7 +6,6 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowActionBarOverlay">true</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -42,8 +41,16 @@
         <item name="android:layout_marginBottom">2dp</item>
         <item name="android:layout_marginEnd">10dp</item>
         <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginStart">10dp</item>
 </style>
 
+    <style name="small_user_text">
+        <item name="android:text">@string/friends</item>
+        <item name="android:height">20dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
 
 
 </resources>

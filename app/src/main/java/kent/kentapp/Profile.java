@@ -27,6 +27,7 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         profilePicture = (ImageButton) findViewById(R.id.profile_picture);
+
         final ImageButton newsBtn = (ImageButton) findViewById(R.id.newsBtn);
         newsBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -88,7 +89,6 @@ public class Profile extends AppCompatActivity {
                 Intent intent = new Intent(Profile.this, SDS.class);
                 startActivity(intent);
                 //finish();
-
             }
         });
 
