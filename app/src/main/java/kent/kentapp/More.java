@@ -29,7 +29,7 @@ public class More  extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_more);
 
-        final TextView profileText = (TextView) findViewById(R.id.profileBtn);
+        final TextView profileText = (TextView) findViewById(R.id.profile_sub_link);
         final ImageView profileImage = (ImageView) findViewById(R.id.profileimg);
         View.OnClickListener profileOnClickListener = new View.OnClickListener() {
             public void onClick(View v) {
@@ -40,7 +40,7 @@ public class More  extends AppCompatActivity  {
         profileText.setOnClickListener(profileOnClickListener);
         profileImage.setOnClickListener(profileOnClickListener);
 
-        final TextView friendsText = (TextView) findViewById(R.id.friendsBtn);
+        final TextView friendsText = (TextView) findViewById(R.id.friends_sub_link);
         final ImageView friendsImage = (ImageView) findViewById(R.id.friends_img);
         View.OnClickListener friendsOnClickListener = new View.OnClickListener() {
             public void onClick(View v) {
@@ -51,7 +51,7 @@ public class More  extends AppCompatActivity  {
         friendsText.setOnClickListener(friendsOnClickListener);
         friendsImage.setOnClickListener(friendsOnClickListener);
 
-        final TextView unionText = (TextView) findViewById(R.id.kent_unionBtn);
+        final TextView unionText = (TextView) findViewById(R.id.kent_union_sub_link);
         final ImageView unionImage = (ImageView) findViewById(R.id.ku_img);
         View.OnClickListener unionOnClickListener = new View.OnClickListener() {
             public void onClick(View v) {
@@ -62,7 +62,7 @@ public class More  extends AppCompatActivity  {
         unionText.setOnClickListener(unionOnClickListener);
         unionImage.setOnClickListener(unionOnClickListener);
 
-        final TextView mediaText = (TextView) findViewById(R.id.mediaBtn);
+        final TextView mediaText = (TextView) findViewById(R.id.media_sub_link);
         final ImageView mediaImage = (ImageView) findViewById(R.id.media_img);
         View.OnClickListener mediaOnClickListener = new View.OnClickListener() {
             public void onClick(View v) {
@@ -73,7 +73,7 @@ public class More  extends AppCompatActivity  {
         mediaText.setOnClickListener(mediaOnClickListener);
         mediaImage.setOnClickListener(mediaOnClickListener);
 
-        final TextView directoryText = (TextView) findViewById(R.id.directoryBtn);
+        final TextView directoryText = (TextView) findViewById(R.id.directory_sub_link);
         final ImageView directoryImage = (ImageView) findViewById(R.id.directory_img);
         View.OnClickListener directoryOnClickListener = new View.OnClickListener() {
             public void onClick(View v) {

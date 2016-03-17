@@ -40,7 +40,7 @@
                 android:textAlignment="center"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/kent_blue"
-                android:textSize="36sp"/>
+                android:textSize="38sp"/>
 
             <TextView
                 android:id="@+id/subtitle"
@@ -110,11 +110,11 @@
 
             <Button
                 android:id="@+id/email_sign_in_button"
-                android:layout_width="90dp"
-                android:layout_height="45dp"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
                 android:layout_gravity="start"
-                android:layout_marginStart="35dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="8dp"
                 android:width="80dp"
                 android:background="@color/kent_blue"
                 android:clickable="true"
@@ -126,12 +126,13 @@
 
 
             <TextView
-                android:id="@+id/reset_password"
+                android:id="@+id/ResetPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:clickable="true"
                 android:ems="12"
+
                 android:layout_marginTop="35dp"
                 android:text="@string/redeemPassword"
                 android:textAlignment="center"
