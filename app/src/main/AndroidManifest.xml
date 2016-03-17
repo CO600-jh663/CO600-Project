@@ -44,6 +44,7 @@
         <activity android:name=".Profile"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustResize"
             />
         <!--
              ATTENTION: This was auto-generated to add Google Play services to your project for
@@ -87,25 +88,30 @@
         android:uiOptions="splitActionBarWhenNarrow"
         android:screenOrientation="portrait"
         android:configChanges="keyboardHidden|orientation|screenSize"
+        android:windowSoftInputMode="adjustResize"
         />
 
     <activity android:name=".Friends"
         android:screenOrientation="portrait"
         android:configChanges="keyboardHidden|orientation|screenSize"
+        android:windowSoftInputMode="adjustResize"
         />
 
 
     <activity android:name=".SDS"
         android:screenOrientation="portrait"
         android:configChanges="keyboardHidden|orientation|screenSize"
+        android:windowSoftInputMode="adjustResize"
         />
     <activity android:name=".Moodle"
         android:screenOrientation="portrait"
         android:configChanges="keyboardHidden|orientation|screenSize"
+        android:windowSoftInputMode="adjustResize"
         />
     <activity android:name=".LoginSAML"
         android:screenOrientation="portrait"
         android:configChanges="keyboardHidden|orientation|screenSize"
+        android:windowSoftInputMode="adjustResize"
         >
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
@@ -113,18 +119,22 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
-    <activity android:name=".Calendar"
+
+        <activity android:name=".Calendar"
         android:screenOrientation="portrait"
         android:configChanges="keyboardHidden|orientation|screenSize"
-        ></activity>
+            android:windowSoftInputMode="adjustResize"
+        />
     <activity android:name=".News"
         android:screenOrientation="portrait"
         android:configChanges="keyboardHidden|orientation|screenSize"
-        ></activity>
+        android:windowSoftInputMode="adjustResize"
+        />
     <activity android:name=".Social"
         android:screenOrientation="portrait"
         android:configChanges="keyboardHidden|orientation|screenSize"
-        ></activity>
+        android:windowSoftInputMode="adjustResize"
+        />
 </application>
 
 </manifest>

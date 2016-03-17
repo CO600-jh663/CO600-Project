@@ -38,9 +38,9 @@
             android:layout_height="105dp"
             android:layout_column="0"
             android:layout_columnSpan="2"
-            android:layout_marginBottom="5dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="2dp"
             android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
             android:layout_row="1"
             android:layout_rowSpan="2"
             android:clickable="true"
@@ -53,18 +53,32 @@
             android:layout_height="wrap_content"
             android:layout_column="2"
             android:layout_columnSpan="5"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="12dp"
             android:layout_row="1"
             android:text="@string/friends_profile"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/add_friend"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_column="2"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginStart="4dp"
+            android:layout_row="2"
+            android:clickable="true"
+            android:contentDescription="@string/add_friend"
+            android:src="@drawable/add_friend" />
 
         <TextView
             android:id="@+id/divide"
             style="@style/divide"
             android:layout_column="0"
             android:layout_marginBottom="2dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:layout_row="3"
             android:background="@color/common_action_bar_splitter" />
 
@@ -112,7 +126,7 @@
             android:layout_rowSpan="1"
             android:height="90dp"
             android:ems="10"
-            android:hint="@string/add_bio"
+            android:hint="@string/existing_bio"
             android:textColor="@color/kent_blue"
             android:textStyle="bold" />
 
@@ -162,7 +176,7 @@
                     <ImageButton
                         android:id="@+id/friendBtn"
                         style="@style/small_user_image"
-                        android:layout_marginStart="30dp"
+                        android:layout_marginStart="20dp"
                         android:layout_column="1"
                         android:layout_row="0"
                         android:contentDescription="@string/friends_recommendations"
@@ -172,7 +186,7 @@
                         android:layout_column="1"
                         android:layout_row="1"
                         style="@style/small_user_text"
-                        android:layout_marginStart="30dp"/>
+                        android:layout_marginStart="25dp"/>
 
                     <ImageButton
                         android:id="@+id/society_pic2"
@@ -248,9 +262,10 @@
                 android:id="@+id/newsBtn"
                 android:layout_width="48dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="10dp"
                 android:background="@drawable/news_icon"
-                android:contentDescription="@string/news" />
+                android:contentDescription="@string/news"
+                android:layout_weight="1"/>
 
             <ImageButton
                 android:id="@+id/calendarBtn"
@@ -258,15 +273,8 @@
                 android:layout_height="54dip"
                 android:layout_marginStart="24dp"
                 android:background="@drawable/calendar_icon"
-                android:contentDescription="@string/calendar" />
-
-            <ImageButton
-                android:id="@+id/socialBtn"
-                android:layout_width="54dip"
-                android:layout_height="54dip"
-                android:layout_marginStart="24dp"
-                android:background="@drawable/social_icon2"
-                android:contentDescription="@string/social" />
+                android:contentDescription="@string/calendar"
+                android:layout_weight="1"/>
 
             <ImageButton
                 android:id="@+id/mapsBtn"
@@ -274,7 +282,17 @@
                 android:layout_height="54dip"
                 android:layout_marginStart="24dp"
                 android:background="@drawable/maps_icon"
-                android:contentDescription="@string/maps" />
+                android:contentDescription="@string/maps"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/computerBtn"
+                android:layout_width="41dip"
+                android:layout_height="54dip"
+                android:layout_marginStart="24dp"
+                android:background="@drawable/computer_icon"
+                android:contentDescription="@string/free_computers"
+                android:layout_weight="1"/>
 
             <ImageButton
                 android:id="@+id/moreBtn"
@@ -282,7 +300,8 @@
                 android:layout_height="54dip"
                 android:layout_marginStart="18dp"
                 android:background="@drawable/more_icon"
-                android:contentDescription="@string/more" />
+                android:contentDescription="@string/more"
+                android:layout_weight="1"/>
 
 
         </LinearLayout>

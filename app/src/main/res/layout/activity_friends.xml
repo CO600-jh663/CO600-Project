@@ -76,13 +76,13 @@
                     android:columnCount="8"
                     android:rowCount="2">
 
-                    <ImageButton
-                        android:id="@+id/profile_pic"
+                    <Button
+                        android:id="@+id/recommendedFriendBtn"
                         style="@style/small_user_image"
                         android:layout_column="1"
                         android:layout_row="0"
                         android:contentDescription="@string/friends_recommendations"
-                        android:src="@drawable/avatar2"
+                        android:background="@drawable/avatar2"
                         android:layout_marginStart="30dp"/>
 
                     <TextView
@@ -91,39 +91,39 @@
                         style="@style/small_user_text"
                         android:layout_marginStart="30dp"/>
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/profile_pic2"
                         style="@style/small_user_image"
                         android:layout_column="2"
                         android:layout_row="0"
                         android:contentDescription="@string/friends_recommendations"
-                        android:src="@drawable/avatar2" />
+                        android:background="@drawable/avatar2" />
 
                     <TextView
                         android:layout_column="2"
                         android:layout_row="1"
                         style="@style/small_user_text" />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/profile_pic3"
                         style="@style/small_user_image"
                         android:layout_column="3"
                         android:layout_row="0"
                         android:contentDescription="@string/friends_recommendations"
-                        android:src="@drawable/avatar2" />
+                        android:background="@drawable/avatar2" />
 
                     <TextView
                         android:layout_column="3"
                         android:layout_row="1"
                         style="@style/small_user_text" />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/profile_pic4"
                         style="@style/small_user_image"
                         android:layout_column="4"
                         android:layout_row="0"
                         android:contentDescription="@string/friends_recommendations"
-                        android:src="@drawable/avatar2" />
+                        android:background="@drawable/avatar2" />
 
                     <TextView
                         android:layout_column="4"
@@ -183,13 +183,13 @@
                     android:columnCount="8"
                     android:rowCount="4">
 
-                    <ImageButton
-                        android:id="@+id/society_pic"
+                    <Button
+                        android:id="@+id/friendBtn"
                         style="@style/small_user_image"
                         android:layout_column="1"
                         android:layout_row="0"
                         android:contentDescription="@string/friends_recommendations"
-                        android:src="@drawable/avatar2"
+                        android:background="@drawable/avatar2"
                         android:layout_marginStart="30dp"/>
 
                     <TextView
@@ -198,46 +198,46 @@
                         style="@style/small_user_text"
                         android:layout_marginStart="30dp"/>
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/society_pic2"
                         style="@style/small_user_image"
                         android:layout_column="2"
                         android:layout_row="0"
                         android:contentDescription="@string/friends_recommendations"
-                        android:src="@drawable/avatar2" />
+                        android:background="@drawable/avatar2" />
 
                     <TextView
                         android:layout_column="2"
                         android:layout_row="1"
                         style="@style/small_user_text"/>
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/society_pic3"
                         style="@style/small_user_image"
                         android:layout_column="3"
                         android:layout_row="0"
                         android:contentDescription="@string/friends_recommendations"
-                        android:src="@drawable/avatar2" />
+                        android:background="@drawable/avatar2" />
 
                     <TextView
                         style="@style/small_user_text"
                         android:layout_column="3"
                         android:layout_row="1" />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/society_pic4"
                         style="@style/small_user_image"
                         android:layout_column="4"
                         android:layout_row="0"
                         android:contentDescription="@string/friends_recommendations"
-                        android:src="@drawable/avatar2" />
+                        android:background="@drawable/avatar2" />
 
                     <TextView
                         android:layout_column="4"
                         android:layout_row="1"
                         style="@style/small_user_text"/>
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/society_pic5"
                         style="@style/small_user_image"
                         android:layout_column="1"
@@ -252,7 +252,7 @@
                         style="@style/small_user_text"
                         android:layout_marginStart="30dp"/>
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/society_pic6"
                         style="@style/small_user_image"
                         android:layout_column="2"
@@ -265,7 +265,7 @@
                         android:layout_row="3"
                         style="@style/small_user_text" />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/society_pic7"
                         style="@style/small_user_image"
                         android:layout_column="3"
@@ -278,7 +278,7 @@
                         android:layout_row="3"
                         style="@style/small_user_text" />
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/society_pic8"
                         style="@style/small_user_image"
                         android:layout_column="4"
