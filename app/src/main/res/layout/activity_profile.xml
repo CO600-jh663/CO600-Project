@@ -77,7 +77,7 @@
             style="@style/divide"
             android:layout_column="0"
             android:layout_marginBottom="2dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             android:layout_row="3"
             android:background="@color/common_action_bar_splitter" />
 
@@ -102,13 +102,15 @@
 
         <Button
             android:id="@+id/btnMoodle"
-            android:layout_width="80dp"
-            android:layout_height="40dp"
+            android:layout_width="78dp"
+            android:layout_height="35dp"
             android:layout_column="0"
             android:layout_columnSpan="2"
             android:layout_marginBottom="5dp"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="26dp"
             android:layout_row="5"
+            android:width="29dp"
+            android:height="24dp"
             android:background="@color/kent_blue"
             android:clickable="true"
             android:ems="10"
@@ -120,12 +122,14 @@
         <Button
             android:id="@+id/btnSDS"
             android:layout_width="66dp"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:layout_column="2"
             android:layout_columnSpan="2"
             android:layout_marginBottom="5dp"
             android:layout_marginStart="16dp"
             android:layout_row="5"
+            android:width="29dp"
+            android:height="24dp"
             android:background="@color/kent_blue"
             android:clickable="true"
             android:ems="10"
@@ -137,12 +141,14 @@
         <Button
             android:id="@+id/calendar_button"
             android:layout_width="95dp"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:layout_column="6"
             android:layout_columnSpan="2"
             android:layout_marginBottom="5dp"
             android:layout_marginStart="28dp"
             android:layout_row="5"
+            android:width="29dp"
+            android:height="24dp"
             android:background="@color/kent_blue"
             android:clickable="true"
             android:ems="10"
@@ -224,10 +230,9 @@
                 android:id="@+id/newsBtn"
                 android:layout_width="48dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="17dp"
                 android:background="@drawable/news_icon"
-                android:contentDescription="@string/news"
-                android:layout_weight="1"/>
+                android:contentDescription="@string/news" />
 
             <ImageButton
                 android:id="@+id/calendarBtn"
@@ -235,8 +240,15 @@
                 android:layout_height="54dip"
                 android:layout_marginStart="24dp"
                 android:background="@drawable/calendar_icon"
-                android:contentDescription="@string/calendar"
-                android:layout_weight="1"/>
+                android:contentDescription="@string/calendar" />
+
+            <ImageButton
+                android:id="@+id/socialBtn"
+                android:layout_width="54dip"
+                android:layout_height="54dip"
+                android:layout_marginStart="24dp"
+                android:background="@drawable/social_icon2"
+                android:contentDescription="@string/social" />
 
             <ImageButton
                 android:id="@+id/mapsBtn"
@@ -244,17 +256,7 @@
                 android:layout_height="54dip"
                 android:layout_marginStart="24dp"
                 android:background="@drawable/maps_icon"
-                android:contentDescription="@string/maps"
-                android:layout_weight="1"/>
-
-            <ImageButton
-                android:id="@+id/computerBtn"
-                android:layout_width="41dip"
-                android:layout_height="54dip"
-                android:layout_marginStart="24dp"
-                android:background="@drawable/free_pcs"
-                android:contentDescription="@string/free_computers"
-                android:layout_weight="1"/>
+                android:contentDescription="@string/maps" />
 
             <ImageButton
                 android:id="@+id/moreBtn"
@@ -262,8 +264,9 @@
                 android:layout_height="54dip"
                 android:layout_marginStart="18dp"
                 android:background="@drawable/more_icon"
-                android:contentDescription="@string/more"
-                android:layout_weight="1"/>
+                android:contentDescription="@string/more" />
+
+
         </LinearLayout>
     </TableLayout>
 </RelativeLayout>

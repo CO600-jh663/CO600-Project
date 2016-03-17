@@ -29,7 +29,6 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
@@ -43,6 +42,8 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 
+
+import javax.net.ssl.HttpsURLConnection;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -108,7 +109,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
-
     }
 
     private void populateAutoComplete() {
@@ -346,10 +346,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 System.out.println("Error fetching user data: " + e);
                 return false;
             }
-            HttpURLConnection urlConnection;
+            HttpsURLConnection urlConnection;
             ArrayList response = new ArrayList();
             try {
-                urlConnection = (HttpURLConnection) url.openConnection();
+                urlConnection = (HttpsURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("GET");
                 //urlConnection.setRequestProperty("username", username);
 

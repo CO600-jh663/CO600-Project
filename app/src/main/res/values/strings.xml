@@ -16,8 +16,6 @@
 
     <!-- Buttons related to menu -->
     <string name="btnMap">Maps</string>
-    <string name="free_computers">Free Computers</string>
-
 
     <!-- Strings related to activity_login -->
 
@@ -71,16 +69,15 @@
 
     <string name="add_bio">+Add Bio/Your Interests and More</string>
     <string name="add_degree">+Add Degree</string>
+
+    <!-- Strings related to activity_friends -->
     <string name="friends_recommendations">Recommendations</string>
 
     <!-- Strings related to activity_friends_profile -->
     <string name="friends_profile">Name</string>
-    <string name="add_friend">add friend</string>
+    <string name="add_friend">+Add</string>
     <string name="remove_friend"></string>
     <string name="degree"></string>
-    <string name="existing_bio"></string>
-
-
 
     <!-- Strings related to activity_directory -->
     <string name="medical_centre">Medical Centre</string>
