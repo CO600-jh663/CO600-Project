@@ -1,11 +1,17 @@
 package kent.kentapp;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.*;
@@ -99,5 +105,132 @@ public class Directory extends Activity {
             }
         });
         
+    }
+}
+
+class DataArrays {
+    static String[] medicalCentre = {"University Medical Centre" + "Giles Lane\n" +
+            "Canterbury\n" + "Kent\n" + "CT2 7PB\n" + "Telephone: 01227 469333\n" + "http://www.umckent.co.uk/\n"};
+    static String[] finances = {"Finance Department" + "The Registry\n" + "University of Kent\n" + "Canterbury\n" +
+            "Kent\n" + "Fax: +44(0)1227 827024\n"};
+    static String[] security = {"Canterbury Campus" + "University of Kent,\n" +
+            "Canterbury,\n" + "Kent\n" + "CT2 7NZ\n ", "Campus Watch: +44 (0)1227 868253", "Campus Watch: 07772 226188",
+            "Campus Watch: 07772 226188"};
+}
+
+class DataProvider {
+
+    public static HashMap<String, List<String>> getDataHashMap() {
+        HashMap<String, List<String>> optionsHashMap = new HashMap<String, List<String>>();
+
+        List<String> medicalCentreList = new ArrayList<String>();
+        List<String> securityList = new ArrayList<String>();
+        List<String> financeList = new ArrayList<String>();
+
+        for (int i = 0; i < DataArrays.medicalCentre.length; i++) {
+            medicalCentreList.add(DataArrays.medicalCentre[i]);
+        }
+
+        for (int i = 0; i < DataArrays.security.length; i++) {
+            securityList.add(DataArrays.security[i]);
+        }
+
+        for (int i = 0; i < DataArrays.finances.length; i++) {
+            financeList.add(DataArrays.finances[i]);
+        }
+
+        optionsHashMap.put("Medical Centre", medicalCentreList);
+        optionsHashMap.put("Campus Security", securityList);
+        optionsHashMap.put("Finance", financeList);
+
+        return optionsHashMap;
+
+    }
+}
+
+class DirectoryAdapter extends BaseExpandableListAdapter {
+
+
+    private Context context;
+    private HashMap<String, List<String>> optionsHashMap;
+    private List<String> directoryOptions;
+
+    public DirectoryAdapter(Context context, HashMap<String,
+            List<String>> hashMap, List<String> list) {
+        optionsHashMap = hashMap;
+        this.context = context;
+        this.optionsHashMap = hashMap;
+        this.directoryOptions = list;
+    }
+
+    @Override
+    public int getGroupCount() {
+        return optionsHashMap.size();
+    }
+
+    @Override
+    public int getChildrenCount(int groupPosition) {
+        return optionsHashMap.get(directoryOptions.get(groupPosition)).size();
+    }
+
+    @Override
+    public Object getGroup(int groupPosition) {
+        return directoryOptions.get(groupPosition);
+    }
+
+    @Override
+    public Object getChild(int groupPosition, int childPosition) {
+        return optionsHashMap.get(directoryOptions.get(groupPosition)).get(childPosition);
+    }
+
+    @Override
+    public long getGroupId(int groupPosition) {
+        return groupPosition;
+    }
+
+    @Override
+    public long getChildId(int groupPosition, int childPosition) {
+        return childPosition;
+    }
+
+    @Override
+    public boolean hasStableIds() {
+        return false;
+    }
+
+    @Override
+    public View getGroupView(int groupPosition, boolean isExpanded,
+                             View convertView, ViewGroup parent) {
+        String groupTitle = (String) getGroup(groupPosition);
+        if (convertView == null) {
+            LayoutInflater inflater =
+                    (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = inflater.inflate(R.layout.activity_directory, parent, false);
+        }
+        TextView parentTextView = (TextView) convertView.findViewById(R.id.textViewParent);
+        parentTextView.setText(groupTitle);
+        return convertView;
+    }
+
+    @Override
+    public View getChildView(int groupPosition,
+                             int childPosition,
+                             boolean isLastChild, View convertView, ViewGroup parent) {
+        Log.i("test", "parent view: " + parent.getTag());
+
+        String childTitle = (String) getChild(groupPosition, childPosition);
+        if (convertView == null) {
+            LayoutInflater inflater =
+                    (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = inflater.inflate(R.layout.activity_directory_child, parent, false);
+        }
+        TextView childTextView = (TextView) convertView.findViewById(R.id.textViewChild);
+        childTextView.setText(childTitle);
+        return convertView;
+    }
+
+    @Override
+    public boolean isChildSelectable(int groupPosition, int childPosition) {
+        return true;
     }
 }

@@ -44,7 +44,7 @@
             android:background="@color/kent_undergraduate_blue" />
 
         <TextView
-            android:id="@+id/profile_sub_link"
+            android:id="@+id/profileBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="0"
@@ -84,7 +84,7 @@
             android:background="@color/common_action_bar_splitter" />
 
         <TextView
-            android:id="@+id/friends_sub_link"
+            android:id="@+id/friendsBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_column="0"
@@ -124,7 +124,7 @@
             android:background="@color/common_action_bar_splitter" />
 
         <TextView
-            android:id="@+id/kent_union_sub_link"
+            android:id="@+id/kent_unionBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_column="0"
@@ -164,7 +164,7 @@
 
 
         <TextView
-            android:id="@+id/media_sub_link"
+            android:id="@+id/mediaBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_column="0"
@@ -203,7 +203,7 @@
             android:background="@color/common_action_bar_splitter" />
 
         <TextView
-            android:id="@+id/directory_sub_link"
+            android:id="@+id/directoryBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_column="0"
@@ -246,7 +246,7 @@
         <Button
             android:id="@+id/logoutBtn"
             android:layout_width="76dp"
-            android:layout_height="35dp"
+            android:layout_height="40dp"
             android:layout_column="0"
             android:layout_columnSpan="7"
             android:layout_marginBottom="10dp"
@@ -286,43 +286,46 @@
                 android:id="@+id/newsBtn"
                 android:layout_width="48dip"
                 android:layout_height="54dip"
-                android:contentDescription="@string/news"
+                android:layout_marginStart="10dp"
                 android:background="@drawable/news_icon"
-                android:layout_marginStart="17dp"/>
+                android:contentDescription="@string/news"
+                android:layout_weight="1"/>
 
             <ImageButton
                 android:id="@+id/calendarBtn"
                 android:layout_width="42dip"
                 android:layout_height="54dip"
-                android:contentDescription="@string/calendar"
+                android:layout_marginStart="24dp"
                 android:background="@drawable/calendar_icon"
-                android:layout_marginStart="24dp"/>
-
-            <ImageButton
-                android:id="@+id/socialBtn"
-                android:layout_width="54dip"
-                android:layout_height="54dip"
-                android:contentDescription="@string/social"
-                android:background="@drawable/social_icon2"
-                android:layout_marginStart="24dp"/>
+                android:contentDescription="@string/calendar"
+                android:layout_weight="1"/>
 
             <ImageButton
                 android:id="@+id/mapsBtn"
                 android:layout_width="41dip"
                 android:layout_height="54dip"
-                android:contentDescription="@string/maps"
+                android:layout_marginStart="24dp"
                 android:background="@drawable/maps_icon"
-                android:layout_marginStart="24dp"/>
+                android:contentDescription="@string/maps"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/computerBtn"
+                android:layout_width="41dip"
+                android:layout_height="54dip"
+                android:layout_marginStart="24dp"
+                android:background="@drawable/free_pcs"
+                android:contentDescription="@string/free_computers"
+                android:layout_weight="1"/>
 
             <ImageButton
                 android:id="@+id/moreBtn"
                 android:layout_width="54dip"
                 android:layout_height="54dip"
                 android:layout_marginStart="18dp"
+                android:background="@drawable/more_icon"
                 android:contentDescription="@string/more"
-                android:background="@drawable/more_icon"/>
-
-
+                android:layout_weight="1"/>
         </LinearLayout>
     </TableLayout>
 

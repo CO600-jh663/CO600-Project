@@ -1,105 +1,90 @@
 package kent.kentapp;
 
-
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.net.Uri;
+import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
+import java.util.Calendar;
 
+public class Media extends AppCompatActivity{
 
-public class Profile extends AppCompatActivity {
-
-
-    ImageButton profilePicture; //= (ImageButton) findViewById(R.id.profile_picture);
+    ImageButton uploadButton;
+    ImageView imageToView;
     private static int RESULT_LOAD_IMAGE = 1;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_media);
 
-        profilePicture = (ImageButton) findViewById(R.id.profile_picture);
 
         final ImageButton newsBtn = (ImageButton) findViewById(R.id.newsBtn);
-        newsBtn.setOnClickListener(new View.OnClickListener() {
+        newsBtn.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(Profile.this, News.class);
+                Intent intent = new Intent(Media.this, News.class);
                 startActivity(intent);
                 //finish();
             }
         });
 
         final ImageButton calendarBtn = (ImageButton) findViewById(R.id.calendarBtn);
-        calendarBtn.setOnClickListener(new View.OnClickListener() {
+        calendarBtn.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(Profile.this, Calendar.class);
+                Intent intent = new Intent(Media.this, Calendar.class);
                 startActivity(intent);
                 //finish();
             }
         });
 
         final ImageButton socialBtn = (ImageButton) findViewById(R.id.socialBtn);
-        socialBtn.setOnClickListener(new View.OnClickListener() {
+        socialBtn.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(Profile.this, Social.class);
+                Intent intent = new Intent(Media.this, Social.class);
                 startActivity(intent);
                 //finish();
             }
         });
 
         final ImageButton mapBtn = (ImageButton) findViewById(R.id.mapsBtn);
-        mapBtn.setOnClickListener(new View.OnClickListener() {
+        mapBtn.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(Profile.this, CampusMap.class);
+                Intent intent = new Intent(Media.this, CampusMap.class);
                 startActivity(intent);
                 //finish();
             }
         });
 
         final ImageButton moreBtn = (ImageButton) findViewById(R.id.moreBtn);
-        moreBtn.setOnClickListener(new View.OnClickListener() {
+        moreBtn.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(Profile.this, More.class);
+                Intent intent = new Intent(Media.this, More.class);
                 startActivity(intent);
                 //finish();
             }
         });
 
-        profilePicture.setOnLongClickListener(new View.OnLongClickListener() {
-            public boolean onLongClick(View v) {
+        uploadButton.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
                 Intent intent = new Intent(
                         Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 
                 startActivityForResult(intent, RESULT_LOAD_IMAGE);
-                return true;
+
+
             }
+
         });
 
-        final Button btnSDS = (Button) findViewById(R.id.btnSDS);
-        btnSDS.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(Profile.this, SDS.class);
-                startActivity(intent);
-                //finish();
-            }
-        });
-
-        final Button btnMoodle = (Button) findViewById(R.id.btnMoodle);
-        btnMoodle.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(Profile.this, Moodle.class);
-                startActivity(intent);
-                //finish();
-            }
-        });
     }
 
     @Override
@@ -118,10 +103,11 @@ public class Profile extends AppCompatActivity {
             String picturePath = cursor.getString(columnIndex);
             cursor.close();
 
-            profilePicture.setImageBitmap(BitmapFactory.decodeFile(picturePath));
+            uploadButton.setImageBitmap(BitmapFactory.decodeFile(picturePath));
         }
     }
+
+
+
+
 }
-
-
-
