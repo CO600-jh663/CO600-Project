@@ -39,7 +39,8 @@
     <string name="immunisation">Immunisation</string>
     <string name="immunisation_subtext">Are you immunisations in date?</string>
     <string name="student_support_and_wellbeing">Student Support &amp; Well-being Service</string>
-    <string name="student_support_and_wellbeing_subtext">Have you registered? (if applicable)</string>0
+    <string name="student_support_and_wellbeing_subtext">Have you registered? (if applicable)</string>
+    0
     <!-- Buttons -->
     <string name="proceed">Continue</string>
 
@@ -94,15 +95,12 @@
     <string name="menu">menu</string>
 
 
-
     <!-- Strings related to activity_news_feed -->
 
 
     <!-- Sub-heading -->
 
     <string name="news_feed">News</string>
-
-
 
 
     <string name="prompt_email">Email</string>
