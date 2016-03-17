@@ -24,9 +24,6 @@ android {
     dexOptions {
         javaMaxHeapSize "4g"
     }
-    lintOptions {
-        abortOnError false
-    }
 }
 
 dependencies {
@@ -35,8 +32,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.android.support:design:23.0.1'
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
-    compile 'com.sothree.slidinguppanel:library:3.3.0'
-    compile 'org.mnode.ical4j:ical4j:1.0.5'
-    compile 'backport-util-concurrent:backport-util-concurrent:3.1'
     provided fileTree(dir: 'libs', include: ['*.jar'])
 }

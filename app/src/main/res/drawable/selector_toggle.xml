@@ -1,14 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item
-        android:state_checked="false"
-        android:drawable="@drawable/selector_off"
-        />
-
-    <item
-        android:state_checked="true"
-        android:drawable="@drawable/selector_on"
-        />
-
+    <!-- When selected, use green -->
+    <item android:drawable="@drawable/selector_on"
+        android:state_checked="true" />
+    <!-- When not selected, use red-->
+    <item android:drawable="@drawable/selector_off"
+        android:state_checked="false"/>
 </selector>
