@@ -55,8 +55,8 @@ public class More  extends AppCompatActivity  {
         final ImageView unionImage = (ImageView) findViewById(R.id.ku_img);
         View.OnClickListener unionOnClickListener = new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(More.this, KentUnion.class);
-                startActivity(intent);
+                //Intent intent = new Intent(More.this, KentUnion.class);
+                //startActivity(intent);
             }
         };
         unionText.setOnClickListener(unionOnClickListener);
@@ -66,8 +66,8 @@ public class More  extends AppCompatActivity  {
         final ImageView mediaImage = (ImageView) findViewById(R.id.media_img);
         View.OnClickListener mediaOnClickListener = new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(More.this, Media.class);
-                startActivity(intent);
+                //Intent intent = new Intent(More.this, Media.class);
+                //startActivity(intent);
             }
         };
         mediaText.setOnClickListener(mediaOnClickListener);
