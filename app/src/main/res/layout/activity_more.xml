@@ -286,43 +286,46 @@
                 android:id="@+id/newsBtn"
                 android:layout_width="48dip"
                 android:layout_height="54dip"
-                android:contentDescription="@string/news"
+                android:layout_marginStart="10dp"
                 android:background="@drawable/news_icon"
-                android:layout_marginStart="12dp"/>
+                android:contentDescription="@string/news"
+                android:layout_weight="1"/>
 
             <ImageButton
                 android:id="@+id/calendarBtn"
                 android:layout_width="42dip"
                 android:layout_height="54dip"
-                android:contentDescription="@string/calendar"
+                android:layout_marginStart="24dp"
                 android:background="@drawable/calendar_icon"
-                android:layout_marginStart="24dp"/>
-
-            <ImageButton
-                android:id="@+id/socialBtn"
-                android:layout_width="54dip"
-                android:layout_height="54dip"
-                android:contentDescription="@string/social"
-                android:background="@drawable/social_icon2"
-                android:layout_marginStart="24dp"/>
+                android:contentDescription="@string/calendar"
+                android:layout_weight="1"/>
 
             <ImageButton
                 android:id="@+id/mapsBtn"
                 android:layout_width="41dip"
                 android:layout_height="54dip"
-                android:contentDescription="@string/maps"
+                android:layout_marginStart="24dp"
                 android:background="@drawable/maps_icon"
-                android:layout_marginStart="24dp"/>
+                android:contentDescription="@string/maps"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/computerBtn"
+                android:layout_width="41dip"
+                android:layout_height="54dip"
+                android:layout_marginStart="24dp"
+                android:background="@drawable/free_pcs"
+                android:contentDescription="@string/free_computers"
+                android:layout_weight="1"/>
 
             <ImageButton
                 android:id="@+id/moreBtn"
                 android:layout_width="54dip"
                 android:layout_height="54dip"
                 android:layout_marginStart="18dp"
+                android:background="@drawable/more_icon"
                 android:contentDescription="@string/more"
-                android:background="@drawable/more_icon"/>
-
-
+                android:layout_weight="1"/>
         </LinearLayout>
     </TableLayout>
 

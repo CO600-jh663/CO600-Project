@@ -290,7 +290,7 @@
                 android:layout_width="41dip"
                 android:layout_height="54dip"
                 android:layout_marginStart="24dp"
-                android:background="@drawable/computer_icon"
+                android:background="@drawable/free_pcs"
                 android:contentDescription="@string/free_computers"
                 android:layout_weight="1"/>
 
@@ -302,8 +302,6 @@
                 android:background="@drawable/more_icon"
                 android:contentDescription="@string/more"
                 android:layout_weight="1"/>
-
-
         </LinearLayout>
     </TableLayout>
 </RelativeLayout>
