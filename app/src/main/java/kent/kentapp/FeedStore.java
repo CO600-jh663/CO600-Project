@@ -1,55 +1,68 @@
 package kent.kentapp;
 
 import java.util.*;
-import android.app.*;
+import android.content.*;
 
 public class FeedStore
 {
     /**
-     * TYPES
+     * TYPES OF ELEMENT
      */
-    private ArrayList<ArrayList<String>> news;
-    private ArrayList<ArrayList<String>> events;
+    private ArrayList<FeedElement> news;
+    private ArrayList<FeedElement> events;
 
-    //STATE
-    private String state;
-    private FeedParser parser;
+    //parser
+    FeedParser parser;
+    //context
+    Context context;
 
 
-    public FeedStore(String state)
+
+    public FeedStore(Context context)
     {
-        this.state = state;
-        news = new ArrayList<ArrayList<String>>();
-        events = new ArrayList<ArrayList<String>>();
         parser = new FeedParser(this);
+        this.context = context;
 
-        //GETS FEEDS!
-        news = parser.getFeed("news");
-        events = parser.getFeed("events");
+
+        //get lists
+        news = map(parser.getFeed("news"));
+        events = map(parser.getFeed("events"));
     }
 
 
-    public ArrayList<ArrayList<String>> get(String type)
+    public ArrayList<FeedElement> get(String type)
     {
-        if (type.equals("news")){
-            return news;
-        }
-        else if (type.equals("events")){
+        if (type.equals("events")) {
             return events;
         }
         else{
-            //DE-FAULT
-            return null;
+            return news;
         }
     }
 
-    /**
-     * TODO: Ask Dragos when feeds' up-date!!!!
-     */
-
-    public String getState()
+    private ArrayList<FeedElement> map(ArrayList<ArrayList<String>> data)
     {
-        //GIT
-        return state;
+        ArrayList<FeedElement> lst = new ArrayList<FeedElement>();
+        FeedNews lmnt;
+        String[] split;
+        for (ArrayList<String> elmnt : data){
+
+            //new element
+            lmnt = new FeedNews();
+
+            for (String fld : elmnt){
+                split = fld.split(":");
+
+                //Mapping
+                lmnt.addField(split[0], split[1]);
+
+            }
+
+            //output element
+            lst.add(lmnt);
+
+        }
+        //output
+        return lst;
     }
 }
