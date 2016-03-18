@@ -15,18 +15,42 @@ public class Calendar extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_calendar);
 
-
-            WebView webView = (WebView) findViewById(R.id.web_view);
-            webView.setWebViewClient(new MyWebViewClient());
+            WebView webview = (WebView) findViewById(R.id.web_view);
+            webview.setVisibility(View.GONE);
+            webview.setWebViewClient(new WebViewClient() {
+                @Override
+                public void onPageFinished(WebView view, String url)
+                {
+                    view.loadUrl("javascript:"
+                            + "var FunctionOne = function () {"
+                            + "  var r = $.Deferred();"
+                            + "  try{document.getElementById('kent-bar').style.display='none';}catch(e){}"
+                            + "  try{document.getElementsByClassName('row-fluid')[0].style.display='none';}catch(e){}"
+                            + "  try{document.querySelector(\"#tpl_calendar > div.calendar-links.visible-phone.well > ul\").style.display='none';}catch(e){}"
+                            + "  try{document.querySelector(\"#calendar-disclaimer > div > div > a\").removeAttribute(\"href\");}catch(e){}"
+                            + "};"
+                            + "FunctionOne();");
+                    view.setVisibility(View.VISIBLE);
+                }
+            });
 
             String url = "https://www.kent.ac.uk/student/my-study/";
-            webView.getSettings().setJavaScriptEnabled(true);
-            webView.loadUrl(url);
+            webview.getSettings().setJavaScriptEnabled(true);
+            webview.loadUrl(url);
 
-            final ImageButton socialBtn = (ImageButton) findViewById(R.id.socialBtn);
-            socialBtn.setOnClickListener(new View.OnClickListener() {
+            final ImageButton newsBtn = (ImageButton) findViewById(R.id.newsBtn);
+            newsBtn.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Intent intent = new Intent(Calendar.this, Social.class);
+                    Intent intent = new Intent(Calendar.this, News.class);
+                    startActivity(intent);
+                    //finish();
+                }
+            });
+
+            final ImageButton computerBtn = (ImageButton) findViewById(R.id.computerBtn);
+            computerBtn.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Intent intent = new Intent(Calendar.this, FreePc.class);
                     startActivity(intent);
                     //finish();
                 }
@@ -50,12 +74,4 @@ public class Calendar extends AppCompatActivity {
                 }
             });
         }
-
-    private class MyWebViewClient extends WebViewClient {
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            view.loadUrl(url);
-            return true;
-        }
-    }
 }

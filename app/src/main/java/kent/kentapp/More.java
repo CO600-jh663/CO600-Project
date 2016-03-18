@@ -1,26 +1,15 @@
 package kent.kentapp;
 
 import android.content.Intent;
-import android.os.AsyncTask;
+import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.ArrayList;
-
-import javax.net.ssl.HttpsURLConnection;
 
 public class More  extends AppCompatActivity  {
 
@@ -44,8 +33,8 @@ public class More  extends AppCompatActivity  {
         final ImageView friendsImage = (ImageView) findViewById(R.id.friends_img);
         View.OnClickListener friendsOnClickListener = new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(More.this, Friends.class);
-                startActivity(intent);
+                /*Intent intent = new Intent(More.this, Friends.class);
+                startActivity(intent);*/
             }
         };
         friendsText.setOnClickListener(friendsOnClickListener);
@@ -77,8 +66,8 @@ public class More  extends AppCompatActivity  {
         final ImageView directoryImage = (ImageView) findViewById(R.id.directory_img);
         View.OnClickListener directoryOnClickListener = new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(More.this, Directory.class);
-                startActivity(intent);
+                /*Intent intent = new Intent(More.this, Directory.class);
+                startActivity(intent);*/
             }
         };
         directoryText.setOnClickListener(directoryOnClickListener);
@@ -102,10 +91,10 @@ public class More  extends AppCompatActivity  {
             }
         });
 
-        final ImageButton socialBtn = (ImageButton) findViewById(R.id.socialBtn);
-        socialBtn.setOnClickListener(new View.OnClickListener() {
+        final ImageButton computerBtn = (ImageButton) findViewById(R.id.computerBtn);
+        computerBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(More.this, Social.class);
+                Intent intent = new Intent(More.this, FreePc.class);
                 startActivity(intent);
                 //finish();
             }

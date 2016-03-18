@@ -78,10 +78,10 @@ public class Directory extends Activity {
             }
         });
 
-        final ImageButton socialBtn = (ImageButton) findViewById(R.id.socialBtn);
-        socialBtn.setOnClickListener(new View.OnClickListener() {
+        final ImageButton computerBtn = (ImageButton) findViewById(R.id.computerBtn);
+        computerBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(Directory.this, Social.class);
+                Intent intent = new Intent(Directory.this, FreePc.class);
                 startActivity(intent);
                 //finish();
             }

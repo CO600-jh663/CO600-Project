@@ -342,7 +342,7 @@
                 android:layout_height="54dip"
                 android:layout_marginStart="24dp"
                 android:background="@drawable/maps_icon"
-                android:contentDescription="@string/maps"
+                android:contentDescription="@string/map"
                 android:layout_weight="1"/>
 
             <ImageButton

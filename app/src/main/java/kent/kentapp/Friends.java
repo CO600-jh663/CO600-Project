@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
@@ -14,7 +13,7 @@ import java.util.ArrayList;
 public class Friends extends AppCompatActivity {
 
     ArrayList<String> recFriends = new ArrayList<>();
-    ArrayList<String> friends = new ArrayList<>();
+    //ArrayList<String> friends = new ArrayList<>();
 
 
     @Override
@@ -40,7 +39,6 @@ public class Friends extends AppCompatActivity {
 
         final ImageButton friendBtn = (ImageButton) findViewById(R.id.friendBtn);
         friendBtn.setOnClickListener((View.OnClickListener) this);
-        RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) friends.getLayoutParams();
 
 
         final Button recFriendBtn = (Button) findViewById(R.id.recommendedFriendBtn);
@@ -49,8 +47,8 @@ public class Friends extends AppCompatActivity {
         recFriends.add("1");
         recFriends.add("2");
 
-        //RelativeLayout friends = (RelativeLayout) findViewById(R.id.friends);
-
+        RelativeLayout friends = (RelativeLayout) findViewById(R.id.friends);
+        RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) friends.getLayoutParams();
 
 
 
