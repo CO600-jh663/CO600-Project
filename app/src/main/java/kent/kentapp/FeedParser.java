@@ -27,7 +27,8 @@ public class FeedParser {
     private String pointer;
 
     //TODO: Dates?... GET FROM CALENDAR-ACTIVITY!
-    private String fromDate, toDate;
+    private String fromDate="";
+    private String toDate="";
 
     //for LL-Parser
     private String[] production;
@@ -142,6 +143,7 @@ public class FeedParser {
         /**
          * Resource is opened on startup/getFeed().
          */
+        movePointer();
 
         //RECURSIVE DESCENT or LL??
         parseS();
