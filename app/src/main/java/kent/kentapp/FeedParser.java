@@ -479,7 +479,7 @@ public class FeedParser {
     private void movePointer()
     {
         try {
-            pointer = Integer.toString(stream.read());
+            pointer = Character.toString((char)stream.read());
         } catch (IOException e){Log.e("", "POINTER NOT WORKING!!");}
     }
 
