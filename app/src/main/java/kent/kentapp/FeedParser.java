@@ -496,36 +496,8 @@ public class FeedParser {
      */
     private ArrayList<ArrayList<String>> output()
     {
-        //FORMATTING OUTPUT\\//
-        String[] temp;
-        Document body;
-        //for output sync.
-        int b = 0;
+        //TODO: Later... format html in body tag!!
 
-        //per-ELEMENT
-        for (ArrayList<String> element : output) {
-            //per-FIELD
-            for (String field : element) {
-                temp = field.split(":");
-                if (temp[0].equals("Body")) {
-                    /**
-                     * PER-BODY ELEMENT PER ITEM!!!!--\/
-                     */
-                    body = Jsoup.parse(temp[1]);
-                    Elements paragraphs = body.getElementsByTag("p");
-                    String bodyText = "";
-                    for (Element paragraph : paragraphs) {
-                        bodyText += paragraph.text();
-                    }
-                    //output\\//
-                    element.set(b, (temp[0] + ":" + bodyText));
-                }
-                //in sync. w/r field
-                b++;
-            }
-            //refresh
-            b = 0;
-        }
         //output
         return output;
     }
