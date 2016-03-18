@@ -115,7 +115,7 @@ public class FeedParser {
         //BEGIN PARSING THEN OUTPUT
         try {
             return parse();
-        } catch (FeedParseException e){Log.d("", e.getMessage());}
+        } catch (FeedParseException e){Log.e("", e.getMessage());}
         //de-fault
         return null;
     }
@@ -170,14 +170,14 @@ public class FeedParser {
 
                 //------\/-ASSUMES pointer AT END-OF-FILE!!
                 if (!(pointer.equals("]"))){
-                    throw new FeedParseException();
+                    throw new FeedParseException("at S");
                 }
                 /**
                  * RETURNS: parse()
                  */
                 break;
             default:
-                throw new FeedParseException();
+                throw new FeedParseException("at S");
         }
     }
     private void parseE() throws FeedParseException
@@ -188,7 +188,7 @@ public class FeedParser {
                 movePointer();
                 element = parseF(element);
                 if (!(pointer.equals("}"))){
-                    throw new FeedParseException();
+                    throw new FeedParseException("at E");
                 }
                 else{
                     //store element 1st!
@@ -220,7 +220,7 @@ public class FeedParser {
                  */
                 break;
             default:
-                throw new FeedParseException();
+                throw new FeedParseException("at E2");
         }
     }
     private ArrayList<String> parseF(ArrayList<String> element) throws FeedParseException
@@ -231,20 +231,15 @@ public class FeedParser {
         switch (pointer){
             case "\"":
                 movePointer();
-                try {
-                    title = parseC();
-                }
-                catch(FeedParseException e){
-                    Log.e("", e.getMessage());
-                }
+                title = parseC();
                 //assumes just-after end of string
                 if (!(pointer.equals("\""))){
-                    throw new FeedParseException();
+                    throw new FeedParseException("at F");
                 }
                 else{
                     movePointer();
                     if (!(pointer.equals(":"))){
-                        throw new FeedParseException();
+                        throw new FeedParseException("at F");
                     }
                     else{
                         movePointer();
@@ -275,7 +270,11 @@ public class FeedParser {
                 //Don't move-pointer!
                 return element;
             default:
-                throw new FeedParseException();
+
+                //@TEST
+                int x = 0;
+
+                throw new FeedParseException("at F2");
         }
     }
     private String parseV(String value) throws FeedParseException
@@ -283,19 +282,21 @@ public class FeedParser {
         //V -> " C " | N.
         switch (pointer){
             case "\"":
+                movePointer();
                 value = (value+parseC());
                 if (!(pointer.equals("\""))){
-                    throw new FeedParseException();
+                    throw new FeedParseException("at V");
                 }
                 else {
                     //else return
+                    movePointer();
                     return value;
                 }
             default:
                 return (value+parseN());
         }
     }
-    private String parseN() throws FeedParseException
+    private String parseN()
     {
         /**
          *   \/-NUMBER-RegAut.
@@ -313,7 +314,7 @@ public class FeedParser {
         //Don't move pointer!
         return num;
     }
-    private String parseC() throws FeedParseException
+    private String parseC()
     {
         /**
          *   \/-STRING-RegAut.
