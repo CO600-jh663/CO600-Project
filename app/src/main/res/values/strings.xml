@@ -211,5 +211,9 @@
     <string name="title_activity_campus_map">CampusMap</string>
     <string name="freePc">Free PCs</string>
     <string name="kent_student">Kent Student</string>
+    <string name="gta">Go To Article</string>
+    <string name="user_full_name">Name</string>
+    <string name="function">function</string>
+    <string name="video">video</string>
 
 </resources>

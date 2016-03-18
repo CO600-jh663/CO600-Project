@@ -129,7 +129,7 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".FreePc"></activity>
+        <activity android:name=".FreePc" />
     </application>
 
 </manifest>
