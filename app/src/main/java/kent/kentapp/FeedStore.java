@@ -25,8 +25,10 @@ public class FeedStore
 
 
         //get lists
-        news = map(parser.getFeed("news"));
-        events = map(parser.getFeed("events"));
+        news = map(parser.getFeed("news"), "n");
+        parser.refresh();
+        events = map(parser.getFeed("events"), "e");
+        parser.refresh();
     }
 
 
@@ -40,22 +42,29 @@ public class FeedStore
         }
     }
 
-    private ArrayList<FeedElement> map(ArrayList<ArrayList<String>> data)
+    private ArrayList<FeedElement> map(ArrayList<ArrayList<String>> data, String type)
     {
         ArrayList<FeedElement> lst = new ArrayList<FeedElement>();
-        FeedNews lmnt;
+        FeedElement lmnt;
         String[] split;
         for (ArrayList<String> elmnt : data){
 
             //new element
-            lmnt = new FeedNews();
+            if (type.equals("n")) {
+                lmnt = new FeedNews();
+            }
+            else{
+                lmnt = new FeedEvents();
+            }
 
             for (String fld : elmnt){
-                split = fld.split(":");
+                //Ignores empty-valued fields!!
+                if (!(fld.substring((fld.length()-1),fld.length()).equals(":"))){
+                    split = fld.split(":");
 
-                //Mapping
-                lmnt.addField(split[0], split[1]);
-
+                    //Mapping
+                    lmnt.addField(split[0], split[1]);
+                }
             }
 
             //output element

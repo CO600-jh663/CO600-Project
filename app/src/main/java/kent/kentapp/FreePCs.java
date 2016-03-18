@@ -60,6 +60,7 @@ public class FreePCs implements Runnable
         buildingsFeed = buildingsFeed.substring(1, (buildingsFeed.length() - 2));
         //Parse
         out = parser.parseThis(buildingsFeed);
+        parser.refresh();
 
         activity.pc(map(out));
     }

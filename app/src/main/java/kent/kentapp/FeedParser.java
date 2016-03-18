@@ -270,10 +270,6 @@ public class FeedParser {
                 //Don't move-pointer!
                 return element;
             default:
-
-                //@TEST
-                int x = 0;
-
                 throw new FeedParseException("at F2");
         }
     }
@@ -500,5 +496,10 @@ public class FeedParser {
 
         //output
         return output;
+    }
+
+    public void refresh()
+    {
+        output = new ArrayList<ArrayList<String>>();
     }
 }
