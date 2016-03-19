@@ -20,12 +20,4 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toLeftOf="@id/nbody"/>
-    <Button
-        android:id="@+id/nbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/gta"
-        android:layout_toEndOf="@id/nbody"
-        android:layout_toRightOf="@id/nimg"
-        />
 </RelativeLayout>

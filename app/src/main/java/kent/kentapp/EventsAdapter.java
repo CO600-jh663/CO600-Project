@@ -63,8 +63,8 @@ public class EventsAdapter extends BaseAdapter {
 
     @Override
     public int getViewTypeCount() {
-        //There are 3-types of View: image, text and button.
-        return 3;
+        //There are 2-types of View: image, text.
+        return 2;
     }
 
     public long getItemId(int position) {

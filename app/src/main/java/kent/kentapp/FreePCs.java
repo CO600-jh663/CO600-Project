@@ -62,6 +62,9 @@ public class FreePCs implements Runnable
         out = parser.parseThis(buildingsFeed);
         parser.refresh();
 
+        //@TEST
+        int x = 0;
+
         activity.pc(map(out));
     }
 
