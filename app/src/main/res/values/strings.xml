@@ -47,11 +47,9 @@
     <string name="proceed">Continue</string>
 
     <!-- Strings related to activity_news -->
-    <string name="person_info">About You</string>
-    <string name="bio">Bio</string>
-    <string name="more">More</string>
-    <string name="moodle">Moodle</string>
-    <string name="sds">SDS</string>
+
+
+
     <string name="timetable">Timetable</string>
     <string name="maps">Maps</string>
     <string name="top_picks">Top Picks</string>
@@ -60,18 +58,24 @@
     <string name="services">Services</string>
 
     <!-- Strings related to activity_more -->
-
+    <string name="more">More</string>
     <string name="official_kent">Kent Home</string>
     <string name="kent_union">Kent Union</string>
+
+
 
     <!-- Buttons -->
     <string name="logout">Log Out</string>
 
     <!-- Strings related to activity_profile -->
-
-    <string name="add_bio">+Add Bio/Your Interests and More</string>
+    <string name="bio">About Yourself</string>
+    <string name="add_bio">+About Yourself</string>
+    <string name="email">Mail</string>
+    <string name="moodle">Moodle</string>
+    <string name="sds">SDS</string>
     <string name="add_degree">+Add Degree</string>
     <string name="friends_recommendations">Recommendations</string>
+    <string name="add_languages">+Language(s) Spoken</string>
 
     <!-- Strings related to activity_friends_profile -->
     <string name="friends_profile">Name</string>

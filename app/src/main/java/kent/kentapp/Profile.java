@@ -6,12 +6,14 @@ import android.database.Cursor;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.net.Uri;
 import android.provider.MediaStore;
-
+import android.widget.TextView;
 
 
 public class Profile extends AppCompatActivity {
@@ -26,7 +28,7 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        profilePicture = (ImageButton) findViewById(R.id.profile_picture);
+
 
         final ImageButton newsBtn = (ImageButton) findViewById(R.id.newsBtn);
         newsBtn.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +75,7 @@ public class Profile extends AppCompatActivity {
             }
         });
 
+        profilePicture = (ImageButton) findViewById(R.id.profile_picture);
         profilePicture.setOnLongClickListener(new View.OnLongClickListener() {
             public boolean onLongClick(View v) {
                 Intent intent = new Intent(
@@ -100,7 +103,34 @@ public class Profile extends AppCompatActivity {
                 //finish();
             }
         });
+
+        final Button btnMail = (Button) findViewById(R.id.btnMail);
+        btnMail.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(Profile.this, Email.class);
+                startActivity(intent);
+                //finish();
+            }
+        });
+
+
+
+        EditText degree = (EditText) findViewById(R.id.add_degree);
     }
+
+
+   // protected void onSaveInstanceState (Bundle outState){
+
+        //super.onSaveInstanceState (outState);
+        //Log.i ("Instance State", "onSaveInstanceState");
+    //}
+
+
+    //protected void onRestoreInstanceState (Bundle outState){
+
+       // super.onRestoreInstanceState (outState);
+       // Log.i ("Instance State", "onRestoreInstanceState");
+    //}
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -120,7 +150,7 @@ public class Profile extends AppCompatActivity {
 
             profilePicture.setImageBitmap(BitmapFactory.decodeFile(picturePath));
         }
-    }
+    }//
 }
 
 

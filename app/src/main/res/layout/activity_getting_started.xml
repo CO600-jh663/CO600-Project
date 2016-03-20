@@ -3,11 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="kent.kentapp.GettingStarted">
+
 
     <GridLayout
         android:id="@+id/gridLayout"
@@ -17,33 +19,41 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
         android:columnCount="8"
+        android:gravity="center_horizontal"
         android:isScrollContainer="true"
         android:rowCount="16">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_column="1"
+            android:layout_column="0"
             android:layout_columnSpan="7"
-            android:layout_gravity="start"
-            android:layout_marginBottom="7dp"
-            android:layout_marginEnd="10dp"
             android:layout_row="0"
-            android:text="@string/getting_started_title"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="32sp" />
+            android:background="@color/kent_light_grey">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnSpan="7"
-            android:layout_marginBottom="5dp"
-            android:layout_row="1"
-            android:width="340dp"
-            android:gravity="center_vertical"
-            android:text="@string/getting_started_subtitle"
-            android:textSize="16sp" />
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/getting_started_title"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/kent_grey"
+                android:textSize="32sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginBottom="5dp"
+                android:width="340dp"
+                android:gravity="center_vertical"
+                android:text="@string/getting_started_subtitle"
+                android:textSize="16sp" />
+        </RelativeLayout>
 
         <TextView
             android:id="@+id/divide"
@@ -51,177 +61,199 @@
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_columnSpan="7"
-            android:layout_margin="2dp"
-            android:layout_marginBottom="0dp"
+            android:layout_marginTop="3dp"
             android:layout_row="2"
             android:height="3dp"
             android:background="@color/kent_gold" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <ScrollView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnSpan="2"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="15dp"
-            android:layout_row="3"
-            android:text="@string/it_account"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="22sp" />
-
-        <CheckBox
-            android:id="@+id/it_account_checkbox"
-            android:layout_column="5"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="15dp"
-            android:layout_row="3"
-            android:button="@drawable/selector_toggle" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnSpan="2"
-            android:layout_row="4"
-            android:text="@string/it_account_subtext"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="25dp"
-            android:layout_row="5"
-            android:text="@string/fees"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="22sp" />
-
-        <CheckBox
-            android:id="@+id/fees_checkbox"
-            android:layout_column="5"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="20dp"
-            android:layout_row="5"
-            android:button="@drawable/selector_toggle" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnSpan="3"
-            android:layout_row="6"
-            android:text="@string/fees_subtext"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnSpan="2"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="25dp"
-            android:layout_row="7"
-            android:text="@string/accommodation"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="22sp" />
-
-        <CheckBox
-            android:id="@+id/accommodation_checkbox"
-            android:layout_column="5"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="20dp"
-            android:layout_row="7"
-            android:button="@drawable/selector_toggle" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnSpan="2"
-            android:layout_row="8"
-            android:text="@string/accommodation_subtext"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnSpan="2"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="25dp"
-            android:layout_row="9"
-            android:text="@string/immunisation"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="22sp" />
-
-        <CheckBox
-            android:id="@+id/immunisation_checkbox"
-            android:layout_column="5"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="20dp"
-            android:layout_row="9"
-            android:button="@drawable/selector_toggle" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnSpan="2"
-            android:layout_row="10"
-            android:text="@string/immunisation_subtext"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
+            android:layout_column="0"
             android:layout_columnSpan="7"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="25dp"
-            android:layout_row="11"
-            android:width="280dp"
-            android:text="@string/student_support_and_wellbeing"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="16sp" />
+            android:layout_row="3"
+            android:layout_rowSpan="2">
 
-        <CheckBox
-            android:id="@+id/optional_check"
-            android:layout_column="5"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="20dp"
-            android:layout_row="11" />
+            <GridLayout
+                android:id="@+id/gridLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="7"
+                android:gravity="center_horizontal"
+                android:isScrollContainer="true"
+                android:rowCount="16">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnSpan="2"
-            android:layout_row="12"
-            android:text="@string/student_support_and_wellbeing_subtext"
-            android:textSize="13sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_row="1"
+                    android:text="@string/it_account"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="22sp" />
+
+                <CheckBox
+                    android:id="@+id/it_account_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginTop="15dp"
+                    android:layout_row="1"
+
+                    android:button="@drawable/selector_toggle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:text="@string/it_account_subtext"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_row="3"
+                    android:text="@string/fees"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="22sp" />
+
+                <CheckBox
+                    android:id="@+id/fees_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+
+                    android:layout_marginTop="20dp"
+                    android:layout_row="3"
+                    android:button="@drawable/selector_toggle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_columnSpan="0"
+                    android:layout_row="4"
+                    android:background="@color/kent_warm_grey"
+                    android:text="@string/fees_subtext"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_row="5"
+                    android:text="@string/accommodation"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="22sp" />
+
+                <CheckBox
+                    android:id="@+id/accommodation_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginTop="20dp"
+                    android:layout_row="5"
+                    android:button="@drawable/selector_toggle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="6"
+                    android:text="@string/accommodation_subtext"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_row="7"
+                    android:paddingEnd="160dp"
+                    android:paddingStart="0dp"
+                    android:text="@string/immunisation"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="22sp" />
+
+                <CheckBox
+                    android:id="@+id/immunisation_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginTop="20dp"
+                    android:layout_row="7"
+                    android:button="@drawable/selector_toggle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="8"
+                    android:text="@string/immunisation_subtext"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_row="9"
+                    android:width="280dp"
+                    android:text="@string/student_support_and_wellbeing"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/optional_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_row="9" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="10"
+                    android:text="@string/student_support_and_wellbeing_subtext"
+                    android:textSize="13sp" />
+
+            </GridLayout>
+        </ScrollView>
 
         <TextView
             android:id="@+id/divide4"
             style="@style/divide"
-            android:background="@color/common_action_bar_splitter"
-            android:layout_row="13"/>
+            android:layout_row="4"
+            android:background="@color/common_action_bar_splitter" />
 
         <Button
             android:id="@+id/proceed_button"
             android:layout_width="96dp"
             android:layout_height="40dp"
-            android:layout_column="1"
+            android:layout_column="0"
             android:layout_marginBottom="5dp"
-            android:layout_marginTop="35dp"
             android:layout_marginStart="10dp"
-            android:layout_row="14"
+            android:layout_marginTop="30dp"
+            android:layout_row="5"
             android:background="@color/kent_blue"
+            android:onClick="proceed"
             android:text="@string/proceed"
             android:textAllCaps="false"
             android:textColor="#ffffff"
-            android:textSize="18sp"
-            android:onClick="proceed"/>
+            android:textSize="18sp" />
 
     </GridLayout>
 </RelativeLayout>

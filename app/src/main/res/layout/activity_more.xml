@@ -21,13 +21,12 @@
         android:rowCount="18">
 
         <TextView
-            android:id="@+id/screen_title"
+            android:id="@+id/page_title"
             style="@style/page_header"
-            android:layout_column="1"
+            android:layout_column="0"
             android:layout_columnSpan="7"
             android:layout_row="1"
             android:text="@string/more"/>
-
 
 
         <TextView
@@ -45,30 +44,22 @@
 
         <TextView
             android:id="@+id/profileBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:layout_column="0"
-            android:layout_columnSpan="5"
-            android:layout_marginBottom="10dp"
+            android:layout_columnSpan="7"
+            android:layout_row="5"
             android:layout_marginStart="20dp"
-            android:layout_row="6"
-            android:layout_rowSpan="1"
+            android:layout_marginEnd="40dp"
             android:ems="10"
             android:text="@string/profile"
             android:textSize="22sp"
-            android:layout_marginTop="15dp"
-            android:textColor="@color/kent_blue"/>
-
-        <ImageView
-            android:id="@+id/profileimg"
-            android:layout_width="35dp"
-            android:layout_height="30dp"
-            android:layout_column="5"
-            android:layout_row="6"
-            android:layout_columnSpan="2"
-            android:src="@drawable/man_icon_hi"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/kent_blue"
+            android:drawableEnd="@drawable/man_icon_hi"
             android:contentDescription="@string/profile"/>
+
 
         <TextView
             android:id="@+id/divide3"
@@ -78,37 +69,30 @@
             android:layout_columnSpan="7"
             android:layout_margin="2dp"
             android:layout_marginBottom="5dp"
-            android:layout_marginTop="40dp"
             android:layout_row="6"
             android:height="3dp"
             android:background="@color/common_action_bar_splitter" />
+
 
         <TextView
             android:id="@+id/friendsBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:layout_column="0"
             android:layout_columnSpan="7"
-            android:layout_marginBottom="10dp"
+            android:layout_row="6"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_row="7"
-            android:layout_rowSpan="1"
+            android:layout_marginEnd="20dp"
             android:ems="10"
             android:text="@string/friends"
             android:textSize="22sp"
-            android:textColor="@color/kent_blue"/>
-
-
-        <ImageView
-            android:id="@+id/friends_img"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_column="5"
-            android:layout_row="7"
-            android:layout_columnSpan="2"
-            android:src="@drawable/people_icon"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/kent_blue"
+            android:drawableEnd="@drawable/friends"
             android:contentDescription="@string/friends"/>
+
+
 
         <TextView
             android:id="@+id/divide4"
@@ -117,8 +101,6 @@
             android:layout_column="0"
             android:layout_columnSpan="7"
             android:layout_margin="2dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="40dp"
             android:layout_row="7"
             android:height="3dp"
             android:background="@color/common_action_bar_splitter" />
@@ -127,26 +109,18 @@
             android:id="@+id/kent_unionBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
             android:layout_column="0"
             android:layout_columnSpan="7"
-            android:layout_marginBottom="10dp"
+            android:layout_row="7"
             android:layout_marginStart="20dp"
-            android:layout_row="8"
-            android:layout_rowSpan="1"
+            android:layout_marginEnd="30dp"
             android:ems="10"
             android:text="@string/kent_union"
             android:textSize="22sp"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/kent_blue"/>
-
-        <ImageView
-            android:id="@+id/ku_img"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_column="5"
-            android:layout_row="8"
-            android:layout_columnSpan="2"
-            android:src="@drawable/ku_icon"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/kent_blue"
+            android:drawableEnd="@drawable/ku_icon"
             android:contentDescription="@string/kent_union"/>
 
         <TextView
@@ -157,36 +131,26 @@
             android:layout_columnSpan="7"
             android:layout_margin="2dp"
             android:layout_marginBottom="5dp"
-            android:layout_marginTop="40dp"
             android:layout_row="8"
             android:height="3dp"
             android:background="@color/common_action_bar_splitter" />
-
 
         <TextView
             android:id="@+id/mediaBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:layout_column="0"
             android:layout_columnSpan="7"
-            android:layout_marginBottom="10dp"
+            android:layout_row="8"
             android:layout_marginStart="20dp"
-            android:layout_row="9"
-            android:layout_rowSpan="1"
+            android:layout_marginEnd="25dp"
             android:ems="10"
-            android:text="@string/media"
+            android:text="@string/friends"
             android:textSize="22sp"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/kent_blue"/>
-
-        <ImageView
-            android:id="@+id/media_img"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_column="5"
-            android:layout_row="9"
-            android:layout_columnSpan="2"
-            android:src="@drawable/media_icon3"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/kent_blue"
+            android:drawableEnd="@drawable/media_icon3"
             android:contentDescription="@string/media"/>
 
         <TextView
@@ -197,7 +161,6 @@
             android:layout_columnSpan="7"
             android:layout_margin="2dp"
             android:layout_marginBottom="5dp"
-            android:layout_marginTop="40dp"
             android:layout_row="9"
             android:height="3dp"
             android:background="@color/common_action_bar_splitter" />
@@ -206,28 +169,21 @@
             android:id="@+id/directoryBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:layout_column="0"
             android:layout_columnSpan="7"
-            android:layout_marginBottom="10dp"
+            android:layout_row="9"
             android:layout_marginStart="20dp"
-            android:layout_row="10"
-            android:layout_rowSpan="1"
+            android:layout_marginEnd="25dp"
             android:ems="10"
             android:text="@string/directory"
             android:textSize="22sp"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/kent_blue" />
-
-        <ImageView
-            android:id="@+id/directory_img"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_column="5"
-            android:layout_row="10"
-            android:layout_columnSpan="2"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/directory_icon2"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/kent_blue"
+            android:drawableEnd="@drawable/directory_icon2"
             android:contentDescription="@string/directory"/>
+
+
 
 
         <TextView
@@ -237,8 +193,8 @@
             android:layout_column="0"
             android:layout_columnSpan="7"
             android:layout_margin="2dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginBottom="15dp"
+
             android:layout_row="10"
             android:height="3dp"
             android:background="@color/common_action_bar_splitter" />
@@ -280,52 +236,47 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="3dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
 
             <ImageButton
                 android:id="@+id/newsBtn"
                 android:layout_width="48dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="10dp"
                 android:background="@drawable/news_icon"
-                android:contentDescription="@string/news"
-                android:layout_weight="1"/>
+                android:contentDescription="@string/news" />
 
             <ImageButton
                 android:id="@+id/calendarBtn"
                 android:layout_width="42dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="25dp"
                 android:background="@drawable/calendar_icon"
-                android:contentDescription="@string/calendar"
-                android:layout_weight="1"/>
+                android:contentDescription="@string/calendar" />
 
             <ImageButton
                 android:id="@+id/mapsBtn"
                 android:layout_width="41dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="25dp"
                 android:background="@drawable/maps_icon"
-                android:contentDescription="@string/maps"
-                android:layout_weight="1"/>
+                android:contentDescription="@string/maps" />
 
             <ImageButton
                 android:id="@+id/computerBtn"
                 android:layout_width="41dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="25dp"
                 android:background="@drawable/free_pcs"
-                android:contentDescription="@string/free_computers"
-                android:layout_weight="1"/>
+                android:contentDescription="@string/free_computers" />
 
             <ImageButton
                 android:id="@+id/moreBtn"
                 android:layout_width="54dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="18dp"
+                android:layout_marginStart="25dp"
                 android:background="@drawable/more_icon"
-                android:contentDescription="@string/more"
-                android:layout_weight="1"/>
+                android:contentDescription="@string/more" />
         </LinearLayout>
     </TableLayout>
 
