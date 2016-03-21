@@ -68,7 +68,8 @@
     <string name="logout">Log Out</string>
 
     <!-- Strings related to activity_profile -->
-    <string name="bio">About Yourself</string>
+    <string name="bio">Bio</string>
+    <string name="person_info">About Yourself</string>
     <string name="add_bio">+About Yourself</string>
     <string name="email">Mail</string>
     <string name="moodle">Moodle</string>

@@ -30,7 +30,6 @@ public class More  extends AppCompatActivity  {
         setContentView(R.layout.activity_more);
 
         final TextView profileText = (TextView) findViewById(R.id.profileBtn);
-        final ImageView profileImage = (ImageView) findViewById(R.id.profileimg);
         View.OnClickListener profileOnClickListener = new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(More.this, Profile.class);
@@ -38,10 +37,9 @@ public class More  extends AppCompatActivity  {
             }
         };
         profileText.setOnClickListener(profileOnClickListener);
-        profileImage.setOnClickListener(profileOnClickListener);
+        //profileImage.setOnClickListener(profileOnClickListener);
 
         final TextView friendsText = (TextView) findViewById(R.id.friendsBtn);
-        final ImageView friendsImage = (ImageView) findViewById(R.id.friends_img);
         View.OnClickListener friendsOnClickListener = new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(More.this, Friends.class);
@@ -49,7 +47,7 @@ public class More  extends AppCompatActivity  {
             }
         };
         friendsText.setOnClickListener(friendsOnClickListener);
-        friendsImage.setOnClickListener(friendsOnClickListener);
+       //friendsImage.setOnClickListener(friendsOnClickListener);
 
         final TextView unionText = (TextView) findViewById(R.id.kent_unionBtn);
         final ImageView unionImage = (ImageView) findViewById(R.id.ku_img);

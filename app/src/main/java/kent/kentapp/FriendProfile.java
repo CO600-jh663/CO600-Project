@@ -1,5 +1,6 @@
 package kent.kentapp;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -7,12 +8,15 @@ import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.content.Intent;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
 import java.util.ArrayList;
 
 public class FriendProfile extends AppCompatActivity {
 
     ArrayList<String> friends = new ArrayList<>();
-    ArrayList<String> students =  new ArrayList<>();
+    ArrayList<String> students = new ArrayList<>();
 
 
     @Override
@@ -35,10 +39,18 @@ public class FriendProfile extends AppCompatActivity {
         final ImageButton moreBtn = (ImageButton) findViewById(R.id.moreBtn);
         moreBtn.setOnClickListener((View.OnClickListener) this);
 
+        final TextView username = (TextView) findViewById(R.id.user_name);
+
+
+        final ImageButton profilePic = (ImageButton) findViewById(R.id.profile_pic);
+        profilePic.setOnLongClickListener((View.OnLongClickListener) this);
+
+
         final ImageButton btnAdd = (ImageButton) findViewById(R.id.add_friend);
         btnAdd.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-students.add("x");
+                String addedFriend = username.getText().toString();
+                friends.add(addedFriend);
                 //finish();
             }
         });
@@ -58,8 +70,7 @@ students.add("x");
         }
     }
 
-    public void onClick(View menu)
-    {
+    public void onClick(View menu) {
         switch (menu.getId()) {
 
             case R.id.newsBtn:
@@ -101,4 +112,19 @@ students.add("x");
 
     }
 
+    //final GridLayout pageLayout = (GridLayout) findViewById(R.id.gridLayout);
+    // @SuppressLint("NewApi")
+    //@Override
+    // public boolean onLongClick(View menu) {
+    //switch (menu.getId()) {
+
+
+    //case R.id.profile_pic:
+    //pageLayout.setBackground(getExternalMediaDirs()].getDrawable());
+
+    //return true;
+    //break;
+
+//});
 }
+

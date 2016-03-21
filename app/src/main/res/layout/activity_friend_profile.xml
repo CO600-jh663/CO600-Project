@@ -25,7 +25,6 @@
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_columnSpan="7"
-            android:layout_margin="2dp"
             android:layout_marginBottom="5dp"
             android:layout_row="0"
             android:height="8dp"
@@ -45,10 +44,11 @@
             android:layout_rowSpan="2"
             android:clickable="true"
             android:src="@drawable/avatar2"
+            android:onClick="onLongClick"
             android:contentDescription="@string/profile_description"/>
 
         <TextView
-            android:id="@+id/homeTitle"
+            android:id="@+id/user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="2"
@@ -80,26 +80,16 @@
             android:layout_marginBottom="2dp"
             android:layout_marginTop="4dp"
             android:layout_row="3"
-            android:background="@color/common_action_bar_splitter" />
+            android:background="@android:color/darker_gray" />
 
         <TextView
             android:id="@+id/about_you"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnSpan="7"
-            android:layout_gravity="end"
+            style="@style/text_subtitle"
             android:layout_marginBottom="5dp"
-            android:layout_marginEnd="10dp"
+            android:text="@string/bio"
             android:layout_row="4"
-            android:width="290dp"
-            android:height="24dp"
-            android:background="@color/kent_translucent"
-            android:ems="10"
-            android:text="@string/person_info"
-            android:textAlignment="viewEnd"
-            android:textSize="20sp" />
-
+            android:width="180dp"
+            android:height="24dp" />
 
         <EditText
             android:id="@+id/add_degree"
@@ -112,7 +102,6 @@
             android:height="40dp"
             android:ems="10"
             android:hint="@string/degree"
-            android:textColor="@color/kent_blue"
             android:textStyle="bold" />
 
         <EditText
@@ -124,38 +113,41 @@
             android:layout_marginBottom="2dp"
             android:layout_row="6"
             android:layout_rowSpan="1"
-            android:height="90dp"
+            android:height="40dp"
             android:ems="10"
             android:hint="@string/existing_bio"
-            android:textColor="@color/kent_blue"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/languages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="7"
+            android:layout_marginBottom="2dp"
+            android:layout_row="7"
+            android:layout_rowSpan="1"
+            android:height="40dp"
+            android:ems="10"
+            android:hint="@string/existing_bio"
             android:textStyle="bold" />
 
 
         <TextView
             android:id="@+id/friends"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnSpan="7"
-            android:layout_gravity="end"
+            style="@style/text_subtitle"
             android:layout_marginBottom="5dp"
-            android:layout_marginEnd="10dp"
-            android:layout_row="7"
+            android:layout_row="8"
             android:width="290dp"
-            android:height="24dp"
-            android:background="@color/kent_translucent"
-            android:ems="10"
-            android:text="@string/friends"
-            android:textAlignment="viewEnd"
-            android:textSize="20sp" />
+            android:text="@string/friends" />
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="280dp"
             android:layout_column="1"
             android:layout_columnSpan="7"
-            android:layout_row="8"
-            android:layout_rowSpan="3">
+            android:layout_row="9"
+            android:layout_rowSpan="2">
 
 
             <RelativeLayout
