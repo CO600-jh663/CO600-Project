@@ -140,7 +140,7 @@ style="@style/text_subtitle"
             android:id="@+id/friend_sub_section"
 style="@style/text_subtitle"
             android:layout_marginBottom="5dp"
-            android:width="105dp"
+            android:width="120dp"
             android:text="@string/friends"
  />
 

@@ -114,7 +114,7 @@
             android:layout_columnSpan="7"
             android:layout_row="7"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="15dp"
             android:ems="10"
             android:text="@string/kent_union"
             android:textSize="22sp"
