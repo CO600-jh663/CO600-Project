@@ -73,6 +73,7 @@ public class Media extends AppCompatActivity{
             }
         });
 
+        uploadButton = (ImageButton) findViewById(R.id.uploadButton);
         uploadButton.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(

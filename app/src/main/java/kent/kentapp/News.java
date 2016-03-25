@@ -25,6 +25,8 @@ public class News extends AppCompatActivity {
                 view.loadUrl("javascript:"
                         + "var FunctionOne = function () {"
                         + "  var r = $.Deferred();"
+                        + "  try{document.querySelector('#_MENU_COLUMN').setAttribute('style', 'display: none;');}catch(e){}"
+                        + "  try{document.querySelector('#_TOP_BAR_CONTAINER').setAttribute('style', 'display: none;');}catch(e){}"
                         + "  try{document.getElementsByClassName('menu_btn')[0].style.display='none';}catch(e){}"
                         + "  try{document.getElementsByClassName('apps_list')[0].style.display='none';}catch(e){}"
                         + "  try{document.querySelector('#apps_container').setAttribute('style', 'display: none;');}catch(e){}"

@@ -42,9 +42,9 @@
             android:background="@android:color/darker_gray" />
 
         <ExpandableListView
-            android:id="@+id/directory_list"
+            android:id="@+id/list"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="420dp"
             android:layout_column="0"
             android:layout_columnSpan="7"
             android:layout_marginBottom="10dp"

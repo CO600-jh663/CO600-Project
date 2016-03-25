@@ -16,7 +16,7 @@
             android:ems="10"
             android:text="@string/medical_centre"
             android:isScrollContainer="true"
-            android:textAlignment="textEnd"
+            android:textAlignment="textStart"
             android:textColor="@color/kent_blue" />
 
 

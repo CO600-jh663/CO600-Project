@@ -31,4 +31,9 @@ public class LoginSAML extends AppCompatActivity {
         webview.loadUrl("https://raptor.kent.ac.uk/proj/co600/project/c26_fresher/simplesaml/module.php/core/authenticate.php?as=default-sp");
         System.out.println("ok");
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }

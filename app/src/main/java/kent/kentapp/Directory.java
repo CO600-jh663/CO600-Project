@@ -28,7 +28,7 @@ public class Directory extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_directory);
 
-        expandableListView = (ExpandableListView) findViewById(R.id.directory_list);
+        expandableListView = (ExpandableListView) findViewById(R.id.list);
         optionsHashMap = DataProvider.getDataHashMap();
         optionsHashMapKeys = new ArrayList<>(optionsHashMap.keySet());
 
@@ -38,24 +38,21 @@ public class Directory extends Activity {
         expandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
             @Override
             public void onGroupExpand(int groupPosition) {
-                Toast.makeText(Directory.this,
-                        optionsHashMapKeys.get(groupPosition)
-                                + " expanded", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(Directory.this, optionsHashMapKeys.get(groupPosition) + " expanded", Toast.LENGTH_SHORT).show();
             }
         });
 
         expandableListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
             @Override
             public void onGroupCollapse(int groupPosition) {
-                Toast.makeText(Directory.this, optionsHashMapKeys.get(groupPosition) + " collapsed", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(Directory.this, optionsHashMapKeys.get(groupPosition) + " collapsed", Toast.LENGTH_SHORT).show();
             }
         });
 
         expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
             public boolean onChildClick(ExpandableListView expandableListView, View clickedView, int groupPosition, int childPosition, long id) {
-                Toast.makeText(Directory.this, "Selected " + optionsHashMap.get(optionsHashMapKeys.get(groupPosition)).get(childPosition)
-                        + " from " + optionsHashMapKeys.get(groupPosition), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(Directory.this, "Selected " + optionsHashMap.get(optionsHashMapKeys.get(groupPosition)).get(childPosition) + " from " + optionsHashMapKeys.get(groupPosition), Toast.LENGTH_SHORT).show();
                 return false;
             }
         });
@@ -109,13 +106,13 @@ public class Directory extends Activity {
 }
 
 class DataArrays {
-    static String[] medicalCentre = {"University Medical Centre" + "Giles Lane\n" +
-            "Canterbury\n" + "Kent\n" + "CT2 7PB\n" + "Telephone: 01227 469333\n" + "http://www.umckent.co.uk/\n"};
-    static String[] finances = {"Finance Department" + "The Registry\n" + "University of Kent\n" + "Canterbury\n" +
-            "Kent\n" + "Fax: +44(0)1227 827024\n"};
-    static String[] security = {"Canterbury Campus" + "University of Kent,\n" +
-            "Canterbury,\n" + "Kent\n" + "CT2 7NZ\n ", "Campus Watch: +44 (0)1227 868253", "Campus Watch: 07772 226188",
-            "Campus Watch: 07772 226188"};
+    static String[] medicalCentre = {"University Medical Centre\n" + "Giles Lane\n" +
+            "Canterbury\n" + "Kent\n" + "CT2 7PB", "Telephone: 01227 469333",
+                "http://www.umckent.co.uk/"};
+    static String[] finances = {"Finance Department\n" + "The Registry\n" +
+            "University of Kent\n" + "Canterbury\n" + "Kent", "Fax: +44(0)1227 827024"};
+    static String[] security = {"Emergencies: 01227 823333", "Enquiries: 01227 823300",
+            "Email: security@kent.ac.uk"};
 }
 
 class DataProvider {
@@ -199,13 +196,11 @@ class DirectoryAdapter extends BaseExpandableListAdapter {
     }
 
     @Override
-    public View getGroupView(int groupPosition, boolean isExpanded,
-                             View convertView, ViewGroup parent) {
+    public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
         String groupTitle = (String) getGroup(groupPosition);
         if (convertView == null) {
-            LayoutInflater inflater =
-                    (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.activity_directory, parent, false);
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = inflater.inflate(R.layout.activity_directory_parent, parent, false);
         }
         TextView parentTextView = (TextView) convertView.findViewById(R.id.textViewParent);
         parentTextView.setText(groupTitle);
@@ -213,15 +208,12 @@ class DirectoryAdapter extends BaseExpandableListAdapter {
     }
 
     @Override
-    public View getChildView(int groupPosition,
-                             int childPosition,
-                             boolean isLastChild, View convertView, ViewGroup parent) {
+    public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
         Log.i("test", "parent view: " + parent.getTag());
 
         String childTitle = (String) getChild(groupPosition, childPosition);
         if (convertView == null) {
-            LayoutInflater inflater =
-                    (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.activity_directory_child, parent, false);
         }
         TextView childTextView = (TextView) convertView.findViewById(R.id.textViewChild);

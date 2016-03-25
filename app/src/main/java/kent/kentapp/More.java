@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.webkit.CookieManager;
+import android.webkit.CookieSyncManager;
+import android.webkit.ValueCallback;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
@@ -66,8 +69,8 @@ public class More  extends AppCompatActivity  {
         final ImageView directoryImage = (ImageView) findViewById(R.id.directory_img);
         View.OnClickListener directoryOnClickListener = new View.OnClickListener() {
             public void onClick(View v) {
-                /*Intent intent = new Intent(More.this, Directory.class);
-                startActivity(intent);*/
+                Intent intent = new Intent(More.this, Directory.class);
+                startActivity(intent);
             }
         };
         directoryText.setOnClickListener(directoryOnClickListener);
@@ -119,6 +122,13 @@ public class More  extends AppCompatActivity  {
                     public boolean shouldOverrideUrlLoading(WebView view, String url) {
                         System.out.println(url);
                         if(url.equalsIgnoreCase("https://raptor.kent.ac.uk/proj/co600/project/c26_fresher/simplesaml/logout.php")) {
+                            CookieManager cookieManager = CookieManager.getInstance();
+                            cookieManager.removeAllCookies(new ValueCallback<Boolean>() {
+                                @Override
+                                public void onReceiveValue(Boolean value) {
+                                    System.out.println("Remove all cookies: " + value);
+                                }
+                            });
                             Intent intent = new Intent(More.this, LoginSAML.class);
                             startActivity(intent);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
