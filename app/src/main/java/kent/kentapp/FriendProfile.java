@@ -1,14 +1,12 @@
 package kent.kentapp;
 
-import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
-import android.content.Intent;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -44,6 +42,9 @@ public class FriendProfile extends AppCompatActivity {
 
         final ImageButton profilePic = (ImageButton) findViewById(R.id.profile_pic);
         profilePic.setOnLongClickListener((View.OnLongClickListener) this);
+        String imagename = "myImage";
+        int res = getResources().getIdentifier(imagename, "drawable", this.getPackageName());
+        profilePic.setImageResource(res);
 
 
         final ImageButton btnAdd = (ImageButton) findViewById(R.id.add_friend);
@@ -108,19 +109,24 @@ public class FriendProfile extends AppCompatActivity {
                 startActivity(add_friend);
                 //finish();
                 break;
+
+            case R.id.profile_pic:
+
         }
 
     }
 
-    //final GridLayout pageLayout = (GridLayout) findViewById(R.id.gridLayout);
-    // @SuppressLint("NewApi")
-    //@Override
-    // public boolean onLongClick(View menu) {
-    //switch (menu.getId()) {
+    //final RelativeLayout layout = (RelativeLayout) findViewById(R.id.layout);
+   // @SuppressLint("NewApi")
+   // public boolean onLongClick(View menu) {
+   // switch (menu.getId()) {
 
 
-    //case R.id.profile_pic:
-    //pageLayout.setBackground(getExternalMediaDirs()].getDrawable());
+   // case R.id.profile_pic:
+        //Resources res = getResources(); //resource handle
+       // Drawable drawable = res.getDrawable(R.drawable.); //new Image that was added to the res folder
+
+        //layout.setBackgroundDrawable(drawable);
 
     //return true;
     //break;
