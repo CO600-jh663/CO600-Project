@@ -110,7 +110,7 @@ public class FeedParser {
             //Automatically Disconnects...
 
             stream = new StringReader(feed);
-        } catch (Exception e) {Log.e("FeedClientException", e.getMessage());}
+        } catch (Exception e) {Log.e("No Internet", e.getMessage());}
 
         //BEGIN PARSING THEN OUTPUT
         try {
@@ -146,8 +146,8 @@ public class FeedParser {
         movePointer();
 
         //RECURSIVE DESCENT or LL??
-        parseS();
-        //llParse();
+        //parseS();
+        llParse();
 
         //close resource
         close();
@@ -356,8 +356,9 @@ public class FeedParser {
         ArrayList<String> expansion;
         //TODO: How to get fields and elements?!?!?!?!?
         while (!(stack.peek().equals("$"))){
-            if (stack.peek().equals("number") || stack.peek().equals("string")){
 
+            //@DATA
+            if (stack.peek().equals("number") || stack.peek().equals("string")){
                 //@DATA-extraction: make field
                 if (fld.equals("")){
                     //parse title
@@ -386,6 +387,8 @@ public class FeedParser {
                 }
 
             }
+
+            //Normal case
             else{
                 if (stack.peek().equals(pointer)){
 
@@ -415,8 +418,10 @@ public class FeedParser {
                         //Don't move-pointer if mismatch!!
                     }
                     else{
-                        //I assume this encapsulates every-possible problem
-                        throw new FeedParseException("Problem with LL-parsing!!");
+                        if (!(stack.peek().equals("e"))){
+                            //I assume this encapsulates every-possible problem
+                            throw new FeedParseException("Problem with LL-parsing!!");
+                        }
                     }
                 }
             }
@@ -425,8 +430,13 @@ public class FeedParser {
     private ArrayList<String> lex(String expression)
     {
         ArrayList<String> list = new ArrayList<String>();
+        //@TEST
+        String point;
         for (int y = 0; (y < (expression.length())); y++){
-            switch (expression.substring(y, (y+1))) {
+
+           point = expression.substring(y, (y+1));
+
+            switch (point){
                 //string-case
                 case "s":
                     list.add("string");
@@ -460,13 +470,26 @@ public class FeedParser {
                     else{
                         list.add("F");
                     }
+                    break;
                 default:
                     //ALL OTHER SYMBOLS ARE OF LENGTH: 1!!
                     list.add(expression.substring(y, (y+1)));
             }
         }
+        list = inverse(list);
         //output
         return list;
+    }
+
+    private ArrayList<String> inverse(ArrayList<String> list)
+    {
+        ArrayList<String> inverted = new ArrayList<String>();
+        Object[] temp;
+        temp = list.toArray();
+        for (int i = (temp.length - 1); (i >= 0); i--){
+            inverted.add((String)temp[i]);
+        }
+        return inverted;
     }
 
 
