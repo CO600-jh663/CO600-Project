@@ -417,8 +417,13 @@ public class FeedParser {
                         }
                         //Don't move-pointer if mismatch!!
                     }
-                    else{
-                        if (!(stack.peek().equals("e"))){
+                    else {
+                        if (stack.peek().equals("e")){
+                            //removes empty
+                            stack.pop();
+
+                        }
+                        else{
                             //I assume this encapsulates every-possible problem
                             throw new FeedParseException("Problem with LL-parsing!!");
                         }
