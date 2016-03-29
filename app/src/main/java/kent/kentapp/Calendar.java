@@ -1,13 +1,15 @@
 package kent.kentapp;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageButton;
- 
+import android.widget.TextView;
+
 public class Calendar extends AppCompatActivity {
 
         @Override
@@ -15,6 +17,9 @@ public class Calendar extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_calendar);
 
+            Typeface verdanna = Typeface.createFromAsset(getAssets(), "fonts/verdana.ttf");
+            TextView title = (TextView) findViewById(R.id.calendar_title);
+            title.setTypeface(verdanna);
 
             WebView webView = (WebView) findViewById(R.id.web_view);
             webView.setWebViewClient(new MyWebViewClient());
