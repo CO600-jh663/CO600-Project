@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.webkit.CookieManager;
-import android.webkit.CookieSyncManager;
 import android.webkit.ValueCallback;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -43,23 +42,23 @@ public class More  extends AppCompatActivity  {
         friendsText.setOnClickListener(friendsOnClickListener);
         friendsImage.setOnClickListener(friendsOnClickListener);
 
-        final TextView unionText = (TextView) findViewById(R.id.kent_unionBtn);
-        final ImageView unionImage = (ImageView) findViewById(R.id.ku_img);
-        View.OnClickListener unionOnClickListener = new View.OnClickListener() {
+        final TextView eventsTxt = (TextView) findViewById(R.id.eventsBtn);
+        final ImageView eventsImage = (ImageView) findViewById(R.id.events_img);
+        View.OnClickListener eventsOnClickListener = new View.OnClickListener() {
             public void onClick(View v) {
-                //Intent intent = new Intent(More.this, KentUnion.class);
-                //startActivity(intent);
+                Intent intent = new Intent(More.this, Events.class);
+                startActivity(intent);
             }
         };
-        unionText.setOnClickListener(unionOnClickListener);
-        unionImage.setOnClickListener(unionOnClickListener);
+        eventsTxt.setOnClickListener(eventsOnClickListener);
+        eventsImage.setOnClickListener(eventsOnClickListener);
 
         final TextView mediaText = (TextView) findViewById(R.id.mediaBtn);
         final ImageView mediaImage = (ImageView) findViewById(R.id.media_img);
         View.OnClickListener mediaOnClickListener = new View.OnClickListener() {
             public void onClick(View v) {
-                //Intent intent = new Intent(More.this, Media.class);
-                //startActivity(intent);
+                Intent intent = new Intent(More.this, Media.class);
+                startActivity(intent);
             }
         };
         mediaText.setOnClickListener(mediaOnClickListener);

@@ -124,7 +124,7 @@
             android:background="@color/common_action_bar_splitter" />
 
         <TextView
-            android:id="@+id/kent_unionBtn"
+            android:id="@+id/eventsBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_column="0"
@@ -134,13 +134,13 @@
             android:layout_row="8"
             android:layout_rowSpan="1"
             android:ems="10"
-            android:text="@string/kent_union"
+            android:text="@string/events"
             android:textSize="22sp"
             android:layout_marginTop="10dp"
             android:textColor="@color/kent_blue"/>
 
         <ImageView
-            android:id="@+id/ku_img"
+            android:id="@+id/events_img"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_column="5"

@@ -22,17 +22,32 @@ public class News extends AppCompatActivity {
             @Override
             public void onPageFinished(WebView view, String url)
             {
-                view.loadUrl("javascript:"
-                        + "var FunctionOne = function () {"
-                        + "  var r = $.Deferred();"
-                        + "  try{document.querySelector('#_MENU_COLUMN').setAttribute('style', 'display: none;');}catch(e){}"
-                        + "  try{document.querySelector('#_TOP_BAR_CONTAINER').setAttribute('style', 'display: none;');}catch(e){}"
-                        + "  try{document.getElementsByClassName('menu_btn')[0].style.display='none';}catch(e){}"
-                        + "  try{document.getElementsByClassName('apps_list')[0].style.display='none';}catch(e){}"
-                        + "  try{document.querySelector('#apps_container').setAttribute('style', 'display: none;');}catch(e){}"
-                        + "};"
-                        + "FunctionOne();");
-                view.setVisibility(View.VISIBLE);
+                if(view.getUrl().equals("https://www.kentunion.co.uk/")) {
+                    view.loadUrl("javascript:"
+                            + "var FunctionOne = function () {"
+                            + "  try{document.querySelector('#_MENU_COLUMN').parentElement.removeChild(document.querySelector('#_MENU_COLUMN'));}catch(e){}"
+                            + "  try{document.querySelector('#_TOP_BAR_CONTAINER').parentElement.removeChild(document.querySelector('#_TOP_BAR_CONTAINER'));}catch(e){}"
+                            + "  try{document.querySelector('#apps_container').parentElement.removeChild(document.querySelector('#apps_container'));}catch(e){}"
+                            + "  try{document.querySelector('#_CONTENT_COLUMN').setAttribute('style', 'padding-top: 0px;');}catch(e){}"
+                            + "};"
+                            + "FunctionOne();");
+                    view.setVisibility(View.VISIBLE);
+                }
+                else {
+                    view.loadUrl("javascript:"
+                            + "var FunctionTwo = function () {"
+                            + "  var y = document.getElementsByTagName('a');"
+                            + "  var i;"
+                            + "  for (i = 0; i < y.length; i++) {"
+                            + "   try{y[i].parentElement.removeChild(y[i]);}catch(e){}"
+                            + "  }"
+                            + "  try{document.querySelector('#_MENU_COLUMN').parentElement.removeChild(document.querySelector('#_MENU_COLUMN'));}catch(e){}"
+                            + "  try{document.querySelector('#_TOP_BAR_CONTAINER').parentElement.removeChild(document.querySelector('#_TOP_BAR_CONTAINER'));}catch(e){}"
+                            + "  try{document.querySelector('#apps_container').parentElement.removeChild(document.querySelector('#apps_container'));}catch(e){}"
+                            + "  try{document.querySelector('#_CONTENT_COLUMN').setAttribute('style', 'padding-top: 0px;');}catch(e){}"
+                            + "};"
+                            + "FunctionTwo();");
+                }
             }
         });
 

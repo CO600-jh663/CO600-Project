@@ -7,6 +7,7 @@
     <string name="title">University of Kent</string>
     <string name="user_welcome_message">Hello User!</string>
     <string name="news">News</string>
+    <string name="events">Events</string>
     <string name="profile">Profile</string>
     <string name="friends">Friends</string>
     <string name="calendar">Calendar</string>
