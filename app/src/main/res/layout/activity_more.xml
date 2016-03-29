@@ -21,12 +21,12 @@
         android:rowCount="18">
 
         n<TextView
-            android:id="@+id/page_title"
-            style="@style/page_header"
-            android:layout_column="0"
-            android:layout_columnSpan="7"
-            android:layout_row="1"
-            android:text="@string/more"/>
+        android:id="@+id/page_title"
+        style="@style/page_header"
+        android:layout_column="0"
+        android:layout_columnSpan="7"
+        android:layout_row="1"
+        android:text="@string/more"/>
 
 
         <TextView
@@ -118,24 +118,10 @@
             android:ems="10"
             android:text="@string/events"
             android:textSize="22sp"
-<<<<<<< HEAD
             android:layout_marginTop="15dp"
             android:textColor="@color/kent_blue"
             android:drawableEnd="@drawable/ku_icon"
-=======
-            android:layout_marginTop="10dp"
-            android:textColor="@color/kent_blue"/>
-
-        <ImageView
-            android:id="@+id/events_img"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_column="5"
-            android:layout_row="8"
-            android:layout_columnSpan="2"
-            android:src="@drawable/ku_icon"
->>>>>>> master
-            android:contentDescription="@string/kent_union"/>
+            android:contentDescription="@string/events"/>
 
         <TextView
             android:id="@+id/divide5"
@@ -274,12 +260,7 @@
                 android:layout_height="54dip"
                 android:layout_marginStart="25dp"
                 android:background="@drawable/maps_icon"
-<<<<<<< HEAD
-                android:contentDescription="@string/maps" />
-=======
-                android:contentDescription="@string/map"
-                android:layout_weight="1"/>
->>>>>>> master
+                android:contentDescription="@string/map" />
 
             <ImageButton
                 android:id="@+id/computerBtn"

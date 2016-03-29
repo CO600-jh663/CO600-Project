@@ -41,7 +41,6 @@ public class More  extends AppCompatActivity  {
        //friendsImage.setOnClickListener(friendsOnClickListener);
 
         final TextView eventsTxt = (TextView) findViewById(R.id.eventsBtn);
-        final ImageView eventsImage = (ImageView) findViewById(R.id.events_img);
         View.OnClickListener eventsOnClickListener = new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(More.this, Events.class);
@@ -49,10 +48,8 @@ public class More  extends AppCompatActivity  {
             }
         };
         eventsTxt.setOnClickListener(eventsOnClickListener);
-        eventsImage.setOnClickListener(eventsOnClickListener);
 
         final TextView mediaText = (TextView) findViewById(R.id.mediaBtn);
-        final ImageView mediaImage = (ImageView) findViewById(R.id.media_img);
         View.OnClickListener mediaOnClickListener = new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(More.this, Media.class);
@@ -60,10 +57,8 @@ public class More  extends AppCompatActivity  {
             }
         };
         mediaText.setOnClickListener(mediaOnClickListener);
-        mediaImage.setOnClickListener(mediaOnClickListener);
 
         final TextView directoryText = (TextView) findViewById(R.id.directoryBtn);
-        final ImageView directoryImage = (ImageView) findViewById(R.id.directory_img);
         View.OnClickListener directoryOnClickListener = new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(More.this, Directory.class);
@@ -71,7 +66,6 @@ public class More  extends AppCompatActivity  {
             }
         };
         directoryText.setOnClickListener(directoryOnClickListener);
-        directoryImage.setOnClickListener(directoryOnClickListener);
 
         final ImageButton newsBtn = (ImageButton) findViewById(R.id.newsBtn);
         newsBtn.setOnClickListener(new View.OnClickListener() {

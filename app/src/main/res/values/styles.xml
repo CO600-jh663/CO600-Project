@@ -58,7 +58,7 @@
         <item name="android:textSize">20sp</item>
         <item name="android:textAlignment">viewEnd</item>
         <item name="android:background">@color/kent_translucent</item>
-       <item name=" android:ems">10</item>
+        <item name="android:ems">10</item>
         <item name="android:height">24dp</item>
         <item name="android:layout_gravity">end</item>
         <item name="android:layout_columnSpan">7</item>

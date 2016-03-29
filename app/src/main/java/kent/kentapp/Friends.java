@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class Friends extends AppCompatActivity {
 
     ArrayList<String> recFriends = new ArrayList<>();
-    //ArrayList<String> friends = new ArrayList<>();
+    ArrayList<String> friends = new ArrayList<>();
 
 
     @Override
@@ -42,22 +42,9 @@ public class Friends extends AppCompatActivity {
 
         Button friendBtn = (Button) findViewById(R.id.friendBtn);
         friendBtn.setOnClickListener((View.OnClickListener) this);
-<<<<<<< HEAD
         GridLayout.LayoutParams params = (GridLayout.LayoutParams) friendBtn.getLayoutParams();
         Button friendProfile;
         GridLayout gridLayout3 = (GridLayout) findViewById(R.id.gridLayout3);
-=======
-
-
-        final Button recFriendBtn = (Button) findViewById(R.id.recommendedFriendBtn);
-        recFriendBtn.setOnClickListener((View.OnClickListener) this);
-
-        recFriends.add("1");
-        recFriends.add("2");
-
-        RelativeLayout friends = (RelativeLayout) findViewById(R.id.friends);
-        RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) friends.getLayoutParams();
->>>>>>> master
 
         for (String s : friends) {
             friendProfile = new Button(this);
