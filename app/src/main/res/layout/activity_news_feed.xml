@@ -56,26 +56,18 @@
 
         <TextView
             android:id="@+id/news_head"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnSpan="7"
-            android:layout_gravity="end"
+style="@style/text_subtitle"
             android:layout_marginBottom="5dp"
-            android:layout_marginEnd="10dp"
             android:layout_row="3"
             android:width="290dp"
             android:height="20dp"
-            android:background="@color/kent_translucent"
-            android:ems="10"
             android:text="@string/news_feed"
-            android:textAlignment="viewEnd"
             android:textSize="16sp" />
 
         <TextView
             android:id="@+id/news"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="match_parent"
             android:layout_column="0"
             android:layout_columnSpan="7"
             android:layout_marginBottom="10dp"
@@ -90,7 +82,6 @@
         android:layout_width="match_parent"
         android:layout_height="63dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:orientation="horizontal">
 
         <TextView
@@ -103,52 +94,52 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="3dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
 
             <ImageButton
                 android:id="@+id/newsBtn"
                 android:layout_width="48dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="10dp"
                 android:background="@drawable/news_icon"
-                android:contentDescription="@string/news"
-                android:layout_weight="1"/>
+                android:contentDescription="@string/news" />
 
             <ImageButton
                 android:id="@+id/calendarBtn"
                 android:layout_width="42dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="25dp"
                 android:background="@drawable/calendar_icon"
-                android:contentDescription="@string/calendar"
-                android:layout_weight="1"/>
+                android:contentDescription="@string/calendar" />
 
             <ImageButton
                 android:id="@+id/mapsBtn"
                 android:layout_width="41dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="25dp"
                 android:background="@drawable/maps_icon"
+<<<<<<< HEAD
+                android:contentDescription="@string/maps" />
+=======
                 android:contentDescription="@string/map"
                 android:layout_weight="1"/>
+>>>>>>> master
 
             <ImageButton
                 android:id="@+id/computerBtn"
                 android:layout_width="41dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="25dp"
                 android:background="@drawable/free_pcs"
-                android:contentDescription="@string/free_computers"
-                android:layout_weight="1"/>
+                android:contentDescription="@string/free_computers" />
 
             <ImageButton
                 android:id="@+id/moreBtn"
                 android:layout_width="54dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="18dp"
+                android:layout_marginStart="25dp"
                 android:background="@drawable/more_icon"
-                android:contentDescription="@string/more"
-                android:layout_weight="1"/>
+                android:contentDescription="@string/more" />
         </LinearLayout>
     </TableLayout>
 </RelativeLayout>

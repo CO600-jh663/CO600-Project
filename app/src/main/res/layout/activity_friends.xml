@@ -39,18 +39,12 @@
 
         <TextView
             android:id="@+id/friends_recommendations"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnSpan="7"
-            android:layout_gravity="end"
+style="@style/text_subtitle"
             android:layout_marginBottom="7dp"
             android:layout_row="3"
             android:width="200dp"
-            android:background="@color/kent_light_grey"
             android:text="@string/friends_recommendations"
-            android:textAlignment="textEnd"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
         <HorizontalScrollView
             android:id="@+id/scroll_menu"
@@ -60,75 +54,73 @@
             android:layout_columnSpan="7"
             android:layout_row="4"
             android:layout_rowSpan="2"
-            android:scrollbars="none">
+            android:scrollbars="none"
+            android:orientation="horizontal">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:gravity="center_horizontal">
 
                 <GridLayout
                     android:id="@+id/gridLayout2"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentStart="true"
-                    android:columnCount="8"
+                    android:columnCount="4"
                     android:rowCount="2">
 
                     <Button
                         android:id="@+id/recommendedFriendBtn"
                         style="@style/small_user_image"
-                        android:layout_column="1"
-                        android:layout_row="0"
-                        android:contentDescription="@string/friends_recommendations"
-                        android:background="@drawable/avatar2"
-                        android:layout_marginStart="30dp"/>
-
-                    <TextView
-                        android:layout_column="1"
-                        android:layout_row="1"
-                        style="@style/small_user_text"
-                        android:layout_marginStart="30dp"/>
-
-                    <Button
-                        android:id="@+id/profile_pic2"
-                        style="@style/small_user_image"
-                        android:layout_column="2"
+                        android:layout_column="0"
                         android:layout_row="0"
                         android:contentDescription="@string/friends_recommendations"
                         android:background="@drawable/avatar2" />
 
                     <TextView
-                        android:layout_column="2"
+                        android:layout_column="0"
+                        android:layout_row="1"
+                        style="@style/small_user_text" />
+
+                    <Button
+                        android:id="@+id/profile_pic2"
+                        style="@style/small_user_image"
+                        android:layout_column="1"
+                        android:layout_row="0"
+                        android:contentDescription="@string/friends_recommendations"
+                        android:background="@drawable/avatar2" />
+
+                    <TextView
+                        android:layout_column="1"
                         android:layout_row="1"
                         style="@style/small_user_text" />
 
                     <Button
                         android:id="@+id/profile_pic3"
                         style="@style/small_user_image"
-                        android:layout_column="3"
+                        android:layout_column="2"
                         android:layout_row="0"
                         android:contentDescription="@string/friends_recommendations"
                         android:background="@drawable/avatar2" />
 
                     <TextView
-                        android:layout_column="3"
+                        android:layout_column="2"
                         android:layout_row="1"
                         style="@style/small_user_text" />
 
                     <Button
                         android:id="@+id/profile_pic4"
                         style="@style/small_user_image"
-                        android:layout_column="4"
+                        android:layout_column="3"
                         android:layout_row="0"
                         android:contentDescription="@string/friends_recommendations"
                         android:background="@drawable/avatar2" />
 
                     <TextView
-                        android:layout_column="4"
+                        android:layout_column="3"
                         android:layout_row="1"
                         style="@style/small_user_text" />
+
                 </GridLayout>
 
             </RelativeLayout>
@@ -146,18 +138,11 @@
 
         <TextView
             android:id="@+id/friend_sub_section"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnSpan="7"
+style="@style/text_subtitle"
             android:layout_marginBottom="5dp"
-            android:layout_gravity="end"
-            android:layout_row="7"
-            android:width="85dp"
-            android:background="@color/kent_translucent"
+            android:width="120dp"
             android:text="@string/friends"
-            android:textAlignment="textEnd"
-            android:textSize="20sp" />
+ />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -170,125 +155,123 @@
 
             <RelativeLayout
                 android:id="@+id/friends"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
 
                 <GridLayout
                     android:id="@+id/gridLayout3"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentStart="true"
-                    android:columnCount="8"
+                    android:columnCount="4"
                     android:rowCount="4">
 
                     <Button
                         android:id="@+id/friendBtn"
                         style="@style/small_user_image"
-                        android:layout_column="1"
-                        android:layout_row="0"
-                        android:contentDescription="@string/friends_recommendations"
-                        android:background="@drawable/avatar2"
-                        android:layout_marginStart="30dp"/>
-
-                    <TextView
-                        android:layout_column="1"
-                        android:layout_row="1"
-                        style="@style/small_user_text"
-                        android:layout_marginStart="30dp"/>
-
-                    <Button
-                        android:id="@+id/society_pic2"
-                        style="@style/small_user_image"
-                        android:layout_column="2"
+                        android:layout_column="0"
                         android:layout_row="0"
                         android:contentDescription="@string/friends_recommendations"
                         android:background="@drawable/avatar2" />
 
                     <TextView
-                        android:layout_column="2"
+                        android:layout_column="0"
+                        android:layout_row="1"
+                        style="@style/small_user_text"
+                        android:layout_marginStart="0dp"/>
+
+                    <Button
+                        android:id="@+id/society_pic2"
+                        style="@style/small_user_image"
+                        android:layout_column="1"
+                        android:layout_row="0"
+                        android:contentDescription="@string/friends_recommendations"
+                        android:background="@drawable/avatar2" />
+
+                    <TextView
+                        android:layout_column="1"
                         android:layout_row="1"
                         style="@style/small_user_text"/>
 
                     <Button
                         android:id="@+id/society_pic3"
                         style="@style/small_user_image"
-                        android:layout_column="3"
+                        android:layout_column="2"
                         android:layout_row="0"
                         android:contentDescription="@string/friends_recommendations"
                         android:background="@drawable/avatar2" />
 
                     <TextView
                         style="@style/small_user_text"
-                        android:layout_column="3"
+                        android:layout_column="2"
                         android:layout_row="1" />
 
                     <Button
                         android:id="@+id/society_pic4"
                         style="@style/small_user_image"
-                        android:layout_column="4"
+                        android:layout_column="3"
                         android:layout_row="0"
                         android:contentDescription="@string/friends_recommendations"
                         android:background="@drawable/avatar2" />
 
                     <TextView
-                        android:layout_column="4"
+                        android:layout_column="3"
                         android:layout_row="1"
                         style="@style/small_user_text"/>
 
                     <Button
                         android:id="@+id/society_pic5"
                         style="@style/small_user_image"
-                        android:layout_column="1"
+                        android:layout_column="0"
                         android:layout_row="2"
                         android:contentDescription="@string/friends_recommendations"
                         android:src="@drawable/avatar2"
-                        android:layout_marginStart="30dp"/>
+                        android:layout_marginStart="0dp"/>
 
                     <TextView
-                        android:layout_column="1"
+                        android:layout_column="0"
                         android:layout_row="3"
                         style="@style/small_user_text"
-                        android:layout_marginStart="30dp"/>
+                        android:layout_marginStart="0dp"/>
 
                     <Button
                         android:id="@+id/society_pic6"
                         style="@style/small_user_image"
-                        android:layout_column="2"
+                        android:layout_column="1"
                         android:layout_row="2"
                         android:contentDescription="@string/friends_recommendations"
                         android:src="@drawable/avatar2" />
 
                     <TextView
-                        android:layout_column="2"
+                        android:layout_column="1"
                         android:layout_row="3"
                         style="@style/small_user_text" />
 
                     <Button
                         android:id="@+id/society_pic7"
                         style="@style/small_user_image"
-                        android:layout_column="3"
+                        android:layout_column="2"
                         android:layout_row="2"
                         android:contentDescription="@string/friends_recommendations"
                         android:src="@drawable/avatar2" />
 
                     <TextView
-                        android:layout_column="3"
+                        android:layout_column="2"
                         android:layout_row="3"
                         style="@style/small_user_text" />
 
                     <Button
                         android:id="@+id/society_pic8"
                         style="@style/small_user_image"
-                        android:layout_column="4"
+                        android:layout_column="3"
                         android:layout_row="2"
                         android:contentDescription="@string/friends_recommendations"
                         android:src="@drawable/avatar2" />
 
                     <TextView
                         style="@style/small_user_text"
-                        android:layout_column="4"
+                        android:layout_column="3"
                         android:layout_row="3" />
                 </GridLayout>
 
@@ -307,7 +290,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/divide4"
+            android:id="@+id/divide_menu"
             style="@style/divide"
             android:background="@color/common_action_bar_splitter" />
 
@@ -316,54 +299,53 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="3dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
 
             <ImageButton
                 android:id="@+id/newsBtn"
                 android:layout_width="48dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="10dp"
                 android:background="@drawable/news_icon"
-                android:contentDescription="@string/news"
-                android:layout_weight="1"/>
+                android:contentDescription="@string/news" />
 
             <ImageButton
                 android:id="@+id/calendarBtn"
                 android:layout_width="42dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="25dp"
                 android:background="@drawable/calendar_icon"
-                android:contentDescription="@string/calendar"
-                android:layout_weight="1"/>
+                android:contentDescription="@string/calendar" />
 
             <ImageButton
                 android:id="@+id/mapsBtn"
                 android:layout_width="41dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="25dp"
                 android:background="@drawable/maps_icon"
+<<<<<<< HEAD
+                android:contentDescription="@string/maps" />
+=======
                 android:contentDescription="@string/map"
                 android:layout_weight="1"/>
+>>>>>>> master
 
             <ImageButton
                 android:id="@+id/computerBtn"
                 android:layout_width="41dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="25dp"
                 android:background="@drawable/free_pcs"
-                android:contentDescription="@string/free_computers"
-                android:layout_weight="1"/>
+                android:contentDescription="@string/free_computers" />
 
             <ImageButton
                 android:id="@+id/moreBtn"
                 android:layout_width="54dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="18dp"
+                android:layout_marginStart="25dp"
                 android:background="@drawable/more_icon"
-                android:contentDescription="@string/more"
-                android:layout_weight="1"/>
+                android:contentDescription="@string/more" />
         </LinearLayout>
-
     </TableLayout>
 
 </RelativeLayout>

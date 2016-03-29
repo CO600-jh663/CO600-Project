@@ -7,6 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/layout"
     tools:context="kent.kentapp.Profile">
 
     <GridLayout
@@ -25,7 +26,6 @@
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_columnSpan="7"
-            android:layout_margin="2dp"
             android:layout_marginBottom="5dp"
             android:layout_row="0"
             android:height="8dp"
@@ -45,10 +45,11 @@
             android:layout_rowSpan="2"
             android:clickable="true"
             android:src="@drawable/avatar2"
+            android:onClick="onLongClick"
             android:contentDescription="@string/profile_description"/>
 
         <TextView
-            android:id="@+id/homeTitle"
+            android:id="@+id/user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="2"
@@ -59,7 +60,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="18sp" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/add_friend"
             android:layout_width="20dp"
             android:layout_height="20dp"
@@ -71,7 +72,7 @@
             android:layout_row="2"
             android:clickable="true"
             android:contentDescription="@string/add_friend"
-            android:src="@drawable/add_friend" />
+            android:background="@drawable/add_icon" />
 
         <TextView
             android:id="@+id/divide"
@@ -80,26 +81,16 @@
             android:layout_marginBottom="2dp"
             android:layout_marginTop="4dp"
             android:layout_row="3"
-            android:background="@color/common_action_bar_splitter" />
+            android:background="@android:color/darker_gray" />
 
         <TextView
             android:id="@+id/about_you"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnSpan="7"
-            android:layout_gravity="end"
+            style="@style/text_subtitle"
             android:layout_marginBottom="5dp"
-            android:layout_marginEnd="10dp"
+            android:text="@string/bio"
             android:layout_row="4"
-            android:width="290dp"
-            android:height="24dp"
-            android:background="@color/kent_translucent"
-            android:ems="10"
-            android:text="@string/person_info"
-            android:textAlignment="viewEnd"
-            android:textSize="20sp" />
-
+            android:width="180dp"
+            android:height="24dp" />
 
         <EditText
             android:id="@+id/add_degree"
@@ -112,7 +103,6 @@
             android:height="40dp"
             android:ems="10"
             android:hint="@string/degree"
-            android:textColor="@color/kent_blue"
             android:textStyle="bold" />
 
         <EditText
@@ -124,59 +114,64 @@
             android:layout_marginBottom="2dp"
             android:layout_row="6"
             android:layout_rowSpan="1"
-            android:height="90dp"
+            android:height="40dp"
             android:ems="10"
             android:hint="@string/existing_bio"
-            android:textColor="@color/kent_blue"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/languages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="7"
+            android:layout_marginBottom="2dp"
+            android:layout_row="7"
+            android:layout_rowSpan="1"
+            android:height="40dp"
+            android:ems="10"
+            android:hint="@string/existing_bio"
             android:textStyle="bold" />
 
 
         <TextView
             android:id="@+id/friends"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnSpan="7"
-            android:layout_gravity="end"
+            style="@style/text_subtitle"
             android:layout_marginBottom="5dp"
-            android:layout_marginEnd="10dp"
-            android:layout_row="7"
+            android:layout_row="8"
             android:width="290dp"
-            android:height="24dp"
-            android:background="@color/kent_translucent"
-            android:ems="10"
-            android:text="@string/friends"
-            android:textAlignment="viewEnd"
-            android:textSize="20sp" />
+            android:text="@string/friends" />
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="280dp"
             android:layout_column="1"
             android:layout_columnSpan="7"
-            android:layout_row="8"
-            android:layout_rowSpan="3">
+            android:layout_row="9"
+            android:layout_rowSpan="2">
 
 
             <RelativeLayout
                 android:id="@+id/friends_layout"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
 
                 <GridLayout
                     android:id="@+id/gridLayout3"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentStart="true"
                     android:columnCount="8"
-                    android:rowCount="4">
+                    android:rowCount="4"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:gravity="center_horizontal">
 
                     <ImageButton
                         android:id="@+id/friendBtn"
                         style="@style/small_user_image"
-                        android:layout_marginStart="20dp"
+                        android:layout_marginStart="0dp"
                         android:layout_column="1"
                         android:layout_row="0"
                         android:contentDescription="@string/friends_recommendations"
@@ -186,7 +181,7 @@
                         android:layout_column="1"
                         android:layout_row="1"
                         style="@style/small_user_text"
-                        android:layout_marginStart="25dp"/>
+                        android:layout_marginStart="0dp"/>
 
                     <ImageButton
                         android:id="@+id/society_pic2"
@@ -233,9 +228,6 @@
 
         </ScrollView>
 
-
-
-
     </GridLayout>
 
     <TableLayout
@@ -247,7 +239,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/divide4"
+            android:id="@+id/divide_menu"
             style="@style/divide"
             android:background="@color/common_action_bar_splitter" />
 
@@ -256,52 +248,52 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="3dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
 
             <ImageButton
                 android:id="@+id/newsBtn"
                 android:layout_width="48dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="10dp"
                 android:background="@drawable/news_icon"
-                android:contentDescription="@string/news"
-                android:layout_weight="1"/>
+                android:contentDescription="@string/news" />
 
             <ImageButton
                 android:id="@+id/calendarBtn"
                 android:layout_width="42dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="25dp"
                 android:background="@drawable/calendar_icon"
-                android:contentDescription="@string/calendar"
-                android:layout_weight="1"/>
+                android:contentDescription="@string/calendar" />
 
             <ImageButton
                 android:id="@+id/mapsBtn"
                 android:layout_width="41dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="25dp"
                 android:background="@drawable/maps_icon"
+<<<<<<< HEAD
+                android:contentDescription="@string/maps" />
+=======
                 android:contentDescription="@string/map"
                 android:layout_weight="1"/>
+>>>>>>> master
 
             <ImageButton
                 android:id="@+id/computerBtn"
                 android:layout_width="41dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="25dp"
                 android:background="@drawable/free_pcs"
-                android:contentDescription="@string/free_computers"
-                android:layout_weight="1"/>
+                android:contentDescription="@string/free_computers" />
 
             <ImageButton
                 android:id="@+id/moreBtn"
                 android:layout_width="54dip"
                 android:layout_height="54dip"
-                android:layout_marginStart="18dp"
+                android:layout_marginStart="25dp"
                 android:background="@drawable/more_icon"
-                android:contentDescription="@string/more"
-                android:layout_weight="1"/>
+                android:contentDescription="@string/more" />
         </LinearLayout>
     </TableLayout>
 </RelativeLayout>

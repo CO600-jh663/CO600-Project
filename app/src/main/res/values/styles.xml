@@ -24,33 +24,46 @@
         <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
         <item name="android:textColor">@color/kent_blue</item>
         <item name="android:textSize">32sp</item>
+        <item name="android:layout_marginEnd">5dp</item>
     </style>
 
     <style name="divide">
-    <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_columnSpan">7</item>
         <item name="android:layout_margin">2dp</item>
         <item name="android:height">3dp</item>
     </style>
 
     <style name="small_user_image">
-    <item name="android:layout_width">55dp</item>
-    <item name="android:layout_height">52dp</item>
+        <item name="android:layout_width">55dp</item>
+        <item name="android:layout_height">52dp</item>
         <item name="android:clickable">true</item>
         <item name="android:layout_marginBottom">2dp</item>
         <item name="android:layout_marginEnd">10dp</item>
         <item name="android:layout_marginTop">5dp</item>
         <item name="android:layout_marginStart">10dp</item>
-</style>
+    </style>
 
     <style name="small_user_text">
         <item name="android:text">@string/friends</item>
         <item name="android:height">20dp</item>
-        <item name="android:layout_marginStart">10dp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="text_subtitle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAlignment">viewEnd</item>
+        <item name="android:background">@color/kent_translucent</item>
+       <item name=" android:ems">10</item>
+        <item name="android:height">24dp</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:layout_columnSpan">7</item>
+        <item name="android:layout_column">0</item>
+        <item name="android:layout_marginEnd">5dp</item>
+    </style>
 
 </resources>

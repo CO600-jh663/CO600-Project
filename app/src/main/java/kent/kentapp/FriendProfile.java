@@ -2,17 +2,20 @@ package kent.kentapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
+import android.widget.GridLayout;
 import android.widget.ImageButton;
-import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class FriendProfile extends AppCompatActivity {
 
-    ArrayList<String> panel1 = new ArrayList<>();
+    ArrayList<String> friends = new ArrayList<>();
+    ArrayList<String> students = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,25 +37,41 @@ public class FriendProfile extends AppCompatActivity {
         final ImageButton moreBtn = (ImageButton) findViewById(R.id.moreBtn);
         moreBtn.setOnClickListener((View.OnClickListener) this);
 
-        final ImageButton friendBtn = (ImageButton) findViewById(R.id.friendBtn);
-        moreBtn.setOnClickListener((View.OnClickListener) this);
-
-        panel1.add("1");
-        panel1.add("2");
-
-        RelativeLayout friends = (RelativeLayout) findViewById(R.id.friends);
+        final TextView username = (TextView) findViewById(R.id.user_name);
 
 
-        for (String s : panel1) {
-            ImageButton friendProfile = new ImageButton(this);
-            //friendBtn.setBackground(getResources(R.drawable.));
-            //friendProfile.setBackgroundColor(0xFF99D6D6);
-            friends.addView(friendProfile);
+        final ImageButton profilePic = (ImageButton) findViewById(R.id.profile_pic);
+        profilePic.setOnLongClickListener((View.OnLongClickListener) this);
+        String imagename = "myImage";
+        int res = getResources().getIdentifier(imagename, "drawable", this.getPackageName());
+        profilePic.setImageResource(res);
+
+
+        final ImageButton btnAdd = (ImageButton) findViewById(R.id.add_friend);
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                String addedFriend = username.getText().toString();
+                friends.add(addedFriend);
+                //finish();
+            }
+        });
+
+
+        Button friendBtn = (Button) findViewById(R.id.friendBtn);
+        friendBtn.setOnClickListener((View.OnClickListener) this);
+        GridLayout.LayoutParams params = (GridLayout.LayoutParams) friendBtn.getLayoutParams();
+        Button friendProfile;
+        GridLayout gridLayout3 = (GridLayout) findViewById(R.id.gridLayout3);
+
+        for (String s : friends) {
+            friendProfile = new Button(this);
+            friendProfile.setLayoutParams(params);
+            //friendProfile.setBackground(recFriends.get(i));
+            gridLayout3.addView(friendProfile);
         }
     }
 
-    public void onClick(View menu)
-    {
+    public void onClick(View menu) {
         switch (menu.getId()) {
 
             case R.id.newsBtn:
@@ -85,8 +104,33 @@ public class FriendProfile extends AppCompatActivity {
                 //finish();
                 break;
 
+            case R.id.add_friend:
+                Intent add_friend = new Intent(FriendProfile.this, More.class);
+                startActivity(add_friend);
+                //finish();
+                break;
+
+            case R.id.profile_pic:
+
         }
 
     }
 
+    //final RelativeLayout layout = (RelativeLayout) findViewById(R.id.layout);
+   // @SuppressLint("NewApi")
+   // public boolean onLongClick(View menu) {
+   // switch (menu.getId()) {
+
+
+   // case R.id.profile_pic:
+        //Resources res = getResources(); //resource handle
+       // Drawable drawable = res.getDrawable(R.drawable.); //new Image that was added to the res folder
+
+        //layout.setBackgroundDrawable(drawable);
+
+    //return true;
+    //break;
+
+//});
 }
+

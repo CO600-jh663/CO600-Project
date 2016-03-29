@@ -1,12 +1,15 @@
 package kent.kentapp;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -37,8 +40,13 @@ public class Friends extends AppCompatActivity {
         moreBtn.setOnClickListener((View.OnClickListener) this);
 
 
-        final ImageButton friendBtn = (ImageButton) findViewById(R.id.friendBtn);
+        Button friendBtn = (Button) findViewById(R.id.friendBtn);
         friendBtn.setOnClickListener((View.OnClickListener) this);
+<<<<<<< HEAD
+        GridLayout.LayoutParams params = (GridLayout.LayoutParams) friendBtn.getLayoutParams();
+        Button friendProfile;
+        GridLayout gridLayout3 = (GridLayout) findViewById(R.id.gridLayout3);
+=======
 
 
         final Button recFriendBtn = (Button) findViewById(R.id.recommendedFriendBtn);
@@ -49,20 +57,36 @@ public class Friends extends AppCompatActivity {
 
         RelativeLayout friends = (RelativeLayout) findViewById(R.id.friends);
         RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) friends.getLayoutParams();
+>>>>>>> master
 
-
-
-
-        for (String s : recFriends) {
-            Button friendProfile = new Button(this);
+        for (String s : friends) {
+            friendProfile = new Button(this);
             friendProfile.setLayoutParams(params);
             //friendProfile.setBackground(recFriends.get(i));
-            friends.addView(friendProfile);
+            gridLayout3.addView(friendProfile);
         }
+
+
+        Button recFriendBtn = (Button) findViewById(R.id.recommendedFriendBtn);
+        recFriendBtn.setOnClickListener((View.OnClickListener) this);
+        GridLayout.LayoutParams recFriend = (GridLayout.LayoutParams) friendBtn.getLayoutParams();
+        Button rFriendProfile;
+        GridLayout gridLayout2 = (GridLayout) findViewById(R.id.gridLayout2);
+
+        for (String rf : recFriends) {
+            rFriendProfile = new Button(this);
+            rFriendProfile.setLayoutParams(recFriend);
+            //friendProfile.setBackground(recFriends.get(i));
+            gridLayout2.addView(rFriendProfile);
+        }
+
+        Typeface verdanna = Typeface.createFromAsset(getAssets(), "fonts/verdana.ttf");
+        TextView title = (TextView) findViewById(R.id.friends_title);
+        title.setTypeface(verdanna);
     }
 
-    public void onClick(View menu)
-    {
+
+    public void onClick(View menu) {
         switch (menu.getId()) {
 
             case R.id.newsBtn:
