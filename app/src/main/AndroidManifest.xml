@@ -19,7 +19,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -28,24 +28,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:windowSoftInputMode="stateVisible|adjustResize">
-
         <activity
-            android:name=".LoginActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:name=".Profile"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            >
-            <!--<intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
-        </activity>
-        <activity android:name=".Profile"
             android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:windowSoftInputMode="adjustResize"
-            />
+            android:windowSoftInputMode="stateHidden" />
         <!--
              ATTENTION: This was auto-generated to add Google Play services to your project for
              App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -54,87 +41,95 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-
-
-        <activity android:name=".Splash"
-            android:screenOrientation="portrait"
+        <activity
+            android:name=".Splash"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            >
-
-
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".GettingStarted"
-            android:screenOrientation="portrait"
+        <activity
+            android:name=".GettingStarted"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            />
-
-        <activity android:name=".CampusMap"
-            android:screenOrientation="portrait"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CampusMap"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            />
+            android:screenOrientation="portrait" />
 
         <!-- TODO add screenOrientation and configChanges to all activities -->
-        <activity android:name=".More"
-            android:screenOrientation="portrait"
+        <activity
+            android:name=".More"
             android:configChanges="keyboardHidden|orientation|screenSize"
-        />
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Directory"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:uiOptions="splitActionBarWhenNarrow"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Friends"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".SDS"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Moodle"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".LoginSAML"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
 
-    <activity android:name=".Directory"
-        android:uiOptions="splitActionBarWhenNarrow"
-        android:screenOrientation="portrait"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:windowSoftInputMode="adjustResize"
-        />
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-    <activity android:name=".Friends"
-        android:screenOrientation="portrait"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:windowSoftInputMode="adjustResize"
-        />
-
-
-    <activity android:name=".SDS"
-        android:screenOrientation="portrait"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:windowSoftInputMode="adjustResize"
-        />
-    <activity android:name=".Moodle"
-        android:screenOrientation="portrait"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:windowSoftInputMode="adjustResize"
-        />
-    <activity android:name=".LoginSAML"
-        android:screenOrientation="portrait"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:windowSoftInputMode="adjustResize"
-        >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-
-        <activity android:name=".Calendar"
-        android:screenOrientation="portrait"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-            android:windowSoftInputMode="adjustResize"
-        />
-    <activity android:name=".News"
-        android:screenOrientation="portrait"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:windowSoftInputMode="adjustResize"
-        />
-    <activity android:name=".Social"
-        android:screenOrientation="portrait"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:windowSoftInputMode="adjustResize"
-        />
-</application>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".Calendar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".News"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Social"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".FreePc"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Media"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Events"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+    </application>
 
 </manifest>

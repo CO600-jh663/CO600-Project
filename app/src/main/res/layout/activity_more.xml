@@ -106,7 +106,7 @@
             android:background="@color/common_action_bar_splitter" />
 
         <TextView
-            android:id="@+id/kent_unionBtn"
+            android:id="@+id/eventsBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -116,11 +116,25 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="15dp"
             android:ems="10"
-            android:text="@string/kent_union"
+            android:text="@string/events"
             android:textSize="22sp"
+<<<<<<< HEAD
             android:layout_marginTop="15dp"
             android:textColor="@color/kent_blue"
             android:drawableEnd="@drawable/ku_icon"
+=======
+            android:layout_marginTop="10dp"
+            android:textColor="@color/kent_blue"/>
+
+        <ImageView
+            android:id="@+id/events_img"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_column="5"
+            android:layout_row="8"
+            android:layout_columnSpan="2"
+            android:src="@drawable/ku_icon"
+>>>>>>> master
             android:contentDescription="@string/kent_union"/>
 
         <TextView
@@ -260,7 +274,12 @@
                 android:layout_height="54dip"
                 android:layout_marginStart="25dp"
                 android:background="@drawable/maps_icon"
+<<<<<<< HEAD
                 android:contentDescription="@string/maps" />
+=======
+                android:contentDescription="@string/map"
+                android:layout_weight="1"/>
+>>>>>>> master
 
             <ImageButton
                 android:id="@+id/computerBtn"

@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".CampusMap">
+    tools:context=".News">
 
 
     <GridLayout
@@ -21,12 +21,12 @@
         android:rowCount="11">
 
         <TextView
-            android:id="@+id/map_title"
+            android:id="@+id/news_title"
             style="@style/page_header"
             android:layout_column="1"
             android:layout_columnSpan="7"
             android:layout_row="1"
-            android:text="@string/map" />
+            android:text="@string/news" />
 
         <TextView
             android:id="@+id/divide"

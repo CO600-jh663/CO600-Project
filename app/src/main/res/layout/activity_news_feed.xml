@@ -118,7 +118,12 @@ style="@style/text_subtitle"
                 android:layout_height="54dip"
                 android:layout_marginStart="25dp"
                 android:background="@drawable/maps_icon"
+<<<<<<< HEAD
                 android:contentDescription="@string/maps" />
+=======
+                android:contentDescription="@string/map"
+                android:layout_weight="1"/>
+>>>>>>> master
 
             <ImageButton
                 android:id="@+id/computerBtn"
