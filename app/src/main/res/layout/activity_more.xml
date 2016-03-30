@@ -75,37 +75,6 @@
 
 
         <TextView
-            android:id="@+id/friendsBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_column="0"
-            android:layout_columnSpan="7"
-            android:layout_row="6"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:ems="10"
-            android:text="@string/friends"
-            android:textSize="22sp"
-            android:layout_marginTop="15dp"
-            android:textColor="@color/kent_blue"
-            android:drawableEnd="@drawable/friends"
-            android:contentDescription="@string/friends"/>
-
-
-
-        <TextView
-            android:id="@+id/divide4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnSpan="7"
-            android:layout_margin="2dp"
-            android:layout_row="7"
-            android:height="3dp"
-            android:background="@color/common_action_bar_splitter" />
-
-        <TextView
             android:id="@+id/eventsBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -142,7 +111,7 @@
             android:layout_marginBottom="10dp"
             android:layout_column="0"
             android:layout_columnSpan="7"
-            android:layout_row="8"
+            android:layout_row="9"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="25dp"
             android:ems="10"
@@ -161,7 +130,7 @@
             android:layout_columnSpan="7"
             android:layout_margin="2dp"
             android:layout_marginBottom="5dp"
-            android:layout_row="9"
+            android:layout_row="10"
             android:height="3dp"
             android:background="@color/common_action_bar_splitter" />
 
@@ -172,7 +141,7 @@
             android:layout_marginBottom="10dp"
             android:layout_column="0"
             android:layout_columnSpan="7"
-            android:layout_row="9"
+            android:layout_row="11"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="25dp"
             android:ems="10"
@@ -195,7 +164,7 @@
             android:layout_margin="2dp"
             android:layout_marginBottom="15dp"
 
-            android:layout_row="10"
+            android:layout_row="12"
             android:height="3dp"
             android:background="@color/common_action_bar_splitter" />
 
@@ -207,7 +176,7 @@
             android:layout_columnSpan="7"
             android:layout_marginBottom="10dp"
             android:layout_marginStart="20dp"
-            android:layout_row="11"
+            android:layout_row="13"
             android:ems="10"
             android:background="@color/kent_blue"
             android:textColor="#ffffff"

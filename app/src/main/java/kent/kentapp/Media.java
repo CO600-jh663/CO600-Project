@@ -69,10 +69,10 @@ public class Media extends AppCompatActivity{
             }
         });
 
-        final ImageButton socialBtn = (ImageButton) findViewById(R.id.socialBtn);
-        socialBtn.setOnClickListener(new OnClickListener() {
+        final ImageButton computerBtn = (ImageButton) findViewById(R.id.computerBtn);
+        computerBtn.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(Media.this, Social.class);
+                Intent intent = new Intent(Media.this, FreePc.class);
                 startActivity(intent);
                 //finish();
             }

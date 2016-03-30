@@ -4,16 +4,14 @@ package kent.kentapp;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
-import android.support.v7.app.AppCompatActivity;
+import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
+import android.provider.MediaStore;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.net.Uri;
-import android.provider.MediaStore;
-import android.widget.TextView;
 
 
 public class Profile extends AppCompatActivity {
@@ -51,7 +49,7 @@ public class Profile extends AppCompatActivity {
         final ImageButton computerBtn = (ImageButton) findViewById(R.id.computerBtn);
         computerBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(Profile.this, Social.class);
+                Intent intent = new Intent(Profile.this, FreePc.class);
                 startActivity(intent);
                 //finish();
             }

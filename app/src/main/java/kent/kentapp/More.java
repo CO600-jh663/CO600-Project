@@ -10,7 +10,6 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 public class More  extends AppCompatActivity  {
@@ -29,16 +28,6 @@ public class More  extends AppCompatActivity  {
         };
         profileText.setOnClickListener(profileOnClickListener);
         //profileImage.setOnClickListener(profileOnClickListener);
-
-        final TextView friendsText = (TextView) findViewById(R.id.friendsBtn);
-        View.OnClickListener friendsOnClickListener = new View.OnClickListener() {
-            public void onClick(View v) {
-                /*Intent intent = new Intent(More.this, Friends.class);
-                startActivity(intent);*/
-            }
-        };
-        friendsText.setOnClickListener(friendsOnClickListener);
-       //friendsImage.setOnClickListener(friendsOnClickListener);
 
         final TextView eventsTxt = (TextView) findViewById(R.id.eventsBtn);
         View.OnClickListener eventsOnClickListener = new View.OnClickListener() {
