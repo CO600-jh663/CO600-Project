@@ -23,6 +23,9 @@ public class Email extends AppCompatActivity {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 System.out.println(url);
                 if(url.contains("https://outlook.office365.com/owa/?realm=kent.ac.uk")) return false;
+                if(url.contains("https://sso.id.kent.ac.uk")) return false;
+                if(url.contains("https://dan.kent.ac.uk")) return false;
+                if(url.contains("https://login.microsoftonline.com")) return false;
                 else {
                     Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                     startActivity(browserIntent);
